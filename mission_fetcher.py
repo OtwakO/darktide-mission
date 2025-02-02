@@ -19,7 +19,7 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 
 def refresh_token():
     with open("refresh_token.txt", "r", encoding="utf-8") as f:
-        REFRESH_TOKEN = f.read()
+        REFRESH_TOKEN = f.read().strip()
     print("Fetching Access Token...")
     url = "https://bsp-auth-prod.atoma.cloud/queue/refresh"
 
