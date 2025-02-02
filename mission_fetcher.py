@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import requests
-import json
+from pathlib import Path
 import time
 import asyncio
 from structures.mission import Mission
@@ -18,7 +18,7 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 
 
 def refresh_token():
-    with open("refresh_token.txt", "r", encoding="utf-8") as f:
+    with open(Path("refresh_token.txt"), "r", encoding="utf-8") as f:
         REFRESH_TOKEN = f.read().strip()
     print("Fetching Access Token...")
     url = "https://bsp-auth-prod.atoma.cloud/queue/refresh"
@@ -32,7 +32,7 @@ def refresh_token():
     result = response.json()
     new_token = result["AccessToken"]
     auth_sub = result["Sub"]
-    with open("refresh_token.txt", "w", encoding="utf-8") as f:
+    with open(Path("refresh_token.txt"), "w", encoding="utf-8") as f:
         f.write(result["RefreshToken"])
     return new_token, auth_sub
 
