@@ -45,6 +45,7 @@ async def fetch_mission_routine():
 
 
 async def initialization():
+    print("Initializing backend...")
     global background_task
     # Startup event handler
     background_task = asyncio.create_task(fetch_mission_routine())
@@ -185,4 +186,4 @@ app = Litestar(
 )
 
 if __name__ == "__main__":
-    uvicorn.run("backend:app", host="127.0.0.1", port=13131, loop="uvloop")
+    uvicorn.run("backend:app", host="127.0.0.1", port=13131)

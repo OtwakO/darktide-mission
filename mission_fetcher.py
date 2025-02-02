@@ -8,7 +8,11 @@ from localization.map_name import MAPS
 from localization.mission_type import MISSION_TYPES
 from localization.mission_modifier import MISSION_MODIFIERS
 from report_notifier import internal_notify
-from mission_database import add_mission_to_database, prune_expired_missions
+from mission_database import (
+    add_mission_to_database,
+    prune_expired_missions,
+    initialize_database,
+)
 
 
 def refresh_token():
@@ -115,6 +119,7 @@ def add_fetched_missions_to_db(missions: list[Mission]):
 
 async def update_mission_database():
     print("Starting mission database fetching...")
+    # initialize_database()
     access_token, auth_sub = refresh_token()
     missions_json = fetch_missions(access_token)
     missions = parse_missions(missions_json)
