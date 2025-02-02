@@ -5,3 +5,4 @@ litestar[standard]
 python-dotenv
 apprise
 uvloop
+arrow
