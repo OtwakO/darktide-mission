@@ -1,6 +1,9 @@
 # Introduction:
 
 This is a complete overhaul over my old Darktide Mission Board, now doesn't rely on external mission source. Performance should be a lot faster.
+
+Feel free to report any issues or suggestions.
+
 Website:
 
 -   https://otwako.github.io/darktide-mission
