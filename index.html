@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="retro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darktide Mission</title>
+    <link rel="icon"
+        href="https://cdn.prod.website-files.com/65786ec854ee7451f4f7291a/65786ec854ee7451f4f729ba_favicon-32x32.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.0"></script>
+    <script src="https://unpkg.com/htmx-ext-preload@2.0.1/preload.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://raheelize.github.io/CrispyToastJS/crispy-toast.css">
+    <script src="https://raheelize.github.io/CrispyToastJS/crispy-toast.js"></script>
+    <script defer src="https://medama-analytic.otwako.com/script.js"></script>
+    <meta name="htmx-config" content='{"selfRequestsOnly": false}'>
+</head>
+
+<style>
+    .main-page {
+        height: 100%;
+        width: 100%;
+        overflow-y: hidden;
+    }
+
+    .filter-list {
+        overflow-y: scroll;
+    }
+
+    .filter-search-btn {
+        background-color: rgba(222, 184, 135, 0.5);
+    }
+
+    .filter-search-btn:hover {
+        background-color: rgba(222, 184, 135, 1);
+    }
+
+    .mission-page-container {
+        background-color: rgb(216, 207, 182)
+    }
+
+    .mission-grid {
+        display: grid;
+        max-height: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        overflow-y: scroll;
+    }
+
+    .credits-icon {
+        filter: brightness(0) saturate(100%) invert(75%) sepia(16%) saturate(6966%) hue-rotate(332deg) brightness(101%) contrast(97%);
+    }
+
+    .xp-icon {
+        filter: brightness(0) saturate(100%) invert(25%) sepia(75%) saturate(2339%) hue-rotate(344deg) brightness(88%) contrast(98%);
+    }
+
+    .image-tooltip-container {
+        position: fixed;
+        visibility: hidden;
+        background-color: transparent;
+        opacity: 0;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+        z-index: 1000;
+    }
+
+    .image-tooltip {
+        width: 600px;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .auric {
+        box-shadow: inset 0 0 0 4px #eab308;
+        border-radius: 6.4px;
+    }
+
+    .checkbox {
+
+        &:checked {
+            border-color: #45c51f !important;
+            --chkbg: #45c51f !important;
+        }
+
+        &:indeterminate {
+            border-color: red !important;
+            --chkbg: red !important;
+        }
+    }
+</style>
+
+<body class="h-screen w-screen" hx-ext="preload">
+    <div class="start-page flex w-screen h-screen justify-center items-center gap-2">
+        <!-- <button data-m:click="language=English" class="btn btn-lg filter-search-btn"
+            hx-get="https://darktide-mission.otwako.dev/" hx-swap="outerHTML" hx-target=".start-page"
+            hx-vals='{"entry_point": "https://darktide-mission.otwako.dev/", "language": "en"}'
+            preload="mouseover">English</button>
+        <button data-m:click="language=繁體中文" class="btn btn-lg filter-search-btn"
+            hx-get="https://darktide-mission.otwako.dev/" hx-swap="outerHTML" hx-target=".start-page"
+            hx-vals='{"entry_point": "https://darktide-mission.otwako.dev/", "language": "zh-tw"}'
+            preload="mouseover">繁體中文</button>
+        <button data-m:click="language=简体中文" class="btn btn-lg filter-search-btn"
+            hx-get="https://darktide-mission.otwako.dev/" hx-swap="outerHTML" hx-target=".start-page"
+            hx-vals='{"entry_point": "https://darktide-mission.otwako.dev/", "language": "zh-cn"}'
+            preload="mouseover">简体中文</button> -->
+        <button class="btn btn-lg filter-search-btn btn-error">任務源目前有問題，正在修復中。</button>
+        <button class="btn btn-lg filter-search-btn btn-error">Mission source isn't currently working. Working on the
+            fix.</button>
+        <a data-m:click="refer_to=Gitlab" class="btn btn-lg filter-search-btn fixed top-4 left-4"
+            href="https://otwako-projects.gitlab.io/darktide-mission/" target=”_blank”>備用節點 (載入慢可以試試)</a>
+        <div class="report-issue">
+            <button data-m:click="action=send_report" class="btn btn-lg filter-search-btn bottom-4 right-4 fixed"
+                onclick="report_modal.showModal()"><i class="fa-regular fa-envelope"></i> 問題回報/Report Issue</button>
+            <dialog id="report_modal" class="modal">
+                <div class="modal-box w-3/3 flex flex-col gap-2">
+                    <div" class="flex align-center items-center justify-center flex-col gap-2">
+                        <label class="font-bold">問題回報/Report Issue</label>
+                        <input type="text" id="report_author" placeholder="你的稱呼(選填) | Name(Optional)"
+                            name="report_author" class="input input-bordered w-full" />
+                        <textarea id="report_content" class="textarea textarea-bordered w-full"
+                            placeholder="內容 | Content" name="report_content"></textarea>
+                        <div class="flex gap-2">
+                            <button class="btn btn-lg filter-search-btn"
+                                hx-post="https://darktide-mission.otwako.dev/send_report"
+                                hx-include="#report_author, #report_content" hx-swap="none"
+                                onclick="report_modal.close();CrispyToast.success('已送出', { position: 'bottom-right'})">送出[O]</button>
+                            <button class="btn btn-lg filter-search-btn" onclick="report_modal.close()">取消[X]</button>
+                        </div>
+                </div>
+                <form method="dialog" class="modal-backdrop">
+                    <button>取消[X]</button>
+                </form>
+            </dialog>
+        </div>
+    </div>
+</body>
+
+</html>
