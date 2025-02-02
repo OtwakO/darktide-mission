@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: "darktide-mission-board"
     volumes:
-      -./database:/app/database
+      - ./database:/app/database
     ports:
       - ":80"
     restart: always
