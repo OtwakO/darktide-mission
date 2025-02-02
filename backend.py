@@ -45,7 +45,6 @@ async def fetch_mission_routine():
 
 
 async def initialization():
-    print("Initializing backend...")
     global background_task
     # Startup event handler
     background_task = asyncio.create_task(fetch_mission_routine())

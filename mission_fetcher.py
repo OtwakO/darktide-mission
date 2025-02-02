@@ -14,14 +14,19 @@ from mission_database import (
     initialize_database,
 )
 
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
+
 
 def refresh_token():
     with open("refresh_token.txt", "r", encoding="utf-8") as f:
         REFRESH_TOKEN = f.read()
-
+    print("Fetching Access Token...")
     url = "https://bsp-auth-prod.atoma.cloud/queue/refresh"
 
-    headers = {"authorization": f"Bearer {REFRESH_TOKEN}"}
+    headers = {
+        "authorization": f"Bearer {REFRESH_TOKEN}",
+        "user-agent": USER_AGENT,
+    }
     response = requests.get(url, headers=headers)
 
     result = response.json()
@@ -33,13 +38,18 @@ def refresh_token():
 
 
 def fetch_missions(access_token):
+    print("Fetching Missions...")
     url = "https://bsp-td-prod.atoma.cloud/mission-board"
-    headers = {"authorization": f"Bearer {access_token}"}
+    headers = {
+        "authorization": f"Bearer {access_token}",
+        "user-agent": USER_AGENT,
+    }
     response = requests.get(url, headers=headers)
     return response.json()
 
 
 def parse_missions(missions_json):
+    print("Parsing Missions...")
     missions = []
     for mission in missions_json["missions"]:
         # Check if map code has corresponding map name
@@ -113,13 +123,14 @@ def parse_missions(missions_json):
 
 
 def add_fetched_missions_to_db(missions: list[Mission]):
+    print("Adding fetched missions to database...")
     for mission in missions:
         add_mission_to_database(mission)
 
 
 async def update_mission_database():
     print("Starting mission database fetching...")
-    # initialize_database()
+    initialize_database()
     access_token, auth_sub = refresh_token()
     missions_json = fetch_missions(access_token)
     missions = parse_missions(missions_json)
