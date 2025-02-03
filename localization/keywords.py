@@ -39,16 +39,6 @@ STANDARD_KEYWORDS = {
         "zh-tw": "狙擊手",
         "zh-cn": "狙击手",
     },
-    "Toxic Gas": {
-        "en": "Toxic Gas",
-        "zh-tw": "瘟疫毒氣",
-        "zh-cn": "瘟疫毒气",
-    },
-    "Twin Toxic Gas": {
-        "en": "Twin Toxic Gas",
-        "zh-tw": "雙頭犬瘟疫毒氣",
-        "zh-cn": "双头犬瘟疫毒气",
-    },
     "Power Supply Interruption": {
         "en": "Power Supply Interruption",
         "zh-tw": "斷電",
@@ -64,21 +54,6 @@ STANDARD_KEYWORDS = {
         "zh-tw": "納垢賜福",
         "zh-cn": "纳垢祝福",
     },
-    "Cooldowns Reduced": {
-        "en": "Cooldowns Reduced",
-        "zh-tw": "冷卻時間減少",
-        "zh-cn": "冷却时间减少",
-    },
-    "Scab Enemies Only": {
-        "en": "Scab Enemies Only",
-        "zh-tw": "僅血痂敵人",
-        "zh-cn": "仅血痂敌人",
-    },
-    "Melee": {
-        "en": "Melee",
-        "zh-tw": "近戰敵人",
-        "zh-cn": "近战敌人",
-    },
     "Mutants": {
         "en": "Mutants",
         "zh-tw": "變種人",
@@ -89,6 +64,26 @@ STANDARD_KEYWORDS = {
         "zh-tw": "自爆",
         "zh-cn": "自爆",
     },
+    "Cooldowns Reduced": {
+        "en": "Cooldowns Reduced",
+        "zh-tw": "冷卻時間減少",
+        "zh-cn": "冷却时间减少",
+    },
+    "Melee": {
+        "en": "Melee",
+        "zh-tw": "近戰敵人",
+        "zh-cn": "近战敌人",
+    },
+    "Ranged": {
+        "en": "Ranged",
+        "zh-tw": "遠程敵人",
+        "zh-cn": "远程敌人",
+    },
+    "Scab Enemies Only": {
+        "en": "Scab Enemies Only",
+        "zh-tw": "僅血痂敵人",
+        "zh-cn": "仅血痂敌人",
+    },
     "Extra Grenades": {
         "en": "Extra Grenades",
         "zh-tw": "額外手榴彈",
@@ -98,6 +93,16 @@ STANDARD_KEYWORDS = {
         "en": "Extra Barrels",
         "zh-tw": "額外爆炸桶",
         "zh-cn": "额外爆炸桶",
+    },
+    "Toxic Gas": {
+        "en": "Toxic Gas",
+        "zh-tw": "瘟疫毒氣",
+        "zh-cn": "瘟疫毒气",
+    },
+    "Twin Toxic Gas": {
+        "en": "Twin Toxic Gas",
+        "zh-tw": "雙頭犬瘟疫毒氣",
+        "zh-cn": "双头犬瘟疫毒气",
     },
 }
 
