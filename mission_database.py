@@ -133,14 +133,11 @@ def search_with_keywords(
         and_keywords = neg_group.split("+")
 
         if len(and_keywords) > 1:
-            # AND logic within the group: each keyword must NOT be in any column
-            group_conditions = []
-            for kw in and_keywords:
-                column_conditions = [
-                    f"{col} NOT LIKE '%' || ? || '%' COLLATE NOCASE" for col in columns
-                ]
-                group_conditions.append(" AND ".join(column_conditions))
-            negative_conditions.append(" AND ".join(group_conditions))
+            # Ensure ANY row with ALL specified keywords is excluded
+            group_condition = " AND ".join(
+                [f"({build_column_conditions(kw, False)})" for kw in and_keywords]
+            )
+            negative_conditions.append(f"NOT ({group_condition})")
         else:
             # Regular OR logic for single keywords
             negative_conditions.append(build_column_conditions(neg_group, True))
