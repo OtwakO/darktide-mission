@@ -44,6 +44,11 @@ UI_TRANSLATIONS = {
         "zh-tw": "僅金漩渦",
         "zh-cn": "仅金漩涡",
     },
+    "mission_type_header": {
+        "en": "Mission Type",
+        "zh-tw": "任務類型",
+        "zh-cn": "任务类型",
+    },
     "maps_header": {
         "en": "Maps",
         "zh-tw": "地圖",

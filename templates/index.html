@@ -153,6 +153,16 @@
 
                     <div class="divider m-0 p-0"></div>
 
+                    <p class="font-bold text-center"> {{ ui_translations.mission_type_header[language] }} </p>
+                    {% for mission_type, translation in mission_type_keywords.items() %}
+                    <label class="cursor-pointer label">
+                        <span class="label-text">{{ translation[language] }}</span>
+                        <input type="checkbox" class="checkbox tri-state-checkbox" name="{{ mission_type }}" />
+                    </label>
+                    {% endfor %}
+
+                    <div class="divider m-0 p-0"></div>
+
                     <p class="font-bold text-center"> {{ ui_translations.maps_header[language] }} </p>
                     {% for map_code, translation in maps.items() %}
                     <label class="cursor-pointer label">

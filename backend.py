@@ -16,7 +16,11 @@ from localization.mission_type import MISSION_TYPES
 from localization.map_name import MAPS
 from localization.side_mission import SIDE_MISSIONS
 from localization.web_ui import UI_TRANSLATIONS
-from localization.keywords import STANDARD_KEYWORDS, SPECIAL_EVENT_KEYWORDS
+from localization.keywords import (
+    STANDARD_KEYWORDS,
+    SPECIAL_EVENT_KEYWORDS,
+    MISSION_TYPE_KEYWORDS,
+)
 from mission_database import search_with_keywords
 from mission_fetcher import update_mission_database
 from report_notifier import internal_notify, external_notify
@@ -84,6 +88,7 @@ async def index(request: Request) -> Template:
         "maps": MAPS,
         "standard_keywords": STANDARD_KEYWORDS,
         "special_event_keywords": SPECIAL_EVENT_KEYWORDS,
+        "mission_type_keywords": MISSION_TYPE_KEYWORDS,
         "mission_difficulties": MISSION_DIFFICULTY,
         "mission_types": MISSION_TYPES,
         "side_missions": SIDE_MISSIONS,

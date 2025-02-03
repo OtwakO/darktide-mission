@@ -119,6 +119,54 @@ SPECIAL_EVENT_KEYWORDS = {
     },
 }
 
+MISSION_TYPE_KEYWORDS = {
+    "Assassination": {
+        "en": "Assassination",
+        "zh-tw": "刺殺任務",
+        "zh-cn": "暗杀任务",
+    },
+    "Disruption": {
+        "en": "Disruption",
+        "zh-tw": "破壞任務",
+        "zh-cn": "破坏任务",
+    },
+    "Espionage": {
+        "en": "Espionage",
+        "zh-tw": "諜報任務",
+        "zh-cn": "谍报任务",
+    },
+    "Investigation": {
+        "en": "Investigation",
+        "zh-tw": "調查任務",
+        "zh-cn": "调查任务",
+    },
+    "Operations": {
+        "en": "Operations",
+        "zh-tw": "行動任務",
+        "zh-cn": "行动任务",
+    },
+    "Raid": {
+        "en": "Raid",
+        "zh-tw": "突擊任務",
+        "zh-cn": "突袭任务",
+    },
+    "Repair": {
+        "en": "Repair",
+        "zh-tw": "修理任務",
+        "zh-cn": "修理任务",
+    },
+    "Special": {
+        "en": "Special",
+        "zh-tw": "特殊任務",
+        "zh-cn": "特殊任务",
+    },
+    "Strike": {
+        "en": "Strike",
+        "zh-tw": "打擊任務",
+        "zh-cn": "打击任务",
+    },
+}
+
 if __name__ == "__main__":
-    alphabetical = dict(sorted(STANDARD_KEYWORDS.items()))
+    alphabetical = dict(sorted(MISSION_TYPE_KEYWORDS.items()))
     print(alphabetical)
