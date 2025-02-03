@@ -99,12 +99,12 @@ def search_with_keywords(
     negative_keywords: List[str] | None = None,
 ) -> List[Dict[str, Any]]:
     """
-    Search SQLite database with positive and negative keyword filters.
+    Search SQLite database with advanced keyword filtering.
 
     Args:
         columns: List of column names to search within
-        positive_keywords: List of partial strings that must all be present
-        negative_keywords: List of partial strings that must not be present
+        positive_keywords: List of partial strings that must all be present (AND)
+        negative_keywords: List of partial strings to exclude, supports '+' for AND within a negative keyword group
 
     Returns:
         List of dictionaries, each containing a matching row with column names as keys
@@ -120,16 +120,33 @@ def search_with_keywords(
         return f"NOT ({combined})" if negate else f"({combined})"
 
     # Build the complete WHERE clause
-    if not positive_keywords:
-        positive_keywords = []
-    if not negative_keywords:
-        negative_keywords = []
-    positive_conditions = [build_column_conditions(kw) for kw in positive_keywords]
-    negative_conditions = [
-        build_column_conditions(kw, True) for kw in negative_keywords
-    ]
-    all_conditions = positive_conditions + negative_conditions
+    positive_keywords = positive_keywords or []
+    negative_keywords = negative_keywords or []
 
+    # Positive keywords conditions
+    positive_conditions = [build_column_conditions(kw) for kw in positive_keywords]
+
+    # Negative keywords conditions with support for AND within a group
+    negative_conditions = []
+    for neg_group in negative_keywords:
+        # Split keywords within a group that are connected by '+'
+        and_keywords = neg_group.split("+")
+
+        if len(and_keywords) > 1:
+            # AND logic within the group: each keyword must NOT be in any column
+            group_conditions = []
+            for kw in and_keywords:
+                column_conditions = [
+                    f"{col} NOT LIKE '%' || ? || '%' COLLATE NOCASE" for col in columns
+                ]
+                group_conditions.append(" AND ".join(column_conditions))
+            negative_conditions.append(" AND ".join(group_conditions))
+        else:
+            # Regular OR logic for single keywords
+            negative_conditions.append(build_column_conditions(neg_group, True))
+
+    # Combine all conditions
+    all_conditions = positive_conditions + negative_conditions
     where_clause = " AND ".join(all_conditions) if all_conditions else "1"
 
     # Construct the complete SQL query
@@ -139,19 +156,21 @@ def search_with_keywords(
         WHERE {where_clause}
     """
 
-    # Create parameter list by repeating each keyword for each column
+    # Prepare parameters
     params = []
-    for kw in positive_keywords + negative_keywords:
+    for kw in positive_keywords:
         params.extend([kw] * len(columns))
+
+    for neg_group in negative_keywords:
+        and_keywords = neg_group.split("+")
+        for kw in and_keywords:
+            params.extend([kw] * len(columns))
 
     try:
         with sqlite3.connect(DB_PATH) as conn:
-            conn.row_factory = (
-                sqlite3.Row
-            )  # Enable row factory for dictionary-like access
+            conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
             rows = cursor.execute(query, params).fetchall()
-            # Convert sqlite3.Row objects to regular dictionaries
             missions = [dict(row) for row in rows]
             sorted_missions = sorted(missions, key=lambda x: x["starting_timestamp"])
             return sorted_missions

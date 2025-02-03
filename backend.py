@@ -33,6 +33,7 @@ SEARCH_IN_COLUMNS = [
     "map_name",
     "mission_type",
     "mission_category",
+    "modifier_code",
     "challenge_level",
     "side_mission",
     "keywords",
@@ -116,9 +117,9 @@ async def get_missions(request: Request) -> None:
             auric_maelstrom_only = form_data.get("auric_maelstrom_only", None)
             if auric_maelstrom_only:
                 if auric_maelstrom_only == "on":
-                    positive_keyword.extend(["auric", "Hi-Intensity"])
+                    positive_keyword.extend(["auric", "Hi-Intensity", "flash_mission"])
                 elif auric_maelstrom_only == "off":
-                    negative_keyword.extend(["auric", "Hi-Intensity"])
+                    negative_keyword.extend(["auric+Hi-Intensity+flash_mission"])
 
             #             print(f"""Language: {language}
             # Positive keywords: {positive_keyword}
