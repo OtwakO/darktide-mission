@@ -6,6 +6,7 @@ services:
     container_name: "darktide-mission-board"
     volumes:
       - ./database:/app/database
+      - ./refresh_token.txt:/app/refresh_token.txt
     ports:
       - ":80"
     restart: always
