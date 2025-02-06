@@ -15,7 +15,7 @@ DATABASE_COLUMNS = "(mission_id, map_code, map_name, mission_type, mission_categ
 def initialize_database() -> None:
     with sqlite3.connect(DB_PATH) as conn:
         cursor = conn.cursor()
-        cursor.execute("""
+        cursor.execute(f"""
             CREATE TABLE IF NOT EXISTS missions (
                 mission_id TEXT,
                 map_code TEXT,
@@ -30,7 +30,7 @@ def initialize_database() -> None:
                 starting_timestamp INTEGER,
                 expiring_timestamp INTEGER,
                 keywords TEXT,
-                UNIQUE (mission_id, starting_timestamp)
+                UNIQUE {DATABASE_COLUMNS}
             )
         """)
 
