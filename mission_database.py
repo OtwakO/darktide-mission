@@ -9,13 +9,13 @@ DB_DIR = Path("database")
 DB_DIR.mkdir(exist_ok=True, parents=True)
 DB_PATH = Path(DB_DIR, "missions.db")
 
-DATABASE_COLUMNS = "(mission_id, starting_timestamp)"
+DATABASE_COLUMNS = "(mission_id, map_code, map_name, mission_type, mission_category, challenge_level, side_mission, modifier_code, experience, credits, starting_timestamp, expiring_timestamp, keywords)"
 
 
 def initialize_database() -> None:
     with sqlite3.connect(DB_PATH) as conn:
         cursor = conn.cursor()
-        cursor.execute(f"""
+        cursor.execute("""
             CREATE TABLE IF NOT EXISTS missions (
                 mission_id TEXT,
                 map_code TEXT,
@@ -30,7 +30,7 @@ def initialize_database() -> None:
                 starting_timestamp INTEGER,
                 expiring_timestamp INTEGER,
                 keywords TEXT,
-                UNIQUE {DATABASE_COLUMNS}
+                UNIQUE (mission_id, starting_timestamp)
             )
         """)
 
