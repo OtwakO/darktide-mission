@@ -12,7 +12,9 @@ def get_discord_service():
     discord_url = os.getenv("DISCORD_WEBHOOK_URL")
     discord_webhook_id = discord_url.split("/")[-2]
     discord_webhook_token = discord_url.split("/")[-1]
-    discord_service = f"discord://{discord_webhook_id}/{discord_webhook_token}"
+    discord_service = (
+        f"discord://{discord_webhook_id}/{discord_webhook_token}/?avatar=No"
+    )
     return discord_service
 
 
