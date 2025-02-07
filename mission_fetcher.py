@@ -11,7 +11,6 @@ from report_notifier import internal_notify
 from mission_database import (
     add_mission_to_database,
     prune_expired_missions,
-    initialize_database,
 )
 
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
@@ -89,14 +88,6 @@ def parse_missions(missions_json):
                 modifiers = mission["circumstance"]
                 keywords = ""
             else:
-                # keywords = " ".join(
-                #     [
-                #         value
-                #         for key, value in MISSION_MODIFIERS.get(
-                #             mission["circumstance"]
-                #         ).items()
-                #     ]
-                # )
                 keywords = MISSION_MODIFIERS.get(mission["circumstance"])["en"]
 
             # Calculate experience and credits
@@ -132,14 +123,13 @@ def parse_missions(missions_json):
 
 
 def add_fetched_missions_to_db(missions: list[Mission]):
-    print("Adding fetched missions to database...")
+    print("- Adding fetched missions to database...")
     for mission in missions:
         add_mission_to_database(mission)
 
 
 async def update_mission_database():
     print("Fetching Missions from Fatshark...")
-    initialize_database()
     access_token, auth_sub = refresh_token()
     missions_json = fetch_missions(access_token)
     missions = parse_missions(missions_json)

@@ -13,6 +13,7 @@ DATABASE_COLUMNS = "(mission_id, map_code, map_name, mission_type, mission_categ
 
 
 def initialize_database() -> None:
+    print("Initializing database...")
     with sqlite3.connect(DB_PATH) as conn:
         cursor = conn.cursor()
         cursor.execute(f"""
@@ -34,12 +35,57 @@ def initialize_database() -> None:
             )
         """)
 
+        # Create FTS5 table for full-text search
+        # The search_dummy is for the NOT Unary workaround
+        # Reference: https://sqlite.org/forum/info/9dafa0de932dda34
+        cursor.execute("""
+            CREATE VIRTUAL TABLE IF NOT EXISTS missions_search USING fts5(
+                mission_id,
+                map_code,
+                map_name,
+                mission_type,
+                mission_category,
+                challenge_level,
+                side_mission,
+                modifier_code,
+                experience,
+                credits,
+                starting_timestamp,
+                expiring_timestamp,
+                keywords,
+                base_term
+            )
+        """)
+
         conn.commit()
+
+    create_fts5_sync_trigger()
+
+
+def create_fts5_sync_trigger():
+    try:
+        with sqlite3.connect(DB_PATH) as conn:
+            cursor = conn.cursor()
+
+            # Insert sync trigger to add new entries to mission_search
+            sync_script = """
+                CREATE TRIGGER IF NOT EXISTS missions_search_sync_insert
+                AFTER INSERT ON missions
+                BEGIN
+                    INSERT OR IGNORE INTO missions_search
+                    VALUES (NEW.mission_id, NEW.map_code, NEW.map_name, NEW.mission_type, NEW.mission_category, NEW.challenge_level, NEW.side_mission, NEW.modifier_code, NEW.experience, NEW.credits, NEW.starting_timestamp, NEW.expiring_timestamp, NEW.keywords, "ALL");
+                END;
+            """
+            cursor.execute(sync_script)
+
+            conn.commit()
+    except sqlite3.Error as e:
+        internal_notify(
+            f"Database FTS5 Create Sync Trigger Error: {str(e)}", sender="Database"
+        )
 
 
 def add_mission_to_database(mission: Mission):
-    initialize_database()
-
     query = f"""
         INSERT OR IGNORE INTO missions {DATABASE_COLUMNS}
         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
@@ -78,14 +124,17 @@ Mission: {str(mission)}
 
 
 def prune_expired_missions(current_timestamp: int):
-    query = """
-        DELETE FROM missions WHERE expiring_timestamp <= ?
+    print("- Pruning expired missions...")
+    # Prune expired missions from both tables
+    query = f"""
+        DELETE FROM missions WHERE expiring_timestamp <= {current_timestamp};
+        DELETE FROM missions_search WHERE expiring_timestamp <= {current_timestamp};
     """
 
     try:
         with sqlite3.connect(DB_PATH) as conn:
             cursor = conn.cursor()
-            cursor.execute(query, (current_timestamp,))
+            cursor.executescript(query)
             conn.commit()
     except sqlite3.Error as e:
         internal_notify(
@@ -94,88 +143,80 @@ def prune_expired_missions(current_timestamp: int):
 
 
 def search_with_keywords(
-    columns: List[str],
     positive_keywords: List[str] | None = None,
     negative_keywords: List[str] | None = None,
 ) -> List[Dict[str, Any]]:
+    # starting_time = time.time()
     """
-    Search SQLite database with advanced keyword filtering.
+    Search SQLite database using FTS5 with advanced keyword filtering.
 
     Args:
-        columns: List of column names to search within
         positive_keywords: List of partial strings that must all be present (AND)
         negative_keywords: List of partial strings to exclude, supports '+' for AND within a negative keyword group
 
     Returns:
         List of dictionaries, each containing a matching row with column names as keys
     """
-    # Input validation
-    if not columns:
-        raise ValueError("Table name and at least one column must be provided")
-
-    # Construct LIKE conditions for each keyword and column combination
-    def build_column_conditions(keyword: str, negate: bool = False) -> str:
-        conditions = [f"{col} LIKE '%' || ? || '%' COLLATE NOCASE" for col in columns]
-        combined = " OR ".join(conditions)
-        return f"NOT ({combined})" if negate else f"({combined})"
-
-    # Build the complete WHERE clause
+    # Initialize empty lists if None
     positive_keywords = positive_keywords or []
     negative_keywords = negative_keywords or []
 
-    # Positive keywords conditions
-    positive_conditions = [build_column_conditions(kw) for kw in positive_keywords]
+    # Build FTS5 query string
+    fts_terms = []
 
-    # Negative keywords conditions with support for AND within a group
-    negative_conditions = []
+    # Handle positive keywords - each must be present (AND logic)
+    for keyword in positive_keywords:
+        # Wrap each term in quotes to handle partial matches
+        fts_terms.append(f'"{keyword}"')
+
+    # Handle negative keywords with AND groups
     for neg_group in negative_keywords:
-        # Split keywords within a group that are connected by '+'
         and_keywords = neg_group.split("+")
-
         if len(and_keywords) > 1:
-            # Ensure ANY row with ALL specified keywords is excluded
-            group_condition = " AND ".join(
-                [f"({build_column_conditions(kw, False)})" for kw in and_keywords]
-            )
-            negative_conditions.append(f"NOT ({group_condition})")
+            # For AND groups, create a NOT (term1 AND term2) condition
+            and_terms = [f'"{kw}"' for kw in and_keywords]
+            fts_terms.append(f"NOT ({' AND '.join(and_terms)})")
         else:
-            # Regular OR logic for single keywords
-            negative_conditions.append(build_column_conditions(neg_group, True))
+            # For single negative terms
+            fts_terms.append(f'NOT "{neg_group}"')
 
-    # Combine all conditions
-    all_conditions = positive_conditions + negative_conditions
-    where_clause = " AND ".join(all_conditions) if all_conditions else "1"
+    # Combine all terms with AND
+    fts_query = (
+        " AND ".join(fts_terms).replace("AND NOT", "NOT") if fts_terms else "ALL"
+    )
 
-    # Construct the complete SQL query
-    query = f"""
-        SELECT DISTINCT *
+    # If only negative keywords are provided, include a wildcard search to avoid standalone NOT
+    if not positive_keywords and negative_keywords:
+        fts_query = f'"ALL" {fts_query}'
+
+    query = """
+        SELECT DISTINCT missions.*
         FROM missions
-        WHERE {where_clause}
+        WHERE mission_id IN (
+            SELECT mission_id
+            FROM missions_search 
+            WHERE missions_search MATCH ?
+        )
+        ORDER BY starting_timestamp
     """
-
-    # Prepare parameters
-    params = []
-    for kw in positive_keywords:
-        params.extend([kw] * len(columns))
-
-    for neg_group in negative_keywords:
-        and_keywords = neg_group.split("+")
-        for kw in and_keywords:
-            params.extend([kw] * len(columns))
 
     try:
         with sqlite3.connect(DB_PATH) as conn:
             conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
-            rows = cursor.execute(query, params).fetchall()
-            missions = [dict(row) for row in rows]
-            sorted_missions = sorted(missions, key=lambda x: x["starting_timestamp"])
-            return sorted_missions
+            rows = cursor.execute(query, (fts_query,)).fetchall()
+            # print(f"Search took {time.time() - starting_time} seconds")
+            # starting_time = time.time()
+            # result = [dict(row) for row in rows]
+            # print(f"Result processing took {time.time() - starting_time} seconds")
+            return [dict(row) for row in rows]
     except sqlite3.Error as e:
         internal_notify(f"""Database Mission Search Error: {str(e)}
                         
+FTS Query: {fts_query}
 Positive keywords: {positive_keywords}
 Negative keywords: {negative_keywords}""")
+        return []
 
 
 if __name__ == "__main__":

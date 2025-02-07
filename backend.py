@@ -21,24 +21,13 @@ from localization.keywords import (
     SPECIAL_EVENT_KEYWORDS,
     MISSION_TYPE_KEYWORDS,
 )
-from mission_database import search_with_keywords
+from mission_database import search_with_keywords, initialize_database
 from mission_fetcher import update_mission_database
 from report_notifier import internal_notify, external_notify
 
 cors_config = CORSConfig(allow_origins=["*"])
 ASSETS_DIR = Path("assets")
 EXCLUDED_KEYWORDS = ["language", "entry_point", "auric_maelstrom_only"]
-SEARCH_IN_COLUMNS = [
-    "map_code",
-    "map_name",
-    "mission_type",
-    "mission_category",
-    "modifier_code",
-    "challenge_level",
-    "side_mission",
-    "keywords",
-]
-
 background_task = None
 
 
@@ -52,6 +41,7 @@ async def fetch_mission_routine():
 async def initialization():
     global background_task
     # Startup event handler
+    initialize_database()
     background_task = asyncio.create_task(fetch_mission_routine())
 
 
@@ -126,7 +116,6 @@ async def get_missions(request: Request) -> None:
             # Negative keywords: {negative_keyword}
             # Auric Maelstrom Only: {auric_maelstrom_only}""")
             missions = search_with_keywords(
-                SEARCH_IN_COLUMNS,
                 positive_keywords=positive_keyword,
                 negative_keywords=negative_keyword,
             )
