@@ -146,6 +146,26 @@ MISSION_MODIFIERS = {
         "zh-tw": "#突擊兵部隊 #近戰敵人 #僅血痂敵人",
         "zh-cn": "#突击兵部队 #近战敌人 #仅血痂敌人",
     },
+    "flash_mission_08": {
+        "en": "#Shock Troop #Mutants #Hunting Grounds #Cooldowns Reduced",
+        "zh-tw": "#突擊兵部隊 #變種人 #狩獵場 #冷卻時間減少",
+        "zh-cn": "#突击兵部队 #变种人 #狩猎场 #冷却时间减少",
+    },
+    "flash_mission_09": {
+        "en": "#Ventilation Purge #Ranged #Scab Enemies Only #Cooldowns Reduced",
+        "zh-tw": "#清掃通風 #遠程敵人 #僅血痂敵人 #冷卻時間減少",
+        "zh-cn": "#清扫通风 #远程敌人 #仅血痂敌人 #冷却时间减少",
+    },
+    "flash_mission_10": {
+        "en": "#Nurgle-Blessed #Monstrous #Shock Troop #Scab Enemies Only #Extra Grenades",
+        "zh-tw": "#納垢賜福 #怪物 #突擊兵部隊 #僅血痂敵人 #額外手榴彈",
+        "zh-cn": "#纳垢祝福 #怪物 #突击兵部队 #仅血痂敌人 #额外手榴弹",
+    },
+    "flash_mission_11": {
+        "en": "#Shock Troop #Poxbursters #Sniper #Extra Grenades #Extra Barrels",
+        "zh-tw": "#突擊兵部隊 #自爆 #狙擊手 #額外手榴彈 #較多爆炸桶",
+        "zh-cn": "#突击兵部队 #自爆 #狙击手 #额外手榴弹 #较多爆炸桶",
+    },
     "flash_mission_12": {
         "en": "#Mutants #Poxbursters #Hunting Grounds #Extra Grenades #Extra Barrels",
         "zh-tw": "#變種人 #自爆 #狩獵場 #額外手榴彈 #額外爆炸桶",

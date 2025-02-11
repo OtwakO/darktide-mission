@@ -1,33 +1,37 @@
 # -*- coding: utf-8 -*-
 import asyncio
-import uvicorn
-import arrow
 from pathlib import Path
+
+import arrow
+import msgspec
+import uvicorn
 from litestar import Litestar, Request, get, post
+from litestar.config.compression import CompressionConfig
 from litestar.config.cors import CORSConfig
 from litestar.contrib.jinja import JinjaTemplateEngine
 from litestar.response import Template
-from litestar.template.config import TemplateConfig
-from litestar.config.compression import CompressionConfig
 from litestar.static_files import create_static_files_router
-from localization.mission_modifier import MISSION_MODIFIERS
-from localization.mission_difficulty import MISSION_DIFFICULTY
-from localization.mission_type import MISSION_TYPES
+from litestar.template.config import TemplateConfig
+
+from localization.keywords import (
+    MISSION_TYPE_KEYWORDS,
+    SPECIAL_EVENT_KEYWORDS,
+    STANDARD_KEYWORDS,
+)
 from localization.map_name import MAPS
+from localization.mission_difficulty import MISSION_DIFFICULTY
+from localization.mission_modifier import MISSION_MODIFIERS
+from localization.mission_type import MISSION_TYPES
 from localization.side_mission import SIDE_MISSIONS
 from localization.web_ui import UI_TRANSLATIONS
-from localization.keywords import (
-    STANDARD_KEYWORDS,
-    SPECIAL_EVENT_KEYWORDS,
-    MISSION_TYPE_KEYWORDS,
-)
-from mission_database import search_with_keywords, initialize_database
+from mission_database import initialize_database, search_with_keywords
 from mission_fetcher import update_mission_database
-from report_notifier import internal_notify, external_notify
+from report_notifier import external_notify, internal_notify
 
 cors_config = CORSConfig(allow_origins=["*"])
 ASSETS_DIR = Path("assets")
 EXCLUDED_KEYWORDS = ["language", "entry_point", "auric_maelstrom_only"]
+SAVE_RAW_JSON_PATH = Path("database", "raw_missions.json")
 background_task = None
 
 
@@ -86,6 +90,19 @@ async def index(request: Request) -> Template:
         "ui_translations": UI_TRANSLATIONS,
     }
     return Template("index.html", context=context)
+
+
+@get("/raw_missions")
+async def raw_missions(request: Request) -> dict:
+    try:
+        with open(SAVE_RAW_JSON_PATH, "rb") as f:
+            raw_missions_json = msgspec.json.decode(f.read())
+    except FileNotFoundError:
+        raw_missions_json = {"missions": []}
+    except msgspec.DecodeError:
+        raw_missions_json = {"missions": []}
+
+    return raw_missions_json
 
 
 @post("/get_missions")
@@ -169,6 +186,7 @@ app = Litestar(
     [
         index,
         get_missions,
+        raw_missions,
         create_static_files_router(path="/assets", directories=[ASSETS_DIR]),
         send_report,
     ],

@@ -6,3 +6,4 @@ python-dotenv
 apprise
 uvloop
 arrow
+msgspec
