@@ -117,11 +117,11 @@ SPECIAL_EVENT_KEYWORDS = {
     #     "zh-tw": "突變驚懼",
     #     "zh-cn": "变异惧妖",
     # },
-    "Brute Conscripts": {
-        "en": "Brute Conscripts",
-        "zh-tw": "野蠻人動員兵",
-        "zh-cn": "蛮子动员兵",
-    },
+    # "Brute Conscripts": {
+    #     "en": "Brute Conscripts",
+    #     "zh-tw": "野蠻人動員兵",
+    #     "zh-cn": "蛮子动员兵",
+    # },
 }
 
 MISSION_TYPE_KEYWORDS = {
