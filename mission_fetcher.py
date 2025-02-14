@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import asyncio
+import json
 import time
 from pathlib import Path
 
@@ -70,6 +71,11 @@ def save_raw_mission_json(mission_json):
                 for mission in all_missions
                 if (int(mission["start"]) + (86400 * 1000) > current_time)
             ]
+            # Deduplicate missions: Reference https://stackoverflow.com/questions/9427163/remove-duplicate-dict-in-list-in-python
+            unique_missions = {
+                json.dumps(mission, sort_keys=True) for mission in all_active_missions
+            }
+            all_active_missions = [json.loads(mission) for mission in unique_missions]
         else:
             all_active_missions = []
         return all_active_missions
@@ -181,4 +187,5 @@ async def update_mission_database():
 
 
 if __name__ == "__main__":
-    asyncio.run(update_mission_database())
+    # asyncio.run(update_mission_database())
+    save_raw_mission_json({"missions": []})
