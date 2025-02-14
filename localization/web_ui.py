@@ -44,6 +44,11 @@ UI_TRANSLATIONS = {
         "zh-tw": "僅金漩渦",
         "zh-cn": "仅金漩涡",
     },
+    "maelstrom_translation": {
+        "en": "Maelstrom",
+        "zh-tw": "大漩渦",
+        "zh-cn": "大漩涡",
+    },
     "mission_type_header": {
         "en": "Mission Type",
         "zh-tw": "任務類型",
