@@ -9,6 +9,21 @@ UI_TRANSLATIONS = {
         "zh-tw": "難度",
         "zh-cn": "难度",
     },
+    "side_mission_header": {
+        "en": "Side Missions",
+        "zh-tw": "次要任務",
+        "zh-cn": "次要任务",
+    },
+    "is_auric_header": {
+        "en": "Auric Missions",
+        "zh-tw": "金級任務",
+        "zh-cn": "金级任务",
+    },
+    "is_maelstrom_header": {
+        "en": "Maelstrom Missions",
+        "zh-tw": "漩渦任務",
+        "zh-cn": "漩涡任务",
+    },
     "filter_header": {
         "en": "Modifiers",
         "zh-tw": "詞綴",
@@ -35,14 +50,14 @@ UI_TRANSLATIONS = {
         "zh-cn": "已复制到剪贴簿!",
     },
     "auric_translation": {
-        "en": "Auric Only",
-        "zh-tw": "僅金級任務",
-        "zh-cn": "仅金级任务",
+        "en": "Auric",
+        "zh-tw": "金級任務",
+        "zh-cn": "金级任务",
     },
     "auric_maelstrom_translation": {
-        "en": "Auric Maelstrom Only",
-        "zh-tw": "僅金漩渦",
-        "zh-cn": "仅金漩涡",
+        "en": "Auric Maelstrom",
+        "zh-tw": "金漩渦",
+        "zh-cn": "金漩涡",
     },
     "maelstrom_translation": {
         "en": "Maelstrom",

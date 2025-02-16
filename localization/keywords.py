@@ -14,11 +14,11 @@ STANDARD_KEYWORDS = {
         "zh-tw": "高強度",
         "zh-cn": "高强度",
     },
-    "Engagement Zone": {
-        "en": "Engagement Zone",
-        "zh-tw": "交戰區",
-        "zh-cn": "交战区",
-    },
+    # "Engagement Zone": {
+    #     "en": "Engagement Zone",
+    #     "zh-tw": "交戰區",
+    #     "zh-cn": "交战区",
+    # },
     "Shock Troop": {
         "en": "Shock Troop",
         "zh-tw": "突擊兵部隊",
@@ -32,7 +32,7 @@ STANDARD_KEYWORDS = {
     "Ventilation Purge": {
         "en": "Ventilation Purge",
         "zh-tw": "清掃通風",
-        "zh-cn": "清扫通风",
+        "zh-cn": "通风净化",
     },
     "Sniper": {
         "en": "Sniper",
@@ -41,13 +41,13 @@ STANDARD_KEYWORDS = {
     },
     "Power Supply Interruption": {
         "en": "Power Supply Interruption",
-        "zh-tw": "斷電",
-        "zh-cn": "断电",
+        "zh-tw": "供電中斷",
+        "zh-cn": "供电中断",
     },
     "Monstrous": {
         "en": "Monstrous",
-        "zh-tw": "怪物",
-        "zh-cn": "怪物",
+        "zh-tw": "怪物專家",
+        "zh-cn": "怪物专家",
     },
     "Nurgle-Blessed": {
         "en": "Nurgle-Blessed",
@@ -101,8 +101,8 @@ STANDARD_KEYWORDS = {
     },
     "Twin Toxic Gas": {
         "en": "Twin Toxic Gas",
-        "zh-tw": "雙頭犬瘟疫毒氣",
-        "zh-cn": "双头犬瘟疫毒气",
+        "zh-tw": "雙頭犬瘟疫毒氣 (雙子)",
+        "zh-cn": "双头犬瘟疫毒气 (双子)",
     },
 }
 

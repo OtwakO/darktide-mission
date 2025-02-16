@@ -1,9 +1,9 @@
 import sqlite3
-from typing import List, Dict, Any
 from pathlib import Path
+from typing import Any, Dict, List
 
-from structures.mission import Mission
 from report_notifier import internal_notify
+from structures.mission import Mission
 
 DB_DIR = Path("database")
 DB_DIR.mkdir(exist_ok=True, parents=True)
@@ -36,7 +36,7 @@ def initialize_database() -> None:
         """)
 
         # Create FTS5 table for full-text search
-        # The search_dummy is for the NOT Unary workaround
+        # The base_term column is for the NOT Unary workaround
         # Reference: https://sqlite.org/forum/info/9dafa0de932dda34
         cursor.execute("""
             CREATE VIRTUAL TABLE IF NOT EXISTS missions_search USING fts5(

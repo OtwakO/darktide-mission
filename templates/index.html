@@ -109,6 +109,7 @@
 
                     <div class="divider m-0 p-0"></div>
 
+                    <!-- Difficulty filter -->
                     <p class="font-bold text-center"> {{ ui_translations.difficulty_header[language] }} </p>
                     {% for difficulty_code, translation in mission_difficulties.items() %}
                     <label class="cursor-pointer label">
@@ -116,6 +117,11 @@
                         <input type="checkbox" class="checkbox tri-state-checkbox" name="{{ difficulty_code }}" />
                     </label>
                     {% endfor %}
+
+                    <div class="divider m-0 p-0"></div>
+
+                    <!-- Side Mission filter -->
+                    <p class="font-bold text-center"> {{ ui_translations.side_mission_header[language] }} </p>
                     {% for side_mission_code, translation in side_missions.items() %}
                     <label class="cursor-pointer label">
                         <span class="label-text">{{ translation[language] }}</span>
@@ -125,6 +131,7 @@
 
                     <div class="divider m-0 p-0"></div>
 
+                    <!-- Special event filter (if exists) -->
                     {% if special_event_keywords %}
                     <p class="font-bold text-center"> {{ ui_translations.event_filter_header[language] }} </p>
                     {% for keyword, translation in special_event_keywords.items() %}
@@ -136,19 +143,30 @@
                     <div class="divider m-0 p-0"></div>
                     {% endif %}
 
-                    <p class="font-bold text-center"> {{ ui_translations.filter_header[language] }} </p>
+                    <!-- Auric filter -->
+                    <p class="font-bold text-center"> {{ ui_translations.is_auric_header[language] }} </p>
                     <label class="cursor-pointer label">
                         <span class="label-text">{{ ui_translations.auric_translation[language] }}</span>
                         <input type="checkbox" class="checkbox tri-state-checkbox" name="auric" />
                     </label>
-                    <label class="cursor-pointer label">
-                        <span class="label-text">{{ ui_translations.auric_maelstrom_translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox" name="auric_maelstrom_only" />
-                    </label>
+
+                    <div class="divider m-0 p-0"></div>
+
+                    <!-- Maelstrom filter -->
+                    <p class="font-bold text-center"> {{ ui_translations.is_maelstrom_header[language] }} </p>
                     <label class="cursor-pointer label">
                         <span class="label-text">{{ ui_translations.maelstrom_translation[language] }}</span>
                         <input type="checkbox" class="checkbox tri-state-checkbox" name="flash_mission" />
                     </label>
+                    <label class="cursor-pointer label">
+                        <span class="label-text">{{ ui_translations.auric_maelstrom_translation[language] }}</span>
+                        <input type="checkbox" class="checkbox tri-state-checkbox" name="auric_maelstrom" />
+                    </label>
+
+                    <div class="divider m-0 p-0"></div>
+
+                    <!-- Modifiers filter -->
+                    <p class="font-bold text-center"> {{ ui_translations.filter_header[language] }} </p>
                     {% for keyword, translation in standard_keywords.items() %}
                     <label class="cursor-pointer label">
                         <span class="label-text">{{ translation[language] }}</span>
@@ -216,7 +234,9 @@
         cardDivs.forEach(div => {
             div.addEventListener('mouseenter', () => {
                 const imageSrc = div.getAttribute('data-image'); // Get the image source
-                tooltip.src = `{{ server_entry_point }}/assets/maps/${imageSrc}`; // Update the tooltip image source
+                if (imageSrc) {
+                    tooltip.src = `{{ server_entry_point }}/assets/maps/${imageSrc}`; // Update the tooltip image source
+                }
                 // console.log(tooltip.src);
             });
         });

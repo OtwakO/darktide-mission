@@ -30,7 +30,7 @@ from report_notifier import external_notify, internal_notify
 
 cors_config = CORSConfig(allow_origins=["*"])
 ASSETS_DIR = Path("assets")
-EXCLUDED_KEYWORDS = ["language", "entry_point", "auric_maelstrom_only"]
+EXCLUDED_KEYWORDS = ["language", "entry_point", "auric_maelstrom"]
 SAVE_RAW_JSON_PATH = Path("database", "raw_missions.json")
 background_task = None
 
@@ -121,17 +121,17 @@ async def get_missions(request: Request) -> None:
                 for key, value in form_data.items()
                 if value == "off" and key not in EXCLUDED_KEYWORDS
             ]
-            auric_maelstrom_only = form_data.get("auric_maelstrom_only", None)
-            if auric_maelstrom_only:
-                if auric_maelstrom_only == "on":
+            auric_maelstrom = form_data.get("auric_maelstrom", None)
+            if auric_maelstrom:
+                if auric_maelstrom == "on":
                     positive_keyword.extend(["auric", "Hi-Intensity", "flash_mission"])
-                elif auric_maelstrom_only == "off":
+                elif auric_maelstrom == "off":
                     negative_keyword.extend(["auric+Hi-Intensity+flash_mission"])
 
             #             print(f"""Language: {language}
             # Positive keywords: {positive_keyword}
             # Negative keywords: {negative_keyword}
-            # Auric Maelstrom Only: {auric_maelstrom_only}""")
+            # Auric Maelstrom: {auric_maelstrom}""")
             missions = search_with_keywords(
                 positive_keywords=positive_keyword,
                 negative_keywords=negative_keyword,

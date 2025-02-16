@@ -50,7 +50,7 @@ MAPS = {
     "fm_resurgence": {
         "en": "Enclavum Baross",
         "zh-tw": "巴羅斯飛地",
-        "zh-cn": "巴罗斯飞地",
+        "zh-cn": "巴洛斯飞地",
         "image": "Enclavum_Baross.png",
     },
     "lm_scavenge": {
@@ -115,8 +115,8 @@ MAPS = {
     },
     "km_enforcer_twins": {
         "en": "The Orthus Offensive",
-        "zh-tw": "雙頭犬攻勢",
-        "zh-cn": "奥都斯攻势",
+        "zh-tw": "雙頭犬攻勢 (雙子)",
+        "zh-cn": "奥都斯攻势 (双子)",
         "image": "The_Orthus_Offensive.png",
     },
     "hm_cartel": {

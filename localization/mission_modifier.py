@@ -6,14 +6,14 @@ MISSION_MODIFIERS = {
         "zh-cn": "#普通",
     },
     "less_resistance_01": {
-        "en": "#Low-Intensity #Engagement Zone",
-        "zh-tw": "#低強度 #交戰區",
-        "zh-cn": "#低强度 #交战区",
+        "en": "#Low-Intensity",
+        "zh-tw": "#低強度",
+        "zh-cn": "#低强度",
     },
     "more_resistance_01": {
-        "en": "#Hi-Intensity #Engagement Zone",
-        "zh-tw": "#高強度 #交戰區",
-        "zh-cn": "#高强度 #交战区",
+        "en": "#Hi-Intensity",
+        "zh-tw": "#高強度",
+        "zh-cn": "#高强度",
     },
     # Shock Troop Modifiers
     "waves_of_specials_01": {
@@ -51,27 +51,27 @@ MISSION_MODIFIERS = {
     "ventilation_purge_01": {
         "en": "#Ventilation Purge",
         "zh-tw": "#清掃通風",
-        "zh-cn": "#清扫通风",
+        "zh-cn": "#通风净化",
     },
     "ventilation_purge_less_resistance_01": {
         "en": "#Low-Intensity #Ventilation Purge",
         "zh-tw": "#低強度 #清掃通風",
-        "zh-cn": "#低强度 #清扫通风",
+        "zh-cn": "#低强度 #通风净化",
     },
     "ventilation_purge_more_resistance_01": {
         "en": "#Hi-Intensity #Ventilation Purge",
         "zh-tw": "#高強度 #清掃通風",
-        "zh-cn": "#高强度 #清扫通风",
+        "zh-cn": "#高强度 #通风净化",
     },
     "ventilation_purge_with_snipers_less_resistance_01": {
         "en": "#Low-Intensity #Ventilation Purge #Sniper",
         "zh-tw": "#低強度 #清掃通風 #狙擊手",
-        "zh-cn": "#低强度 #清扫通风 #狙击手",
+        "zh-cn": "#低强度 #通风净化 #狙击手",
     },
     "ventilation_purge_with_snipers_more_resistance_01": {
         "en": "#Hi-Intensity #Ventilation Purge #Sniper",
         "zh-tw": "#高強度 #清掃通風 #狙擊手",
-        "zh-cn": "#高强度 #清扫通风 #狙击手",
+        "zh-cn": "#高强度 #通风净化 #狙击手",
     },
     # Toxic Gas Modifiers
     "toxic_gas_01": {
@@ -91,30 +91,30 @@ MISSION_MODIFIERS = {
     },
     "toxic_gas_twins_01": {
         "en": "#Twin Toxic Gas",
-        "zh-tw": "#雙頭犬瘟疫毒氣",
-        "zh-cn": "#双头犬瘟疫毒气",
+        "zh-tw": "#雙頭犬瘟疫毒氣 (雙子)",
+        "zh-cn": "#双头犬瘟疫毒气 (双子)",
     },
     # Power Supply Interruption Modifiers
     "darkness_01": {
         "en": "#Power Supply Interruption",
-        "zh-tw": "#斷電",
-        "zh-cn": "#断电",
+        "zh-tw": "#供電中斷",
+        "zh-cn": "#供电中断",
     },
     "darkness_more_resistance_01": {
         "en": "#Hi-Intensity #Power Supply Interruption",
-        "zh-tw": "#高強度 #斷電",
-        "zh-cn": "#高强度 #断电",
+        "zh-tw": "#高強度 #供電中斷",
+        "zh-cn": "#高强度 #供电中断",
     },
     "darkness_less_resistance_01": {
         "en": "#Low-Intensity #Power Supply Interruption",
-        "zh-tw": "#低強度 #斷電",
-        "zh-cn": "#低强度 #断电",
+        "zh-tw": "#低強度 #供電中斷",
+        "zh-cn": "#低强度 #供电中断",
     },
     # Flash Missions
     "flash_mission_01": {
         "en": "#Monstrous #Shock Troop",
-        "zh-tw": "#怪物 #突擊兵部隊",
-        "zh-cn": "#怪物 #突击兵部队",
+        "zh-tw": "#怪物專家 #突擊兵部隊",
+        "zh-cn": "#怪物专家 #突击兵部队",
     },
     "flash_mission_02": {
         "en": "#Nurgle-Blessed #Shock Troop",
@@ -133,13 +133,13 @@ MISSION_MODIFIERS = {
     },
     "flash_mission_05": {
         "en": "#Monstrous #Shock Troop #Power Supply Interruption",
-        "zh-tw": "#怪物 #突擊兵部隊 #斷電",
-        "zh-cn": "#怪物 #突击兵部队 #断电",
+        "zh-tw": "#怪物專家 #突擊兵部隊 #供電中斷",
+        "zh-cn": "#怪物专家 #突击兵部队 #供电中断",
     },
     "flash_mission_06": {
         "en": "#Shock Troop #Ventilation Purge #Sniper",
         "zh-tw": "#突擊兵部隊 #清掃通風 #狙擊手",
-        "zh-cn": "#突击兵部队 #清扫通风 #狙击手",
+        "zh-cn": "#突击兵部队 #通风净化 #狙击手",
     },
     "flash_mission_07": {
         "en": "#Shock Troop #Melee #Scab Enemies Only",
@@ -154,12 +154,12 @@ MISSION_MODIFIERS = {
     "flash_mission_09": {
         "en": "#Ventilation Purge #Ranged #Scab Enemies Only #Cooldowns Reduced",
         "zh-tw": "#清掃通風 #遠程敵人 #僅血痂敵人 #冷卻時間減少",
-        "zh-cn": "#清扫通风 #远程敌人 #仅血痂敌人 #冷却时间减少",
+        "zh-cn": "#通风净化 #远程敌人 #仅血痂敌人 #冷却时间减少",
     },
     "flash_mission_10": {
         "en": "#Nurgle-Blessed #Monstrous #Shock Troop #Scab Enemies Only #Extra Grenades",
-        "zh-tw": "#納垢賜福 #怪物 #突擊兵部隊 #僅血痂敵人 #額外手榴彈",
-        "zh-cn": "#纳垢祝福 #怪物 #突击兵部队 #仅血痂敌人 #额外手榴弹",
+        "zh-tw": "#納垢賜福 #怪物專家 #突擊兵部隊 #僅血痂敵人 #額外手榴彈",
+        "zh-cn": "#纳垢祝福 #怪物专家 #突击兵部队 #仅血痂敌人 #额外手榴弹",
     },
     "flash_mission_11": {
         "en": "#Shock Troop #Poxbursters #Sniper #Extra Grenades #Extra Barrels",
@@ -183,14 +183,14 @@ MISSION_MODIFIERS = {
     },
     "flash_mission_18": {
         "en": "#Monstrous #Shock Troop #Sniper #Toxic Gas",
-        "zh-tw": "#怪物 #突擊兵部隊 #狙擊手 #瘟疫毒氣",
-        "zh-cn": "#怪物 #突击兵部队 #狙击手 #瘟疫毒气",
+        "zh-tw": "#怪物專家 #突擊兵部隊 #狙擊手 #瘟疫毒氣",
+        "zh-cn": "#怪物专家 #突击兵部队 #狙击手 #瘟疫毒气",
     },
     # High Flash Missions
     "high_flash_mission_01": {
         "en": "#Hi-Intensity #Monstrous #Shock Troop",
-        "zh-tw": "#高強度 #怪物 #突擊兵部隊",
-        "zh-cn": "#高强度 #怪物 #突击兵部队",
+        "zh-tw": "#高強度 #怪物專家 #突擊兵部隊",
+        "zh-cn": "#高强度 #怪物专家 #突击兵部队",
     },
     "high_flash_mission_02": {
         "en": "#Hi-Intensity #Nurgle-Blessed #Shock Troop",
@@ -209,13 +209,13 @@ MISSION_MODIFIERS = {
     },
     "high_flash_mission_05": {
         "en": "#Hi-Intensity #Monstrous #Shock Troop #Power Supply Interruption",
-        "zh-tw": "#高強度 #怪物 #突擊兵部隊 #斷電",
-        "zh-cn": "#高强度 #怪物 #突击兵部队 #断电",
+        "zh-tw": "#高強度 #怪物專家 #突擊兵部隊 #供電中斷",
+        "zh-cn": "#高强度 #怪物专家 #突击兵部队 #供电中断",
     },
     "high_flash_mission_06": {
         "en": "#Hi-Intensity #Shock Troop #Sniper #Ventilation Purge",
         "zh-tw": "#高強度 #突擊兵部隊 #狙擊手 #清掃通風",
-        "zh-cn": "#高强度 #突击兵部队 #狙击手 #清扫通风",
+        "zh-cn": "#高强度 #突击兵部队 #狙击手 #通风净化",
     },
     "high_flash_mission_07": {
         "en": "#Hi-Intensity #Shock Troop #Melee #Scab Enemies Only",
@@ -230,12 +230,12 @@ MISSION_MODIFIERS = {
     "high_flash_mission_09": {
         "en": "#Hi-Intensity #Ventilation Purge #Ranged #Scab Enemies Only #Cooldowns Reduced",
         "zh-tw": "#高強度 #清掃通風 #遠程敵人 #僅血痂敵人 #冷卻時間減少",
-        "zh-cn": "#高强度 #清扫通风 #远程敌人 #仅血痂敌人 #冷却时间减少",
+        "zh-cn": "#高强度 #通风净化 #远程敌人 #仅血痂敌人 #冷却时间减少",
     },
     "high_flash_mission_10": {
         "en": "#Hi-Intensity #Nurgle-Blessed #Monstrous #Shock Troop #Scab Enemies Only #Extra Grenades",
-        "zh-tw": "#高強度 #納垢賜福 #怪物 #突擊兵部隊 #僅血痂敵人 #額外手榴彈",
-        "zh-cn": "#高强度 #纳垢祝福 #怪物 #突击兵部队 #仅血痂敌人 #额外手榴弹",
+        "zh-tw": "#高強度 #納垢賜福 #怪物專家 #突擊兵部隊 #僅血痂敵人 #額外手榴彈",
+        "zh-cn": "#高强度 #纳垢祝福 #怪物专家 #突击兵部队 #仅血痂敌人 #额外手榴弹",
     },
     "high_flash_mission_11": {
         "en": "#Hi-Intensity #Shock Troop #Poxbursters #Sniper #Extra Grenades #Extra Barrels",
@@ -259,8 +259,8 @@ MISSION_MODIFIERS = {
     },
     "high_flash_mission_18": {
         "en": "#Hi-Intensity #Monstrous #Shock Troop #Sniper #Toxic Gas",
-        "zh-tw": "#高強度 #怪物 #突擊兵部隊 #狙擊手 #瘟疫毒氣",
-        "zh-cn": "#高强度 #怪物 #突击兵部队 #狙击手 #瘟疫毒气",
+        "zh-tw": "#高強度 #怪物專家 #突擊兵部隊 #狙擊手 #瘟疫毒氣",
+        "zh-cn": "#高强度 #怪物专家 #突击兵部队 #狙击手 #瘟疫毒气",
     },
     # Special Event Modifiers - Moebian 21st
     "moebian_21st_01": {
@@ -274,14 +274,14 @@ MISSION_MODIFIERS = {
         "zh-cn": "#被感染的莫比亚21团士兵 #高强度 #狩猎场",
     },
     "moebian_21st_03": {
-        "en": "#Infected Moebian 21st #Hi-Intensity #Engagement Zone",
-        "zh-tw": "#染疫的莫比亞第21師 #高強度 #交戰區",
-        "zh-cn": "#被感染的莫比亚21团士兵 #高强度 #交战区",
+        "en": "#Infected Moebian 21st #Hi-Intensity",
+        "zh-tw": "#染疫的莫比亞第21師 #高強度",
+        "zh-cn": "#被感染的莫比亚21团士兵 #高强度",
     },
     "moebian_21st_04": {
         "en": "#Infected Moebian 21st #Hi-Intensity #Power Supply Interruption",
-        "zh-tw": "#染疫的莫比亞第21師 #高強度 #斷電",
-        "zh-cn": "#被感染的莫比亚21团士兵 #高强度 #断电",
+        "zh-tw": "#染疫的莫比亞第21師 #高強度 #供電中斷",
+        "zh-cn": "#被感染的莫比亚21团士兵 #高强度 #供电中断",
     },
     "moebian_21st_05": {
         "en": "#Infected Moebian 21st #Hi-Intensity #Toxic Gas",
@@ -291,7 +291,7 @@ MISSION_MODIFIERS = {
     "moebian_21st_06": {
         "en": "#Infected Moebian 21st #Hi-Intensity #Sniper #Ventilation Purge",
         "zh-tw": "#染疫的莫比亞第21師 #高強度 #狙擊手 #清掃通風",
-        "zh-cn": "#被感染的莫比亚21团士兵 #高强度 #狙击手 #清扫通风",
+        "zh-cn": "#被感染的莫比亚21团士兵 #高强度 #狙击手 #通风净化",
     },
     "moebian_21st_07": {
         "en": "#Infected Moebian 21st #Hi-Intensity #Shock Troop",
@@ -316,8 +316,8 @@ MISSION_MODIFIERS = {
     },
     "nurgle_explosion_04": {
         "en": "#Mutated Horrors #Hi-Intensity #Power Supply Interruption",
-        "zh-tw": "#突變驚懼 #高強度 #斷電",
-        "zh-cn": "#突變惧妖 #高强度 #断电",
+        "zh-tw": "#突變驚懼 #高強度 #供電中斷",
+        "zh-cn": "#突變惧妖 #高强度 #供电中断",
     },
     "nurgle_explosion_05": {
         "en": "#Mutated Horrors #Hi-Intensity #Toxic Gas",
@@ -327,7 +327,7 @@ MISSION_MODIFIERS = {
     "nurgle_explosion_06": {
         "en": "#Mutated Horrors #Hi-Intensity #Ventilation Purge",
         "zh-tw": "#突變驚懼 #高強度 #清掃通風",
-        "zh-cn": "#突變惧妖 #高强度 #清扫通风",
+        "zh-cn": "#突變惧妖 #高强度 #通风净化",
     },
     "nurgle_explosion_07": {
         "en": "#Mutated Horrors #Hi-Intensity #Shock Troop",
@@ -352,8 +352,8 @@ MISSION_MODIFIERS = {
     },
     "abhuman_04": {
         "en": "#Brute Conscripts #Hi-Intensity #Power Supply Interruption",
-        "zh-tw": "#野蠻人動員兵 #高強度 #斷電",
-        "zh-cn": "#蛮子动员兵 #高强度 #断电",
+        "zh-tw": "#野蠻人動員兵 #高強度 #供電中斷",
+        "zh-cn": "#蛮子动员兵 #高强度 #供电中断",
     },
     "abhuman_05": {
         "en": "#Brute Conscripts #Hi-Intensity #Toxic Gas",
@@ -363,7 +363,7 @@ MISSION_MODIFIERS = {
     "abhuman_06": {
         "en": "#Brute Conscripts #Hi-Intensity #Ventilation Purge",
         "zh-tw": "#野蠻人動員兵 #高強度 #清掃通風",
-        "zh-cn": "#蛮子动员兵 #高强度 #清扫通风",
+        "zh-cn": "#蛮子动员兵 #高强度 #通风净化",
     },
     "abhuman_07": {
         "en": "#Brute Conscripts #Hi-Intensity #Shock Troop",
