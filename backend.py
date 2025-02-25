@@ -12,7 +12,6 @@ from litestar.contrib.jinja import JinjaTemplateEngine
 from litestar.response import Template
 from litestar.static_files import create_static_files_router
 from litestar.template.config import TemplateConfig
-
 from localization.keywords import (
     MISSION_TYPE_KEYWORDS,
     SPECIAL_EVENT_KEYWORDS,
@@ -38,8 +37,11 @@ background_task = None
 async def fetch_mission_routine():
     # Fetch missions every 2 minutes
     while True:
-        await update_mission_database()
-        await asyncio.sleep(2 * 60)
+        try:
+            await update_mission_database()
+            await asyncio.sleep(2 * 60)
+        except Exception:
+            pass
 
 
 async def initialization():

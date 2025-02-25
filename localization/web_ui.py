@@ -44,6 +44,11 @@ UI_TRANSLATIONS = {
         "zh-tw": "複製",
         "zh-cn": "复制",
     },
+    "import_btn": {
+        "en": "Import",
+        "zh-tw": "匯入",
+        "zh-cn": "导入",
+    },
     "copy_success": {
         "en": "Copied to clipboard!",
         "zh-tw": "已複製到剪貼簿!",

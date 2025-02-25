@@ -5,10 +5,16 @@
             <h2 class="card-title justify-center items-center">
                 {{ maps[mission.map_code][language] }} <i class="fa-regular fa-image text-stone-400 tooltip-hover"></i>
             </h2>
-            <button class="btn btn-md btn-neutral"
-                onclick="navigator.clipboard.writeText('/mmt {{ mission.mission_id }}');CrispyToast.success('{{ ui_translations.copy_success[language] }}', { position: 'bottom-right'})">
-                {{ ui_translations.copy_btn[language] }}
-            </button>
+            <div class="copy-btn-group">
+                <button class="btn btn-md btn-neutral"
+                    onclick="navigator.clipboard.writeText('/mmt {{ mission.mission_id }}');CrispyToast.success('{{ ui_translations.copy_success[language] }}', { position: 'bottom-right'})">
+                    {{ ui_translations.copy_btn[language] }}
+                </button>
+                <button class="btn btn-md btn-neutral"
+                    onclick="navigator.clipboard.writeText('/mmtimport {{ mission.mission_id }}');CrispyToast.success('{{ ui_translations.copy_success[language] }}', { position: 'bottom-right'})">
+                    {{ ui_translations.copy_btn[language] }}
+                </button>
+            </div>
         </div>
         <div class="card-actions justify-between items-center">
             <div>
