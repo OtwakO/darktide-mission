@@ -7,11 +7,11 @@
     <title>Darktide Mission</title>
     <link rel="icon"
         href="https://cdn.prod.website-files.com/65786ec854ee7451f4f7291a/65786ec854ee7451f4f729ba_favicon-32x32.png">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/themes.css" rel="stylesheet" type="text/css" /> -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/themes.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script> -->
     <script src="https://unpkg.com/htmx.org@2.0.0"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -103,11 +103,11 @@
                 <p class="filter-title font-mono font-extrabold flex-grow text-center">{{
                     ui_translations.search_header[language] }}</p>
                 <input type="submit" form="filter-form" value="{{ ui_translations.search_button[language] }}"
-                    class="btn btn-primary filter-search-btn flex-basis-1/2">
+                    class="btn filter-search-btn flex-basis-1/2">
             </div>
-            <div class="filter-list">
-                <form id="filter-form" hx-post="{{ server_entry_point }}/get_missions" hx-target="#mission-grid"
-                    hx-swap="innerHTML"
+            <div class="filter-list pr-2">
+                <form class="space-y-4" id="filter-form" hx-post="{{ server_entry_point }}/get_missions"
+                    hx-target="#mission-grid" hx-swap="innerHTML"
                     hx-vals='{"language": "{{ language }}", "entry_point": "{{ server_entry_point }}"}' hx-boost="true">
 
                     <div class="divider m-0 p-0"></div>
@@ -115,10 +115,11 @@
                     <!-- Difficulty filter -->
                     <p class="font-bold text-center"> {{ ui_translations.difficulty_header[language] }} </p>
                     {% for difficulty_code, translation in mission_difficulties.items() %}
-                    <label class="cursor-pointer label">
+                    <div class="cursor-pointer">
                         <span class="label-text">{{ translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox" name="{{ difficulty_code }}" />
-                    </label>
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                            name="{{ difficulty_code }}" />
+                    </div>
                     {% endfor %}
 
                     <div class="divider m-0 p-0"></div>
@@ -126,10 +127,11 @@
                     <!-- Side Mission filter -->
                     <p class="font-bold text-center"> {{ ui_translations.side_mission_header[language] }} </p>
                     {% for side_mission_code, translation in side_missions.items() %}
-                    <label class="cursor-pointer label">
+                    <div class="cursor-pointer">
                         <span class="label-text">{{ translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox" name="{{ side_mission_code }}" />
-                    </label>
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                            name="{{ side_mission_code }}" />
+                    </div>
                     {% endfor %}
 
                     <div class="divider m-0 p-0"></div>
@@ -138,63 +140,70 @@
                     {% if special_event_keywords %}
                     <p class="font-bold text-center"> {{ ui_translations.event_filter_header[language] }} </p>
                     {% for keyword, translation in special_event_keywords.items() %}
-                    <label class="cursor-pointer label">
+                    <div class="cursor-pointer">
                         <span class="label-text">{{ translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox" name="{{ keyword }}" />
-                    </label>
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                            name="{{ keyword }}" />
+                    </div>
                     {% endfor %}
                     <div class="divider m-0 p-0"></div>
                     {% endif %}
 
                     <!-- Auric filter -->
                     <p class="font-bold text-center"> {{ ui_translations.is_auric_header[language] }} </p>
-                    <label class="cursor-pointer label">
+                    <div class="cursor-pointer">
                         <span class="label-text">{{ ui_translations.auric_translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox" name="auric" />
-                    </label>
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                            name="auric" />
+                    </div>
 
                     <div class="divider m-0 p-0"></div>
 
                     <!-- Maelstrom filter -->
                     <p class="font-bold text-center"> {{ ui_translations.is_maelstrom_header[language] }} </p>
-                    <label class="cursor-pointer label">
+                    <div class="cursor-pointer">
                         <span class="label-text">{{ ui_translations.maelstrom_translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox" name="flash_mission" />
-                    </label>
-                    <label class="cursor-pointer label">
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                            name="flash_mission" />
+                    </div>
+                    <div class="cursor-pointer">
                         <span class="label-text">{{ ui_translations.auric_maelstrom_translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox" name="auric_maelstrom" />
-                    </label>
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                            name="auric_maelstrom" />
+                    </div>
 
                     <div class="divider m-0 p-0"></div>
 
                     <!-- Modifiers filter -->
                     <p class="font-bold text-center"> {{ ui_translations.filter_header[language] }} </p>
                     {% for keyword, translation in standard_keywords.items() %}
-                    <label class="cursor-pointer label">
+                    <div class="cursor-pointer">
                         <span class="label-text">{{ translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox" name="{{ keyword }}" />
-                    </label>
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                            name="{{ keyword }}" />
+                    </div>
                     {% endfor %}
 
                     <div class="divider m-0 p-0"></div>
 
                     <p class="font-bold text-center"> {{ ui_translations.mission_type_header[language] }} </p>
                     {% for mission_type, translation in mission_type_keywords.items() %}
-                    <label class="cursor-pointer label">
+                    <div class="cursor-pointer">
                         <span class="label-text">{{ translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox" name="{{ mission_type }}" />
-                    </label>
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                            name="{{ mission_type }}" />
+                    </div>
                     {% endfor %}
 
                     <div class="divider m-0 p-0"></div>
 
                     <p class="font-bold text-center"> {{ ui_translations.maps_header[language] }} </p>
                     {% for map_code, translation in maps.items() %}
-                    <label class="cursor-pointer label">
+                    <div class="cursor-pointer">
                         <span class="label-text">{{ translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox" name="{{ map_code }}" />
-                    </label>
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                            name="{{ map_code }}" />
+                    </div>
                     {% endfor %}
                 </form>
             </div>

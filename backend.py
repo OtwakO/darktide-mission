@@ -12,6 +12,7 @@ from litestar.contrib.jinja import JinjaTemplateEngine
 from litestar.response import Template
 from litestar.static_files import create_static_files_router
 from litestar.template.config import TemplateConfig
+
 from localization.keywords import (
     MISSION_TYPE_KEYWORDS,
     SPECIAL_EVENT_KEYWORDS,
@@ -200,4 +201,4 @@ app = Litestar(
 )
 
 if __name__ == "__main__":
-    uvicorn.run("backend:app", host="127.0.0.1", port=13131)
+    uvicorn.run("backend:app", host="127.0.0.1", port=13131, reload=True)
