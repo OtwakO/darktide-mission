@@ -107,11 +107,11 @@ STANDARD_KEYWORDS = {
 }
 
 SPECIAL_EVENT_KEYWORDS = {
-    "Infected Moebian 21st": {
-        "en": "Infected Moebian 21st",
-        "zh-tw": "染疫的莫比亞第21師",
-        "zh-cn": "被感染的莫比亚21团士兵",
-    },
+    # "Infected Moebian 21st": {
+    #     "en": "Infected Moebian 21st",
+    #     "zh-tw": "染疫的莫比亞第21師",
+    #     "zh-cn": "被感染的莫比亚21团士兵",
+    # },
     # "Mutated Horrors": {
     #     "en": "Mutated Horrors",
     #     "zh-tw": "突變驚懼",
