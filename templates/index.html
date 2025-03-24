@@ -277,7 +277,7 @@
     }
 
     document.addEventListener("htmx:afterProcessNode", function (evt) {
-        if (evt.detail.elt.classList.contains("main-page")) {
+        if (evt.detail.elt.classList.contains("filter-search-btn")) {
             console.log("Tri-state checkbox initialization")
             document.querySelectorAll(".tri-state-checkbox").forEach(checkbox => {
                 // Initialize the state
