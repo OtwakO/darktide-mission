@@ -107,6 +107,7 @@ def parse_missions(missions_json):
             # Check if map is Psykhanium and skip it if true
             if mission["map"] == "psykhanium":
                 continue
+
             # Check if map code has corresponding map name
             map_name = MAPS.get(mission["map"], None)
             if not map_name:

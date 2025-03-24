@@ -77,9 +77,30 @@ async def send_report(request: Request) -> None:
 @get("/")
 async def index(request: Request) -> Template:
     entry_point = request.query_params.get(
-        "entry_point", f"http://{request.headers.get('host')}"
+        "entry_point", "https://darktide-mission.otwako.dev/"
     )
     language = request.query_params.get("language", "en")
+    context = {
+        "server_entry_point": entry_point.strip("/"),
+        "language": language,
+        "maps": MAPS,
+        "standard_keywords": STANDARD_KEYWORDS,
+        "special_event_keywords": SPECIAL_EVENT_KEYWORDS,
+        "mission_type_keywords": MISSION_TYPE_KEYWORDS,
+        "mission_difficulties": MISSION_DIFFICULTY,
+        "mission_types": MISSION_TYPES,
+        "side_missions": SIDE_MISSIONS,
+        "ui_translations": UI_TRANSLATIONS,
+    }
+    return Template("index.html", context=context)
+
+
+@get("/{lang: str}")
+async def index_lang(request: Request, lang: str) -> Template:
+    entry_point = request.query_params.get(
+        "entry_point", "https://darktide-mission.otwako.dev/"
+    )
+    language = lang if lang in ("en", "zh-cn", "zh-tw") else "en"
     context = {
         "server_entry_point": entry_point.strip("/"),
         "language": language,
@@ -131,7 +152,7 @@ async def get_missions(request: Request) -> None:
                 elif auric_maelstrom == "off":
                     negative_keyword.extend(["auric+Hi-Intensity+flash_mission"])
 
-            #             print(f"""Language: {language}
+            # print(f"""Language: {language}
             # Positive keywords: {positive_keyword}
             # Negative keywords: {negative_keyword}
             # Auric Maelstrom: {auric_maelstrom}""")
@@ -168,6 +189,7 @@ async def get_missions(request: Request) -> None:
                 "mission_types": MISSION_TYPES,
                 "side_missions": SIDE_MISSIONS,
             }
+
             if missions:
                 return Template("mission.html", context=context)
             else:
@@ -188,6 +210,7 @@ async def get_missions(request: Request) -> None:
 app = Litestar(
     [
         index,
+        index_lang,
         get_missions,
         raw_missions,
         create_static_files_router(path="/assets", directories=[ASSETS_DIR]),

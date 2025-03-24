@@ -1,9 +1,10 @@
 {% for mission in missions %}
-<div class="card bg-base-100 shadow-xl m-2" data-image="{{ maps[mission.map_code]['image'] }}">
+<div class="card bg-base-100 shadow-xl m-2" data-image="{{ maps.get(mission.map_code,{}).get('image', '') }}">
     <div class="card-body {% if mission.mission_category == 'auric' %}auric{% endif %}">
         <div class="card-header flex justify-between">
             <h2 class="card-title justify-center items-center">
-                {{ maps[mission.map_code][language] }} <i class="fa-regular fa-image text-stone-400 tooltip-hover"></i>
+                {{ maps.get(mission.map_code, {}).get(language, mission.map_code) }} <i
+                    class="fa-regular fa-image text-stone-400 tooltip-hover"></i>
             </h2>
             <div class="copy-btn-group">
                 <button class="btn btn-md btn-neutral"
@@ -18,7 +19,8 @@
         </div>
         <div class="card-actions justify-between items-center">
             <div>
-                <div class="badge badge-soft badge-info">{{ mission_types[mission.map_code][language] }}</div>
+                <div class="badge badge-soft badge-info">{{ mission_types.get(mission.map_code, {}).get(language,
+                    mission.mission_type) }}</div>
                 <div class="badge badge-soft">{{ mission_difficulties[mission.challenge_level][language] }}</div>
                 <div class="badge badge-ghost">{{ side_missions[mission.side_mission][language] }}</div>
                 <div class="badge badge-ghost">{{ mission.humanized_time_delta }}</div>
