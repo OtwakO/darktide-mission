@@ -84,4 +84,9 @@ UI_TRANSLATIONS = {
         "zh-tw": "沒有找到任何任務",
         "zh-cn": "没有找到任何任务",
     },
+    "report_issue": {
+        "en": "Report an issue",
+        "zh-tw": "反饋問題",
+        "zh-cn": "反馈问题",
+    },
 }

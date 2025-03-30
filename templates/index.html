@@ -96,8 +96,8 @@
     } */
 </style>
 
-<body class="h-screen w-screen">
-    <div class="main-page flex p-2">
+<body class="h-screen w-screen" hx-boost="true">
+    <div class="main-page flex">
         <div class="filter-container flex flex-col basis-1/6 p-2">
             <div class="filter-header flex flex-row items-center gap-2 p-2">
                 <p class="filter-title font-mono font-extrabold flex-grow text-center">{{
@@ -209,10 +209,59 @@
             </div>
         </div>
 
-        <div class="mission-page-container basis-5/6 p-2">
-            <div class="mission-grid h-full" id="mission-grid">
+        <div class="right-panel basis-5/6 flex flex-col pt-2 pr-2">
+            <div class="mission-page-container p-2 flex-grow rounded-md">
+                <div class="mission-grid h-full" id="mission-grid">
+
+                </div>
+            </div>
+
+            <!-- Footer Bar -->
+            <div class="footer-bar h-12 flex justify-end items-center mt-2 mb-2 gap-2">
+                <!-- Language Selection -->
+                <select class="lang-select select h-12" onchange="window.location.href=this.value"
+                    current-lang="{{ language }}">
+                    <option value="{{ server_entry_point }}/en">English</option>
+                    <option value="{{ server_entry_point }}/zh-tw">繁體中文</option>
+                    <option value="{{ server_entry_point }}/zh-cn">简体中文</option>
+                </select>
+
+                <!-- Report Issue Button -->
+                <div class="report-issue">
+                    <button data-m:click="action=send_report" class="btn btn-lg filter-search-btn"
+                        onclick="report_modal.showModal()"><i class="fa-regular fa-envelope"></i>{{
+                        ui_translations.report_issue[language] }}</button>
+                    <dialog id="report_modal" class="modal">
+                        <div class="modal-box w-3/3 flex flex-col gap-2">
+                            <div" class="flex align-center items-center justify-center flex-col gap-2">
+                                <label class="font-bold">{{ ui_translations.report_issue[language] }}</label>
+                                <input type="text" id="report_author" placeholder="你的稱呼(選填) | Name(Optional)"
+                                    name="report_author" class="input input-bordered w-full" />
+                                <textarea id="report_content" class="textarea textarea-bordered w-full"
+                                    placeholder="內容 | Content" name="report_content"></textarea>
+                                <div class="flex gap-2">
+                                    <button class="btn btn-lg filter-search-btn"
+                                        hx-post="https://darktide-mission.otwako.dev/send_report"
+                                        hx-include="#report_author, #report_content" hx-swap="none"
+                                        onclick="report_modal.close();CrispyToast.success('已送出', { position: 'bottom-right'})">送出[O]</button>
+                                    <button class="btn btn-lg filter-search-btn"
+                                        onclick="report_modal.close()">取消[X]</button>
+                                </div>
+                        </div>
+                        <form method="dialog" class="modal-backdrop">
+                            <button>取消[X]</button>
+                        </form>
+                    </dialog>
+                </div>
+
+                <!-- Github Button -->
+                <a data-m:click="github_repo=Github" class="btn btn-lg filter-search-btn"
+                    href="https://github.com/OtwakO/darktide-mission" target=”_blank”><i
+                        class="fa-brands fa-github fa-2xl"></i>
+                </a>
 
             </div>
+
         </div>
 
         <div class="image-tooltip-container">
@@ -236,6 +285,12 @@
             CrispyToast.error(`${statusCode}: ${errorMsg}`, { position: 'bottom-right' });
         }
     })
+
+    function updateLanguageSelection() {
+        const langSelect = document.querySelector('.lang-select');
+        const language = document.querySelector('.lang-select').getAttribute("current-lang");
+        langSelect.value = `{{ server_entry_point }}/${language}`;
+    }
 
     function loadImageTooltip() {
         const tooltip = document.querySelector('.image-tooltip');
@@ -276,43 +331,54 @@
         tooltipContainer.style.top = `${event.pageY + offset}px`;
     }
 
-    document.addEventListener("htmx:afterProcessNode", function (evt) {
-        if (evt.detail.elt.classList.contains("filter-search-btn")) {
-            console.log("Tri-state checkbox initialization")
-            document.querySelectorAll(".tri-state-checkbox").forEach(checkbox => {
-                // Initialize the state
-                checkbox.dataset.state = "unchecked";
+    function initTriStateCheckbox() {
+        document.querySelectorAll(".tri-state-checkbox").forEach(checkbox => {
+            // Initialize the state
+            checkbox.dataset.state = "unchecked";
 
-                checkbox.addEventListener("change", function (event) {
-                    event.preventDefault(); // Prevent default only after the change
+            checkbox.addEventListener("change", function (event) {
+                event.preventDefault(); // Prevent default only after the change
 
-                    // Use requestAnimationFrame to ensure DOM updates happen
-                    requestAnimationFrame(() => {
-                        if (this.dataset.state === "unchecked") {
-                            this.checked = true;
-                            this.indeterminate = false;
-                            this.dataset.state = "checked";
-                        } else if (this.dataset.state === "checked") {
-                            this.indeterminate = true;
-                            this.dataset.state = "off";
-                            this.value = "off";
-                        } else {
-                            this.checked = false;
-                            this.indeterminate = false;
-                            this.dataset.state = "unchecked";
-                            this.removeAttribute('value');
-                        }
-                    });
-                });
-
-                // Prevent the default click behavior
-                checkbox.addEventListener("click", function (event) {
-                    event.preventDefault();
-                    // Manually trigger change event
-                    const changeEvent = new Event('change', { bubbles: true });
-                    this.dispatchEvent(changeEvent);
+                // Use requestAnimationFrame to ensure DOM updates happen
+                requestAnimationFrame(() => {
+                    if (this.dataset.state === "unchecked") {
+                        this.checked = true;
+                        this.indeterminate = false;
+                        this.dataset.state = "checked";
+                    } else if (this.dataset.state === "checked") {
+                        this.indeterminate = true;
+                        this.dataset.state = "off";
+                        this.value = "off";
+                    } else {
+                        this.checked = false;
+                        this.indeterminate = false;
+                        this.dataset.state = "unchecked";
+                        this.removeAttribute('value');
+                    }
                 });
             });
+
+            // Prevent the default click behavior
+            checkbox.addEventListener("click", function (event) {
+                event.preventDefault();
+                // Manually trigger change event
+                const changeEvent = new Event('change', { bubbles: true });
+                this.dispatchEvent(changeEvent);
+            });
+        });
+    }
+
+    document.addEventListener("htmx:afterProcessNode", function (evt) {
+        // console.log(evt.detail)
+        if (evt.detail.elt.classList.contains("filter-search-btn")) {
+
+            // Update the language selection
+            // updateLanguageSelection();
+
+            // Initialize tri-state checkbox
+            // console.log("Tri-state checkbox initialization")
+            initTriStateCheckbox();
+            updateLanguageSelection();
         }
     });
 </script>
