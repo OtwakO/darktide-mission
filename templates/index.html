@@ -377,27 +377,27 @@
         });
     }
 
-    // document.addEventListener("htmx:afterProcessNode", function (evt) {
-    //     if (evt.detail.elt.classList.contains("filter-search-btn")) {
-    //         // console.log(evt.detail)
+    document.addEventListener("htmx:afterProcessNode", function (evt) {
+        if (evt.detail.elt.classList.contains("filter-search-btn")) {
+            // console.log(evt.detail)
 
-    //         // Update the language selection
-    //         updateLanguageSelection();
+            // Update the language selection
+            updateLanguageSelection();
 
-    //         // Initialize tri-state checkbox
-    //         // console.log("Tri-state checkbox initialization")
-    //         initTriStateCheckbox();
-    //     }
-    // });
-
-    document.addEventListener('DOMContentLoaded', (event) => {
-        // Update the language selection
-        updateLanguageSelection();
-
-        // Initialize tri-state checkbox
-        // console.log("Tri-state checkbox initialization")
-        initTriStateCheckbox();
+            // Initialize tri-state checkbox
+            // console.log("Tri-state checkbox initialization")
+            initTriStateCheckbox();
+        }
     });
+
+    // document.addEventListener('DOMContentLoaded', (event) => {
+    //     // Update the language selection
+    //     updateLanguageSelection();
+
+    //     // Initialize tri-state checkbox
+    //     // console.log("Tri-state checkbox initialization")
+    //     initTriStateCheckbox();
+    // });
 </script>
 
 </html>
