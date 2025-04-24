@@ -164,16 +164,20 @@ async def get_missions(request: Request) -> None:
 
             # Add localized modifiers to missions
             for mission in missions:
-                modifiers_string = MISSION_MODIFIERS.get(mission["modifier_code"])[
-                    language
-                ]
+                # Check if mission modifier is predefined, empty dict if not,
+                predefined_modifier = MISSION_MODIFIERS.get(
+                    mission["modifier_code"], {}
+                )
+                # If not predefined, use the modifier code as is as it's responding language string
+                modifiers_string = predefined_modifier.get(
+                    language, mission["modifier_code"]
+                )
                 modifiers = [
                     modifier.strip()
                     for modifier in modifiers_string.split("#")
                     if modifier != ""
                 ]
                 mission["modifiers"] = modifiers
-
                 # Add localized humanized time delta to missions'
                 starting_time = arrow.get(mission["starting_timestamp"])
                 humanized_time_delta = starting_time.humanize(locale=language)
@@ -221,6 +225,7 @@ app = Litestar(
     on_startup=[initialization],
     on_shutdown=[cleanup_background_routine],
     compression_config=CompressionConfig(backend="gzip", gzip_compress_level=9),
+    debug=True,
 )
 
 if __name__ == "__main__":

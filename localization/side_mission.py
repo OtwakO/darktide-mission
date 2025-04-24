@@ -14,4 +14,10 @@ SIDE_MISSIONS = {
         "zh-tw": "取得魔法書 (白書)",
         "zh-cn": "取得魔法书 (白书)",
     },
+    # Special Event Side Missions - Corrupted Communications Devices
+    "side_mission_hack_communications": {
+        "en": "Corrupted Communications Devices",
+        "zh-tw": "毀損通訊裝置",
+        "zh-cn": "损坏的通讯装置",
+    },
 }

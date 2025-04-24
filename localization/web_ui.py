@@ -70,7 +70,7 @@ UI_TRANSLATIONS = {
         "zh-cn": "大漩涡",
     },
     "mission_type_header": {
-        "en": "Mission Type",
+        "en": "Mission Types",
         "zh-tw": "任務類型",
         "zh-cn": "任务类型",
     },

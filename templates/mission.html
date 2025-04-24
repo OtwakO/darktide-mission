@@ -21,8 +21,10 @@
             <div>
                 <div class="badge badge-soft badge-info">{{ mission_types.get(mission.map_code, {}).get(language,
                     mission.mission_type) }}</div>
-                <div class="badge badge-soft">{{ mission_difficulties[mission.challenge_level][language] }}</div>
-                <div class="badge badge-ghost">{{ side_missions[mission.side_mission][language] }}</div>
+                <div class="badge badge-soft">{{ mission_difficulties.get(mission.challenge_level, {}).get(language,
+                    mission.challenge_level) }}</div>
+                <div class="badge badge-ghost">{{ side_missions.get(mission.side_mission, {}).get(language,
+                    mission.side_mission) }}</div>
                 <div class="badge badge-ghost">{{ mission.humanized_time_delta }}</div>
             </div>
             <div class="badge badge-ghost gap-2">

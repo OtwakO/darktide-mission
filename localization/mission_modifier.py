@@ -370,4 +370,40 @@ MISSION_MODIFIERS = {
         "zh-tw": "#野蠻人動員兵 #高強度 #突擊兵部隊",
         "zh-cn": "#蛮子动员兵 #高强度 #突击兵部队",
     },
+    # Special Event Modifiers - Tainted Airwaves
+    "communication_hack_01": {
+        "en": "#Tainted Airwaves",
+        "zh-tw": "#干擾訊號",
+        "zh-cn": "#腐化电波",
+    },
+    "communication_hack_02": {
+        "en": "#Tainted Airwaves #Hi-Intensity #Hunting Grounds",
+        "zh-tw": "#干擾訊號 #高強度 #狩獵場",
+        "zh-cn": "#腐化电波 #高强度 #狩猎场",
+    },
+    "communication_hack_03": {
+        "en": "#Tainted Airwaves #Hi-Intensity",
+        "zh-tw": "#干擾訊號 #高強度",
+        "zh-cn": "#腐化电波 #高强度",
+    },
+    "communication_hack_04": {
+        "en": "#Tainted Airwaves #Hi-Intensity #Power Supply Interruption",
+        "zh-tw": "#干擾訊號 #高強度 #供電中斷",
+        "zh-cn": "#腐化电波 #高强度 #供电中断",
+    },
+    "communication_hack_05": {
+        "en": "#Tainted Airwaves #Hi-Intensity #Toxic Gas",
+        "zh-tw": "#干擾訊號 #高強度 #瘟疫毒氣",
+        "zh-cn": "#腐化电波 #高强度 #瘟疫毒气",
+    },
+    "communication_hack_06": {
+        "en": "#Tainted Airwaves #Hi-Intensity #Ventilation Purge",
+        "zh-tw": "#干擾訊號 #高強度 #清掃通風",
+        "zh-cn": "#腐化电波 #高强度 #通风净化",
+    },
+    "communication_hack_07": {
+        "en": "#Tainted Airwaves #Hi-Intensity #Shock Troop",
+        "zh-tw": "#干擾訊號 #高強度 #突擊兵部隊",
+        "zh-cn": "#腐化电波 #高强度 #突击兵部队",
+    },
 }
