@@ -190,32 +190,43 @@ def search_with_keywords(
         fts_query = f'"ALL" {fts_query}'
 
     # Excludes map_code because there might be overlap (cm_raid vs raid mission types)
+    # query = """
+    #     SELECT DISTINCT missions.*
+    #     FROM missions
+    #     WHERE mission_id IN (
+    #         SELECT mission_id
+    #         FROM missions_search
+    #         WHERE
+    #             mission_id MATCH ? OR          -- Param 1
+    #             map_name MATCH ? OR            -- Param 2
+    #             mission_type MATCH ? OR        -- Param 3
+    #             mission_category MATCH ? OR    -- Param 4
+    #             challenge_level MATCH ? OR     -- Param 5
+    #             side_mission MATCH ? OR        -- Param 6
+    #             modifier_code MATCH ? OR       -- Param 7
+    #             experience MATCH ? OR          -- Param 8
+    #             credits MATCH ? OR             -- Param 9
+    #             starting_timestamp MATCH ? OR  -- Param 10
+    #             expiring_timestamp MATCH ? OR  -- Param 11
+    #             keywords MATCH ? OR            -- Param 12
+    #             base_term MATCH ?              -- Param 13
+    #             -- map_code is omitted here
+    #     )
+    #     ORDER BY starting_timestamp
+    # """
+
     query = """
         SELECT DISTINCT missions.*
         FROM missions
         WHERE mission_id IN (
             SELECT mission_id
-            FROM missions_search
-            WHERE
-                mission_id MATCH ? OR          -- Param 1
-                map_name MATCH ? OR            -- Param 2
-                mission_type MATCH ? OR        -- Param 3
-                mission_category MATCH ? OR    -- Param 4
-                challenge_level MATCH ? OR     -- Param 5
-                side_mission MATCH ? OR        -- Param 6
-                modifier_code MATCH ? OR       -- Param 7
-                experience MATCH ? OR          -- Param 8
-                credits MATCH ? OR             -- Param 9
-                starting_timestamp MATCH ? OR  -- Param 10
-                expiring_timestamp MATCH ? OR  -- Param 11
-                keywords MATCH ? OR            -- Param 12
-                base_term MATCH ?              -- Param 13
-                -- map_code is omitted here
+            FROM missions_search 
+            WHERE missions_search MATCH ?
         )
         ORDER BY starting_timestamp
     """
 
-    params = (fts_query,) * 13  # 13 params in total
+    params = (fts_query,) * 1  # 13 params in total
 
     try:
         with sqlite3.connect(DB_PATH) as conn:
