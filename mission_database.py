@@ -195,17 +195,33 @@ def search_with_keywords(
         FROM missions
         WHERE mission_id IN (
             SELECT mission_id
-            FROM missions_search 
-            WHERE missions_search MATCH ?
+            FROM missions_search
+            WHERE
+                mission_id MATCH ? OR          -- Param 1
+                map_name MATCH ? OR            -- Param 2
+                mission_type MATCH ? OR        -- Param 3
+                mission_category MATCH ? OR    -- Param 4
+                challenge_level MATCH ? OR     -- Param 5
+                side_mission MATCH ? OR        -- Param 6
+                modifier_code MATCH ? OR       -- Param 7
+                experience MATCH ? OR          -- Param 8
+                credits MATCH ? OR             -- Param 9
+                starting_timestamp MATCH ? OR  -- Param 10
+                expiring_timestamp MATCH ? OR  -- Param 11
+                keywords MATCH ? OR            -- Param 12
+                base_term MATCH ?              -- Param 13
+                -- map_code is omitted here
         )
         ORDER BY starting_timestamp
     """
+
+    params = (fts_query,) * 13  # 13 params in total
 
     try:
         with sqlite3.connect(DB_PATH) as conn:
             conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
-            rows = cursor.execute(query, (fts_query,)).fetchall()
+            rows = cursor.execute(query, params).fetchall()
             # print(f"Search took {time.time() - starting_time} seconds")
             # starting_time = time.time()
             # result = [dict(row) for row in rows]
