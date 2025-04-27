@@ -189,13 +189,27 @@ def search_with_keywords(
     if not positive_keywords and negative_keywords:
         fts_query = f'"ALL" {fts_query}'
 
+    # Excludes map_code because there might be overlap (cm_raid vs raid mission types)
     query = """
         SELECT DISTINCT missions.*
         FROM missions
         WHERE mission_id IN (
             SELECT mission_id
-            FROM missions_search 
-            WHERE missions_search MATCH ?
+            FROM missions_search
+            WHERE 
+                mission_id MATCH ? OR
+                map_name MATCH ? OR
+                mission_type MATCH ? OR
+                mission_category MATCH ? OR
+                challenge_level MATCH ? OR
+                side_mission MATCH ? OR
+                modifier_code MATCH ? OR
+                experience MATCH ? OR
+                credits MATCH ? OR
+                starting_timestamp MATCH ? OR
+                expiring_timestamp MATCH ? OR
+                keywords MATCH ? OR
+                base_term MATCH ?
         )
         ORDER BY starting_timestamp
     """

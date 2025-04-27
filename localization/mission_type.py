@@ -45,9 +45,9 @@ MISSION_TYPES = {
         "zh-cn": "打击任务",
     },
     "lm_scavenge": {
-        "en": "Raid",
-        "zh-tw": "突擊任務",
-        "zh-cn": "突袭任务",
+        "en": "Investigation",
+        "zh-tw": "調查任務",
+        "zh-cn": "调查任务",
     },
     "cm_habs": {
         "en": "Investigation",
