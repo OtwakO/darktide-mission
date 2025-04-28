@@ -153,8 +153,8 @@ def parse_missions(missions_json):
 
             mission_entry = Mission(
                 mission_id=mission["id"],
-                # map_code=mission["map"],
-                map_code="UNINDEXED",
+                map_code=mission["map"],
+                # map_code="UNINDEXED",
                 map_name=map_name,
                 mission_type=mission_type,
                 mission_category=mission.get("category", "normal"),
