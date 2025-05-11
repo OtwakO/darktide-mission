@@ -122,11 +122,11 @@ SPECIAL_EVENT_KEYWORDS = {
     #     "zh-tw": "野蠻人動員兵",
     #     "zh-cn": "蛮子动员兵",
     # },
-    "Tainted Airwaves": {
-        "en": "Tainted Airwaves",
-        "zh-tw": "干擾訊號",
-        "zh-cn": "腐化电波",
-    }
+    # "Tainted Airwaves": {
+    #     "en": "Tainted Airwaves",
+    #     "zh-tw": "干擾訊號",
+    #     "zh-cn": "腐化电波",
+    # }
 }
 
 MISSION_TYPE_KEYWORDS = {
