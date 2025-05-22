@@ -406,4 +406,40 @@ MISSION_MODIFIERS = {
         "zh-tw": "#干擾訊號 #高強度 #突擊兵部隊",
         "zh-cn": "#腐化电波 #高强度 #突击兵部队",
     },
+    # Special Event Modifiers - Dark Rituals
+    "skulls_event_01": {
+        "en": "#Dark Rituals",
+        "zh-tw": "#黑暗儀式",
+        "zh-cn": "#黑暗仪式",
+    },
+    "skulls_event_01_02": {
+        "en": "#Dark Rituals #Hi-Intensity #Hunting Grounds",
+        "zh-tw": "#黑暗儀式 #高強度 #狩獵場",
+        "zh-cn": "#黑暗仪式 #高强度 #狩猎场",
+    },
+    "skulls_event_01_03": {
+        "en": "#Dark Rituals #Hi-Intensity",
+        "zh-tw": "#黑暗儀式 #高強度",
+        "zh-cn": "#黑暗仪式 #高强度",
+    },
+    "skulls_event_01_04": {
+        "en": "#Dark Rituals #Hi-Intensity #Ventilation Purge",
+        "zh-tw": "#黑暗儀式 #高強度 #清掃通風",
+        "zh-cn": "#黑暗仪式 #高强度 #通风净化",
+    },
+    "skulls_event_01_05": {
+        "en": "#Dark Rituals #Hi-Intensity #Toxic Gas",
+        "zh-tw": "#黑暗儀式 #高強度 #瘟疫毒氣",
+        "zh-cn": "#黑暗仪式 #高强度 #瘟疫毒气",
+    },
+    "skulls_event_01_06": {
+        "en": "#Dark Rituals #Hi-Intensity #Sniper",
+        "zh-tw": "#黑暗儀式 #高強度 #狙擊手",
+        "zh-cn": "#黑暗仪式 #高强度 #狙击手",
+    },
+    "skulls_event_01_07": {
+        "en": "#Dark Rituals #Hi-Intensity #Shock Troop",
+        "zh-tw": "#黑暗儀式 #高強度 #突擊兵部隊",
+        "zh-cn": "#黑暗仪式 #高强度 #突击兵部队",
+    },
 }
