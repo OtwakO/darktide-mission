@@ -90,9 +90,9 @@ MISSION_TYPES = {
         "zh-cn": "打击任务",
     },
     "dm_forge": {
-        "en": "Strike",
-        "zh-tw": "打擊任務",
-        "zh-cn": "打击任务",
+        "en": "Repair",
+        "zh-tw": "修理任務",
+        "zh-cn": "修理任务",
     },
     "km_enforcer_twins": {
         "en": "Special",
