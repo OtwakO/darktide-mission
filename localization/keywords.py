@@ -127,11 +127,11 @@ SPECIAL_EVENT_KEYWORDS = {
     #     "zh-tw": "干擾訊號",
     #     "zh-cn": "腐化电波",
     # }
-    "Dark Rituals": {
-        "en": "Dark Rituals",
-        "zh-tw": "黑暗儀式",
-        "zh-cn": "黑暗仪式",
-    }
+    # "Dark Rituals": {
+    #     "en": "Dark Rituals",
+    #     "zh-tw": "黑暗儀式",
+    #     "zh-cn": "黑暗仪式",
+    # }
 }
 
 MISSION_TYPE_KEYWORDS = {
