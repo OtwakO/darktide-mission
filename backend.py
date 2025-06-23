@@ -133,7 +133,7 @@ async def raw_missions(request: Request) -> dict:
 
 @post("/get_missions")
 async def get_missions(request: Request) -> None:
-    print(request)
+    # print(request)
     if request.headers.get("hx-request", None) == "true":
         try:
             form_data = await request.form()
@@ -163,7 +163,7 @@ async def get_missions(request: Request) -> None:
                 positive_keywords=positive_keyword,
                 negative_keywords=negative_keyword,
             )
-            print(missions)
+            # print(missions)
 
             # Add localized modifiers to missions
             for mission in missions:
