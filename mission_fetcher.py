@@ -7,6 +7,7 @@ from pathlib import Path
 import msgspec
 import requests
 
+from localization.ignored_keywords import IGNORED_MAPS, IGNORED_MODIFIERS
 from localization.map_name import MAPS
 from localization.mission_modifier import MISSION_MODIFIERS
 from localization.mission_type import MISSION_TYPES
@@ -117,8 +118,9 @@ async def parse_missions(missions_json):
         missions = []
         for mission in missions_json["missions"]:
             current_mission = mission
-            # Check if map is Psykhanium and skip it if true
-            if mission["map"] == "psykhanium":
+
+            # Check if map has keyword to be ignored
+            if any([keyword in mission["map"] for keyword in IGNORED_MAPS]):
                 continue
 
             # Check if map code has corresponding map name
