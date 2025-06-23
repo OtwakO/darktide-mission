@@ -48,7 +48,7 @@ async def fetch_mission_routine():
 async def initialization():
     global background_task
     # Startup event handler
-    initialize_database()
+    await initialize_database()
     background_task = asyncio.create_task(fetch_mission_routine())
 
 
@@ -208,7 +208,6 @@ async def get_missions(request: Request) -> None:
                 sender="Backend Framework",
                 source_site=source_site,
             )
-            pass
 
 
 app = Litestar(
@@ -218,7 +217,7 @@ app = Litestar(
         get_missions,
         raw_missions,
         create_static_files_router(path="/assets", directories=[ASSETS_DIR]),
-        send_report,
+        # send_report,
     ],
     template_config=TemplateConfig(directory="templates", engine=JinjaTemplateEngine),
     cors_config=cors_config,

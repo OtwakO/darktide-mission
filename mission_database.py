@@ -13,7 +13,7 @@ DB_PATH = Path(DB_DIR, "missions.db")
 DATABASE_COLUMNS = "(mission_id, map_code, map_name, mission_type, mission_category, challenge_level, side_mission, modifier_code, experience, credits, starting_timestamp, expiring_timestamp, keywords)"
 
 
-def initialize_database() -> None:
+async def initialize_database() -> None:
     print("Initializing database...")
     with sqlite3.connect(DB_PATH) as conn:
         cursor = conn.cursor()
@@ -60,10 +60,10 @@ def initialize_database() -> None:
 
         conn.commit()
 
-    create_fts5_sync_trigger()
+    await create_fts5_sync_trigger()
 
 
-def create_fts5_sync_trigger():
+async def create_fts5_sync_trigger():
     try:
         with sqlite3.connect(DB_PATH) as conn:
             cursor = conn.cursor()
@@ -81,14 +81,14 @@ def create_fts5_sync_trigger():
 
             conn.commit()
     except sqlite3.Error as e:
-        asyncio.run(
+        asyncio.create_task(
             internal_notify(
                 f"Database FTS5 Create Sync Trigger Error: {str(e)}", sender="Database"
             )
         )
 
 
-def add_mission_to_database(mission: Mission):
+async def add_mission_to_database(mission: Mission):
     query = f"""
         INSERT OR IGNORE INTO missions {DATABASE_COLUMNS}
         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
@@ -117,7 +117,7 @@ def add_mission_to_database(mission: Mission):
             )
             conn.commit()
     except sqlite3.Error as e:
-        asyncio.run(
+        asyncio.create_task(
             internal_notify(
                 f"""Database Add Mission Error: {str(e)}
 
@@ -128,7 +128,7 @@ Mission: {str(mission)}
         )
 
 
-def prune_expired_missions(current_timestamp: int):
+async def prune_expired_missions(current_timestamp: int):
     print("- Pruning expired missions...")
     # Prune expired missions from both tables
     query = f"""
@@ -142,14 +142,14 @@ def prune_expired_missions(current_timestamp: int):
             cursor.executescript(query)
             conn.commit()
     except sqlite3.Error as e:
-        asyncio.run(
+        asyncio.create_task(
             internal_notify(
                 f"Database Prune Expired Mission Error: {str(e)}", sender="Database"
             )
         )
 
 
-def search_with_keywords(
+async def search_with_keywords(
     positive_keywords: List[str] | None = None,
     negative_keywords: List[str] | None = None,
 ) -> List[Dict[str, Any]]:
@@ -246,15 +246,16 @@ def search_with_keywords(
             # print(f"Result processing took {time.time() - starting_time} seconds")
             return [dict(row) for row in rows]
     except sqlite3.Error as e:
-        asyncio.run(
+        asyncio.create_task(
             internal_notify(f"""Database Mission Search Error: {str(e)}
                         
 FTS Query: {fts_query}
 Positive keywords: {positive_keywords}
 Negative keywords: {negative_keywords}""")
         )
+
         return []
 
 
 if __name__ == "__main__":
-    initialize_database()
+    asyncio.run(initialize_database())

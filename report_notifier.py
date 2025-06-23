@@ -34,10 +34,13 @@ async def external_notify(content, sender="Anonymous", source_site=None):
 來源網站: {source_site}
 {"-" * 50}"""
 
-    await apobj.async_notify(
-        title="Darktide Mission Board - 問題/意見回報",
-        body=message,
-    )
+    try:
+        return await apobj.async_notify(
+            title="Darktide Mission Board - 問題/意見回報",
+            body=message,
+        )
+    except Exception as e:
+        print(f"Error sending notification: {e}")
 
 
 async def internal_notify(content, sender="System", source_site="Internal"):
@@ -51,10 +54,13 @@ async def internal_notify(content, sender="System", source_site="Internal"):
 來源網站: {source_site}
 {"-" * 50}"""
 
-    await apobj.async_notify(
-        title="Darktide Mission Board - 程式錯誤回報",
-        body=message,
-    )
+    try:
+        return await apobj.async_notify(
+            title="Darktide Mission Board - 程式錯誤回報",
+            body=message,
+        )
+    except Exception as e:
+        print(f"Error sending notification: {e}")
 
 
 async def test_notify():

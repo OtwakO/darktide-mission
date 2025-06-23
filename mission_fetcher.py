@@ -21,7 +21,7 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 SAVE_RAW_JSON_PATH = Path("database", "raw_missions.json")
 
 
-def refresh_token():
+async def refresh_token():
     print("- Obtaining new access token...")
     try:
         with open(Path("refresh_token.txt"), "r", encoding="utf-8") as f:
@@ -41,13 +41,16 @@ def refresh_token():
             f.write(result["RefreshToken"])
         return new_token, auth_sub
     except Exception as e:
-        asyncio.run(
-            internal_notify(f"Failed to refresh token: {e}", sender="Mission Fetcher")
+        asyncio.create_task(
+            internal_notify(
+                f"Failed to refresh token: {e}\nResponse: {response.text}",
+                sender="Mission Fetcher",
+            )
         )
         return None, None
 
 
-def fetch_missions(access_token):
+async def fetch_missions(access_token):
     print("- Fetching missions from API...")
     try:
         url = "https://bsp-td-prod.atoma.cloud/mission-board"
@@ -56,15 +59,19 @@ def fetch_missions(access_token):
             "user-agent": USER_AGENT,
         }
         response = requests.get(url, headers=headers)
+
         return response.json()
     except Exception as e:
-        asyncio.run(
-            internal_notify(f"Failed to fetch missions: {e}", sender="Mission Fetcher")
+        asyncio.create_task(
+            internal_notify(
+                f"Failed to fetch missions: {e}\nResponse: {response.text}",
+                sender="Mission Fetcher",
+            )
         )
         return {}
 
 
-def save_raw_mission_json(mission_json):
+async def save_raw_mission_json(mission_json):
     print("- Saving raw mission JSON to file...")
 
     def prune_expired_mission_from_json(all_missions):
@@ -103,31 +110,33 @@ def save_raw_mission_json(mission_json):
         f.write(msgspec.json.encode(existing_json))
 
 
-def parse_missions(missions_json):
+async def parse_missions(missions_json):
     print("- Parsing missions to human-readable format...")
     try:
+        current_mission = None
         missions = []
         for mission in missions_json["missions"]:
+            current_mission = mission
             # Check if map is Psykhanium and skip it if true
             if mission["map"] == "psykhanium":
                 continue
 
             # Check if map code has corresponding map name
-            map_name = MAPS.get(mission["map"], None)
-            if not map_name:
-                asyncio.run(
+            map_data = MAPS.get(mission["map"], None)
+            if map_data:
+                map_name = map_data.get("en", mission["map"])
+            else:
+                map_name = mission["map"]
+                asyncio.create_task(
                     internal_notify(
                         f"Unknown map code: {mission['map']}", sender="Mission Fetcher"
                     )
                 )
-                map_name = mission["map"]
-            else:
-                map_name = MAPS.get(mission["map"])["en"]
 
             # Check if map code has corresponding mission type
             mission_type = MISSION_TYPES.get(mission["map"], None)
             if not mission_type:
-                asyncio.run(
+                asyncio.create_task(
                     internal_notify(
                         f"Unknown mission type for map: {mission['map']}",
                         sender="Mission Fetcher",
@@ -140,7 +149,7 @@ def parse_missions(missions_json):
             # Check if modifier code has corresponding modifiers then add all modifiers of all languages to keywords string
             modifiers = MISSION_MODIFIERS.get(mission["circumstance"], None)
             if not modifiers:
-                asyncio.run(
+                asyncio.create_task(
                     internal_notify(
                         f"Unknown modifier code: {mission['circumstance']}",
                         sender="Mission Fetcher",
@@ -180,29 +189,68 @@ def parse_missions(missions_json):
             missions.append(mission_entry)
         return missions
     except Exception as e:
-        asyncio.run(
-            internal_notify(f"Failed to parse missions: {e}", sender="Mission Fetcher")
+        asyncio.create_task(
+            internal_notify(
+                f"Failed to parse missions: {e}\nMission: {current_mission}",
+                sender="Mission Fetcher",
+            )
         )
         return []
 
 
-def add_fetched_missions_to_db(missions: list[Mission]):
+async def add_fetched_missions_to_db(missions: list[Mission]):
     print("- Adding fetched missions to database...")
     for mission in missions:
-        add_mission_to_database(mission)
+        await add_mission_to_database(mission)
 
 
 async def update_mission_database():
     print("Fetching Missions from Fatshark...")
-    access_token, auth_sub = refresh_token()
-    missions_json = fetch_missions(access_token)
-    save_raw_mission_json(missions_json)
-    missions = parse_missions(missions_json)
-    add_fetched_missions_to_db(missions)
-    prune_expired_missions(int(time.time() * 1000))
+    access_token, auth_sub = await refresh_token()
+    missions_json = await fetch_missions(access_token)
+    await save_raw_mission_json(missions_json)
+    missions = await parse_missions(missions_json)
+    await add_fetched_missions_to_db(missions)
+    await prune_expired_missions(int(time.time() * 1000))
     print("Mission Fetched!")
+
+
+async def test_loop():
+    while True:
+        try:
+            await update_mission_database()
+            print(f"\nNext fetch in 1 minutes. (Time: {time.strftime('%H:%M:%S')})")
+            await asyncio.sleep(20)  # Wait for 1 minutes
+        except asyncio.CancelledError:
+            # This is raised when main_task.cancel() is called
+            print("Shutdown signal received. Exiting.")
+            break
+        except Exception as e:
+            # Catch unexpected errors to prevent the service from crashing
+            print(f"An unexpected error occurred in the main loop: {e}")
+            asyncio.create_task(
+                internal_notify(f"FATAL: Main loop crashed with error: {e}")
+            )
+            print("Restarting the loop after a 60-second delay...")
+            await asyncio.sleep(60)
 
 
 if __name__ == "__main__":
     # asyncio.run(update_mission_database())
-    save_raw_mission_json({"missions": []})
+    # save_raw_mission_json({"missions": []})
+    loop = asyncio.get_event_loop()
+    main_task = loop.create_task(test_loop())
+
+    try:
+        # This runs the event loop until main_task is complete.
+        loop.run_until_complete(main_task)
+    except KeyboardInterrupt:
+        print("\nKeyboardInterrupt received. Initiating graceful shutdown...")
+        # When Ctrl+C is pressed, we cancel the main task.
+        # The `try/except asyncio.CancelledError` inside main() will catch this.
+        main_task.cancel()
+        # We run the loop one last time to allow the shutdown logic
+        # in main() to execute.
+        loop.run_until_complete(main_task)
+    finally:
+        loop.close()
