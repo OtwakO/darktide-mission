@@ -86,6 +86,7 @@ async def create_fts5_sync_trigger():
                 f"Database FTS5 Create Sync Trigger Error: {str(e)}", sender="Database"
             )
         )
+        ...
 
 
 async def add_mission_to_database(mission: Mission):
@@ -126,6 +127,7 @@ Mission: {str(mission)}
                 sender="Database",
             )
         )
+        ...
 
 
 async def prune_expired_missions(current_timestamp: int):
@@ -147,6 +149,7 @@ async def prune_expired_missions(current_timestamp: int):
                 f"Database Prune Expired Mission Error: {str(e)}", sender="Database"
             )
         )
+        ...
 
 
 async def search_with_keywords(

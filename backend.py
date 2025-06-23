@@ -71,7 +71,9 @@ async def send_report(request: Request) -> None:
     if not username:
         username = "Anonymous"
     if content:
-        await external_notify(content, sender=username, source_site=source_site)
+        asyncio.create_task(
+            external_notify(content, sender=username, source_site=source_site)
+        )
 
 
 @get("/")
@@ -131,6 +133,7 @@ async def raw_missions(request: Request) -> dict:
 
 @post("/get_missions")
 async def get_missions(request: Request) -> None:
+    print(request)
     if request.headers.get("hx-request", None) == "true":
         try:
             form_data = await request.form()
@@ -156,11 +159,11 @@ async def get_missions(request: Request) -> None:
             # Positive keywords: {positive_keyword}
             # Negative keywords: {negative_keyword}
             # Auric Maelstrom: {auric_maelstrom}""")
-            missions = search_with_keywords(
+            missions = await search_with_keywords(
                 positive_keywords=positive_keyword,
                 negative_keywords=negative_keyword,
             )
-            # print(missions)
+            print(missions)
 
             # Add localized modifiers to missions
             for mission in missions:
@@ -203,10 +206,12 @@ async def get_missions(request: Request) -> None:
             error_form_data = "".join(
                 [f"- {key}: {value}\n" for key, value in form_data.items()]
             )
-            await internal_notify(
-                f"{e}\n\nForm data:\n{error_form_data}",
-                sender="Backend Framework",
-                source_site=source_site,
+            asyncio.create_task(
+                internal_notify(
+                    f"{e}\n\nForm data:\n{error_form_data}",
+                    sender="Backend Framework",
+                    source_site=source_site,
+                )
             )
 
 
@@ -224,7 +229,7 @@ app = Litestar(
     on_startup=[initialization],
     on_shutdown=[cleanup_background_routine],
     compression_config=CompressionConfig(backend="gzip", gzip_compress_level=9),
-    debug=True,
+    # debug=True,
 )
 
 if __name__ == "__main__":
