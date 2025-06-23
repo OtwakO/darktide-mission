@@ -71,7 +71,7 @@ async def send_report(request: Request) -> None:
     if not username:
         username = "Anonymous"
     if content:
-        external_notify(content, sender=username, source_site=source_site)
+        await external_notify(content, sender=username, source_site=source_site)
 
 
 @get("/")
@@ -203,7 +203,7 @@ async def get_missions(request: Request) -> None:
             error_form_data = "".join(
                 [f"- {key}: {value}\n" for key, value in form_data.items()]
             )
-            internal_notify(
+            await internal_notify(
                 f"{e}\n\nForm data:\n{error_form_data}",
                 sender="Backend Framework",
                 source_site=source_site,

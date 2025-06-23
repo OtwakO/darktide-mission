@@ -1,3 +1,4 @@
+import asyncio
 import sqlite3
 from pathlib import Path
 from typing import Any, Dict, List
@@ -80,8 +81,10 @@ def create_fts5_sync_trigger():
 
             conn.commit()
     except sqlite3.Error as e:
-        internal_notify(
-            f"Database FTS5 Create Sync Trigger Error: {str(e)}", sender="Database"
+        asyncio.run(
+            internal_notify(
+                f"Database FTS5 Create Sync Trigger Error: {str(e)}", sender="Database"
+            )
         )
 
 
@@ -114,12 +117,14 @@ def add_mission_to_database(mission: Mission):
             )
             conn.commit()
     except sqlite3.Error as e:
-        internal_notify(
-            f"""Database Add Mission Error: {str(e)}
+        asyncio.run(
+            internal_notify(
+                f"""Database Add Mission Error: {str(e)}
 
 Mission: {str(mission)}
 """,
-            sender="Database",
+                sender="Database",
+            )
         )
 
 
@@ -137,8 +142,10 @@ def prune_expired_missions(current_timestamp: int):
             cursor.executescript(query)
             conn.commit()
     except sqlite3.Error as e:
-        internal_notify(
-            f"Database Prune Expired Mission Error: {str(e)}", sender="Database"
+        asyncio.run(
+            internal_notify(
+                f"Database Prune Expired Mission Error: {str(e)}", sender="Database"
+            )
         )
 
 
@@ -239,11 +246,13 @@ def search_with_keywords(
             # print(f"Result processing took {time.time() - starting_time} seconds")
             return [dict(row) for row in rows]
     except sqlite3.Error as e:
-        internal_notify(f"""Database Mission Search Error: {str(e)}
+        asyncio.run(
+            internal_notify(f"""Database Mission Search Error: {str(e)}
                         
 FTS Query: {fts_query}
 Positive keywords: {positive_keywords}
 Negative keywords: {negative_keywords}""")
+        )
         return []
 
 

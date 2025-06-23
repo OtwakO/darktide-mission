@@ -41,7 +41,9 @@ def refresh_token():
             f.write(result["RefreshToken"])
         return new_token, auth_sub
     except Exception as e:
-        internal_notify(f"Failed to refresh token: {e}", sender="Mission Fetcher")
+        asyncio.run(
+            internal_notify(f"Failed to refresh token: {e}", sender="Mission Fetcher")
+        )
         return None, None
 
 
@@ -56,7 +58,9 @@ def fetch_missions(access_token):
         response = requests.get(url, headers=headers)
         return response.json()
     except Exception as e:
-        internal_notify(f"Failed to fetch missions: {e}", sender="Mission Fetcher")
+        asyncio.run(
+            internal_notify(f"Failed to fetch missions: {e}", sender="Mission Fetcher")
+        )
         return {}
 
 
@@ -111,8 +115,10 @@ def parse_missions(missions_json):
             # Check if map code has corresponding map name
             map_name = MAPS.get(mission["map"], None)
             if not map_name:
-                internal_notify(
-                    f"Unknown map code: {mission['map']}", sender="Mission Fetcher"
+                asyncio.run(
+                    internal_notify(
+                        f"Unknown map code: {mission['map']}", sender="Mission Fetcher"
+                    )
                 )
                 map_name = mission["map"]
             else:
@@ -121,9 +127,11 @@ def parse_missions(missions_json):
             # Check if map code has corresponding mission type
             mission_type = MISSION_TYPES.get(mission["map"], None)
             if not mission_type:
-                internal_notify(
-                    f"Unknown mission type for map: {mission['map']}",
-                    sender="Mission Fetcher",
+                asyncio.run(
+                    internal_notify(
+                        f"Unknown mission type for map: {mission['map']}",
+                        sender="Mission Fetcher",
+                    )
                 )
                 mission_type = "Unknown"
             else:
@@ -132,9 +140,11 @@ def parse_missions(missions_json):
             # Check if modifier code has corresponding modifiers then add all modifiers of all languages to keywords string
             modifiers = MISSION_MODIFIERS.get(mission["circumstance"], None)
             if not modifiers:
-                internal_notify(
-                    f"Unknown modifier code: {mission['circumstance']}",
-                    sender="Mission Fetcher",
+                asyncio.run(
+                    internal_notify(
+                        f"Unknown modifier code: {mission['circumstance']}",
+                        sender="Mission Fetcher",
+                    )
                 )
                 modifiers = mission["circumstance"]
                 keywords = ""
@@ -170,7 +180,9 @@ def parse_missions(missions_json):
             missions.append(mission_entry)
         return missions
     except Exception as e:
-        internal_notify(f"Failed to parse missions: {e}", sender="Mission Fetcher")
+        asyncio.run(
+            internal_notify(f"Failed to parse missions: {e}", sender="Mission Fetcher")
+        )
         return []
 
 
