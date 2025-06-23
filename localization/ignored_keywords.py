@@ -1,6 +1,7 @@
 IGNORED_MAPS = [
     "psykhanium",
-    "player_journey",
 ]
 
-IGNORED_MODIFIERS = []
+IGNORED_MODIFIERS = [
+    "player_journey",
+]

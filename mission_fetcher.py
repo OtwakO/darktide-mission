@@ -151,12 +151,19 @@ async def parse_missions(missions_json):
             # Check if modifier code has corresponding modifiers then add all modifiers of all languages to keywords string
             modifiers = MISSION_MODIFIERS.get(mission["circumstance"], None)
             if not modifiers:
-                asyncio.create_task(
-                    internal_notify(
-                        f"Unknown modifier code: {mission['circumstance']}",
-                        sender="Mission Fetcher",
+                # Only send notification if absent of established modifier code is not an ignored one.
+                if not any(
+                    [
+                        keyword in mission["circumstance"]
+                        for keyword in IGNORED_MODIFIERS
+                    ]
+                ):
+                    asyncio.create_task(
+                        internal_notify(
+                            f"Unknown modifier code: {mission['circumstance']}",
+                            sender="Mission Fetcher",
+                        )
                     )
-                )
                 modifiers = mission["circumstance"]
                 keywords = ""
             else:
