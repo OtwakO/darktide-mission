@@ -13,6 +13,7 @@ from litestar.response import Template
 from litestar.static_files import create_static_files_router
 from litestar.template.config import TemplateConfig
 
+from authors_note import AUTHORS_NOTE
 from localization.keywords import (
     MISSION_TYPE_KEYWORDS,
     SPECIAL_EVENT_KEYWORDS,
@@ -93,6 +94,7 @@ async def index(request: Request) -> Template:
         "mission_types": MISSION_TYPES,
         "side_missions": SIDE_MISSIONS,
         "ui_translations": UI_TRANSLATIONS,
+        "authors_note": AUTHORS_NOTE.get(language, "").strip(),
     }
     return Template("index.html", context=context)
 
@@ -114,6 +116,7 @@ async def index_lang(request: Request, lang: str) -> Template:
         "mission_types": MISSION_TYPES,
         "side_missions": SIDE_MISSIONS,
         "ui_translations": UI_TRANSLATIONS,
+        "authors_note": AUTHORS_NOTE.get(language, "").strip(),
     }
     return Template("index.html", context=context)
 
@@ -231,7 +234,7 @@ app = Litestar(
     on_startup=[initialization],
     on_shutdown=[cleanup_background_routine],
     compression_config=CompressionConfig(backend="gzip", gzip_compress_level=9),
-    # debug=True,
+    debug=True,
 )
 
 if __name__ == "__main__":

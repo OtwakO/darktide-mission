@@ -226,7 +226,12 @@
             </div>
 
             <!-- Footer Bar -->
-            <div class="footer-bar h-12 flex justify-end items-center mt-2 mb-2 gap-2">
+            <div class="footer-bar max-h-[100px] h-fit flex justify-end items-center mt-2 mb-2 gap-2">
+                {% if authors_note %}
+                <div class="author-note mr-auto min-w-0 w-full overflow-y-scroll overflow-x-scroll p-2 rounded max-h-full
+                    whitespace-pre-wrap">{{ authors_note }}</div>
+                {% endif %}
+                
                 <!-- Language Selection -->
                 <select class="lang-select select h-12 w-fit" onchange="window.location.href=this.value"
                     current-lang="{{ language }}">
@@ -236,7 +241,7 @@
                 </select>
 
                 <!-- Report Issue Button -->
-                <div class="report-issue">
+                <div class="report-issue min-w-fit">
                     <button data-m:click="action=send_report" class="btn btn-lg filter-search-btn"
                         onclick="report_modal.showModal()"><i class="fa-regular fa-envelope"></i>{{
                         ui_translations.report_issue[language] }}</button>

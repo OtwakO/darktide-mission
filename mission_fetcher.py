@@ -176,8 +176,8 @@ async def parse_missions(missions_json):
                 experience += bonus.get("xp", 0)
                 credits += bonus.get("credits", 0)
 
-            # Set Expiry Timestamp (Add 24 hours to epoch timestamp)
-            expiry_timestamp = int(mission["start"]) + (86400 * 1000)
+            # Set Expiry Timestamp (Add 190 minutes to epoch timestamp)
+            expiry_timestamp = int(mission["start"]) + (11400 * 1000)
 
             mission_entry = Mission(
                 mission_id=mission["id"],
