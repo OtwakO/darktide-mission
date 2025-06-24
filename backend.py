@@ -187,7 +187,7 @@ async def get_missions(request: Request) -> None:
                 # Add localized humanized time delta to missions'
                 starting_time = arrow.get(mission["starting_timestamp"])
                 humanized_time_delta = starting_time.humanize(
-                    locale=language, granularity="minute"
+                    locale=language, granularity=["hour", "minute"]
                 )
                 mission["humanized_time_delta"] = humanized_time_delta
 
