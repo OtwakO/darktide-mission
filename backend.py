@@ -13,7 +13,7 @@ from litestar.response import Template
 from litestar.static_files import create_static_files_router
 from litestar.template.config import TemplateConfig
 
-from authors_note import AUTHORS_NOTE
+from localization.authors_note import AUTHORS_NOTE
 from localization.keywords import (
     MISSION_TYPE_KEYWORDS,
     SPECIAL_EVENT_KEYWORDS,
