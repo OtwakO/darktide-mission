@@ -257,6 +257,11 @@ MISSION_MODIFIERS = {
         "zh-tw": "#高強度 #納垢賜福 #突擊兵部隊 #變種人 #冷卻時間減少 #額外爆炸桶",
         "zh-cn": "#高强度 #纳垢祝福 #突击兵部队 #变种人 #冷却时间减少 #额外爆炸桶",
     },
+    # "high_flash_mission_14": {
+    #     "en": "#Hi-Intensity #Heretical Disruption #No Horde #Shock Troop #Cooldowns Reduced",
+    #     "zh-tw": "#高強度 #神秘壓制 #無人群 #突擊兵部隊 #冷卻時間減少",
+    #     "zh-cn": "#高强度 #神秘压制 #无人群 #突击兵部队 #冷却时间减少",
+    # },
     "high_flash_mission_16": {
         "en": "#Hi-Intensity #Shock Troop #Mutants #Toxic Gas #Hunting Grounds",
         "zh-tw": "#高強度 #突擊兵部隊 #變種人 #瘟疫毒氣 #狩獵場",

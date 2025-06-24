@@ -4,5 +4,5 @@ IGNORED_MAPS = [
 
 IGNORED_MODIFIERS = [
     "player_journey",
-    "ember",
+    "flash_mission_14",
 ]

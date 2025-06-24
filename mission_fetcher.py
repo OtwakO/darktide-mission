@@ -20,6 +20,7 @@ from structures.mission import Mission
 
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0"
 SAVE_RAW_JSON_PATH = Path("database", "raw_missions.json")
+MISSION_ALIVE_TIME = 11400 * 1000  # 11400 seconds = 190 minutes
 
 
 async def refresh_token():
@@ -81,7 +82,7 @@ async def save_raw_mission_json(mission_json):
             all_active_missions = [
                 mission
                 for mission in all_missions
-                if (int(mission["start"]) + (86400 * 1000) > current_time)
+                if ((int(mission["start"]) + MISSION_ALIVE_TIME) > current_time)
             ]
             # Deduplicate missions: Reference https://stackoverflow.com/questions/9427163/remove-duplicate-dict-in-list-in-python
             unique_missions = {
@@ -106,6 +107,9 @@ async def save_raw_mission_json(mission_json):
     existing_json["missions"] = prune_expired_mission_from_json(
         existing_json["missions"]
     )
+
+    # Sort missions by starting timestamp
+    existing_json["missions"].sort(key=lambda x: x["start"])
 
     with open(SAVE_RAW_JSON_PATH, "wb") as f:
         f.write(msgspec.json.encode(existing_json))
@@ -150,6 +154,7 @@ async def parse_missions(missions_json):
 
             # Check if modifier code has corresponding modifiers then add all modifiers of all languages to keywords string
             modifiers = MISSION_MODIFIERS.get(mission["circumstance"], None)
+
             if not modifiers:
                 # Only send notification if absent of established modifier code is not an ignored one.
                 if not any(
@@ -165,19 +170,21 @@ async def parse_missions(missions_json):
                         )
                     )
                 modifiers = mission["circumstance"]
-                keywords = ""
             else:
-                keywords = MISSION_MODIFIERS.get(mission["circumstance"])["en"]
+                modifiers = modifiers.get(
+                    "en", "Unexpected Error Please Contact Developer"
+                )
 
             # Calculate experience and credits
             experience = mission["xp"]
             credits = mission["credits"]
+
             for circumstance, bonus in mission["extraRewards"].items():
                 experience += bonus.get("xp", 0)
                 credits += bonus.get("credits", 0)
 
             # Set Expiry Timestamp (Add 190 minutes to epoch timestamp)
-            expiry_timestamp = int(mission["start"]) + (11400 * 1000)
+            expiry_timestamp = int(mission["start"]) + MISSION_ALIVE_TIME
 
             mission_entry = Mission(
                 mission_id=mission["id"],
@@ -185,15 +192,19 @@ async def parse_missions(missions_json):
                 # map_code="UNINDEXED",
                 map_name=map_name,
                 mission_type=mission_type,
-                mission_category=mission.get("category", "normal"),
+                mission_category=mission.get("category", "common"),
+                mission_flags=", ".join(
+                    [f"flag_{flag}" for flag in mission.get("flags", {})]
+                ),
                 challenge_level=f"challenge_level_0{mission['challenge']}",
+                resistance_level=f"resistance_level_0{mission['resistance']}",
                 side_mission=mission.get("sideMission", "no_side_mission"),
                 modifier_code=mission["circumstance"],
                 experience=experience,
                 credits=credits,
                 starting_timestamp=mission["start"],
                 expiring_timestamp=expiry_timestamp,
-                keywords=keywords,
+                keywords=modifiers,
             )
             missions.append(mission_entry)
         return missions

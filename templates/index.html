@@ -162,7 +162,7 @@
                     <div class="cursor-pointer">
                         <span class="label-text">{{ ui_translations.auric_translation[language] }}</span>
                         <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
-                            name="auric" />
+                            name="resistance_level_05" />
                     </div>
 
                     <div class="divider m-0 p-0"></div>
@@ -172,7 +172,7 @@
                     <div class="cursor-pointer">
                         <span class="label-text">{{ ui_translations.maelstrom_translation[language] }}</span>
                         <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
-                            name="flash_mission" />
+                            name="maelstrom" />
                     </div>
                     <div class="cursor-pointer">
                         <span class="label-text">{{ ui_translations.auric_maelstrom_translation[language] }}</span>
@@ -231,7 +231,7 @@
                 <div class="author-note mr-auto min-w-0 w-full overflow-y-scroll overflow-x-scroll p-2 rounded max-h-full
                     whitespace-pre-wrap shadow-[inset_0_-2px_12px_rgba(0,0,0,0.1)]">{{ authors_note }}</div>
                 {% endif %}
-                
+
                 <!-- Language Selection -->
                 <select class="lang-select select h-12 w-fit" onchange="window.location.href=this.value"
                     current-lang="{{ language }}">

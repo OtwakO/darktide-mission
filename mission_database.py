@@ -10,7 +10,7 @@ DB_DIR = Path("database")
 DB_DIR.mkdir(exist_ok=True, parents=True)
 DB_PATH = Path(DB_DIR, "missions.db")
 
-DATABASE_COLUMNS = "(mission_id, map_code, map_name, mission_type, mission_category, challenge_level, side_mission, modifier_code, experience, credits, starting_timestamp, expiring_timestamp, keywords)"
+DATABASE_COLUMNS = "(mission_id, map_code, map_name, mission_type, mission_category, mission_flags, challenge_level, resistance_level, side_mission, modifier_code, experience, credits, starting_timestamp, expiring_timestamp, keywords)"
 
 
 async def initialize_database() -> None:
@@ -24,7 +24,9 @@ async def initialize_database() -> None:
                 map_name TEXT,
                 mission_type TEXT,
                 mission_category TEXT,
+                mission_flags TEXT,
                 challenge_level TEXT,
+                resistance_level TEXT,
                 side_mission TEXT,
                 modifier_code TEXT,
                 experience INTEGER,
@@ -46,7 +48,9 @@ async def initialize_database() -> None:
                 map_name,
                 mission_type,
                 mission_category,
+                mission_flags,
                 challenge_level,
+                resistance_level,
                 side_mission,
                 modifier_code,
                 experience,
@@ -74,7 +78,7 @@ async def create_fts5_sync_trigger():
                 AFTER INSERT ON missions
                 BEGIN
                     INSERT OR IGNORE INTO missions_search
-                    VALUES (NEW.mission_id, NEW.map_code, NEW.map_name, NEW.mission_type, NEW.mission_category, NEW.challenge_level, NEW.side_mission, NEW.modifier_code, NEW.experience, NEW.credits, NEW.starting_timestamp, NEW.expiring_timestamp, NEW.keywords, "ALL");
+                    VALUES (NEW.mission_id, NEW.map_code, NEW.map_name, NEW.mission_type, NEW.mission_category, NEW.mission_flags, NEW.challenge_level, NEW.resistance_level, NEW.side_mission, NEW.modifier_code, NEW.experience, NEW.credits, NEW.starting_timestamp, NEW.expiring_timestamp, NEW.keywords, "ALL");
                 END;
             """
             cursor.execute(sync_script)
@@ -92,7 +96,7 @@ async def create_fts5_sync_trigger():
 async def add_mission_to_database(mission: Mission):
     query = f"""
         INSERT OR IGNORE INTO missions {DATABASE_COLUMNS}
-        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
+        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
     """
 
     try:
@@ -106,7 +110,9 @@ async def add_mission_to_database(mission: Mission):
                     mission.map_name,
                     mission.mission_type,
                     mission.mission_category,
+                    mission.mission_flags,
                     mission.challenge_level,
+                    mission.resistance_level,
                     mission.side_mission,
                     mission.modifier_code,
                     mission.experience,

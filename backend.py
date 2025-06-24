@@ -154,9 +154,18 @@ async def get_missions(request: Request) -> None:
             auric_maelstrom = form_data.get("auric_maelstrom", None)
             if auric_maelstrom:
                 if auric_maelstrom == "on":
-                    positive_keyword.extend(["auric", "Hi-Intensity", "flash_mission"])
+                    positive_keyword.extend(
+                        [
+                            "maelstrom",
+                            "Hi-Intensity",
+                            "flash_mission",
+                            "resistance_level_05",
+                        ]
+                    )
                 elif auric_maelstrom == "off":
-                    negative_keyword.extend(["auric+Hi-Intensity+flash_mission"])
+                    negative_keyword.extend(
+                        ["maelstrom+Hi-Intensity+flash_mission+resistance_level_05"]
+                    )
 
             # print(f"""Language: {language}
             # Positive keywords: {positive_keyword}

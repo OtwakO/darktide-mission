@@ -1,6 +1,6 @@
 {% for mission in missions %}
 <div class="card bg-base-100 shadow-xl m-2" data-image="{{ maps.get(mission.map_code,{}).get('image', '') }}">
-    <div class="card-body {% if mission.mission_category == 'auric' %}auric{% endif %}">
+    <div class="card-body {% if mission.resistance_level == 'resistance_level_05' %}auric{% endif %}">
         <div class="card-header flex justify-between">
             <h2 class="card-title justify-center items-center">
                 {{ maps.get(mission.map_code, {}).get(language, mission.map_code) }} <i
