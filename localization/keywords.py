@@ -132,6 +132,11 @@ SPECIAL_EVENT_KEYWORDS = {
     #     "zh-tw": "黑暗儀式",
     #     "zh-cn": "黑暗仪式",
     # }
+    "Inferno": {
+        "en": "Inferno",
+        "zh-tw": "煉獄",
+        "zh-cn": "烈焰地狱",
+    }
 }
 
 MISSION_TYPE_KEYWORDS = {

@@ -63,6 +63,11 @@ MISSION_MODIFIERS = {
         "zh-tw": "#高強度 #清掃通風",
         "zh-cn": "#高强度 #通风净化",
     },
+    "ventilation_purge_with_snipers_01": {
+        "en": "#Ventilation Purge #Sniper",
+        "zh-tw": "#清掃通風 #狙擊手",
+        "zh-cn": "#通风净化 #狙击手",
+    },
     "ventilation_purge_with_snipers_less_resistance_01": {
         "en": "#Low-Intensity #Ventilation Purge #Sniper",
         "zh-tw": "#低強度 #清掃通風 #狙擊手",
@@ -441,5 +446,21 @@ MISSION_MODIFIERS = {
         "en": "#Dark Rituals #Hi-Intensity #Shock Troop",
         "zh-tw": "#黑暗儀式 #高強度 #突擊兵部隊",
         "zh-cn": "#黑暗仪式 #高强度 #突击兵部队",
+    },
+    # Special Event Modifiers - Inferno
+    "ember_01": {
+        "en": "#Inferno",
+        "zh-tw": "#煉獄",
+        "zh-cn": "#烈焰地狱",
+    },
+    "ember_01_waves_spec": {
+        "en": "#Inferno #Shock Troop",
+        "zh-tw": "#煉獄 #突擊兵部隊",
+        "zh-cn": "#烈焰地狱 #突击兵部队",
+    },
+    "ember_01_hunt_grou": {
+        "en": "#Inferno #Hunting Grounds",
+        "zh-tw": "#煉獄 #狩獵場",
+        "zh-cn": "#烈焰地狱 #狩猎场",
     },
 }
