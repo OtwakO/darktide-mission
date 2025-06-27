@@ -1,7 +1,7 @@
 AUTHORS_NOTE = {
     "en": """
 ⚠️ Seems like Fatshark changed the missions to be expired pass the ~190 minute mark. (24hr -> ~190min)
-🚩 If you notice any unnamed modifiers, feel free to send me the exact modifiers in game so I can update it.
+🚩 If you notice any unnamed modifiers, feel free to send me the exact modifiers in game so I can update it, with as much detail as possible.
 """,
     "zh-tw": """
 ⚠️ 看起來肥鯊把任務改成大約190分鐘後就會過期。(24小時 -> 約190分鐘)
