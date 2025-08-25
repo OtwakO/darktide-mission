@@ -468,4 +468,30 @@ MISSION_MODIFIERS = {
         "zh-tw": "#煉獄 #狩獵場",
         "zh-cn": "#烈焰地狱 #狩猎场",
     },
+    # Special Event Modifiers - Explosive Uprising
+    "barrel_grounds": {
+        "en": "#Explosive Uprising",
+        "zh-tw": "#驚爆危城",
+        "zh-cn": "#纷乱爆燃",
+    },
+    "barrel_grounds_hunt_grou": {
+        "en": "#Explosive Uprising #Hunting Grounds",
+        "zh-tw": "#驚爆危城 #狩獵場",
+        "zh-cn": "#纷乱爆燃 #狩猎场",
+    },
+    "barrel_grounds_ventilation": {
+        "en": "#Explosive Uprising #Ventilation Purge",
+        "zh-tw": "#驚爆危城 #清掃通風",
+        "zh-cn": "#纷乱爆燃 #通风净化",
+    },
+    "barrel_grounds_more_res": {
+        "en": "#Explosive Uprising #Hi-Intensity",
+        "zh-tw": "#驚爆危城 #高強度",
+        "zh-cn": "#纷乱爆燃 #高强度",
+    },
+    "barrel_grounds_waves_spec": {
+        "en": "#Explosive Uprising #Hi-Intensity #Shock Troop",
+        "zh-tw": "#驚爆危城 #高強度 #突擊兵部隊",
+        "zh-cn": "#纷乱爆燃 #高强度 #突击兵部队",
+    },
 }
