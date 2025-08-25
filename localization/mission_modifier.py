@@ -484,6 +484,11 @@ MISSION_MODIFIERS = {
         "zh-tw": "#驚爆危城 #清掃通風",
         "zh-cn": "#纷乱爆燃 #通风净化",
     },
+    "barrel_grounds_darkness": {
+        "en": "#Explosive Uprising #Power Supply Interruption",
+        "zh-tw": "#驚爆危城 #供電中斷",
+        "zh-cn": "#纷乱爆燃 #供电中断",
+    },
     "barrel_grounds_more_res": {
         "en": "#Explosive Uprising #Hi-Intensity",
         "zh-tw": "#驚爆危城 #高強度",
