@@ -137,11 +137,11 @@ SPECIAL_EVENT_KEYWORDS = {
     #     "zh-tw": "煉獄",
     #     "zh-cn": "烈焰地狱",
     # }
-    "Explosive Uprising": {
-        "en": "Explosive Uprising",
-        "zh-tw": "驚爆危城",
-        "zh-cn": "纷乱爆燃",
-    }
+    # "Explosive Uprising": {
+    #     "en": "Explosive Uprising",
+    #     "zh-tw": "驚爆危城",
+    #     "zh-cn": "纷乱爆燃",
+    # }
 }
 
 MISSION_TYPE_KEYWORDS = {
