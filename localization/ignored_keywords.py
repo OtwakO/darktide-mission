@@ -7,4 +7,5 @@ IGNORED_MODIFIERS = [
     "flash_mission_14",
     "rotten",
     "rations_recover",
+    "rations_destroy",
 ]
