@@ -142,6 +142,11 @@ SPECIAL_EVENT_KEYWORDS = {
     #     "zh-tw": "驚爆危城",
     #     "zh-cn": "纷乱爆燃",
     # }
+    "Atonement": {
+        "en": "Atonement",
+        "zh-tw": "贖罪",
+        "zh-cn": "赎罪",
+    }
 }
 
 MISSION_TYPE_KEYWORDS = {

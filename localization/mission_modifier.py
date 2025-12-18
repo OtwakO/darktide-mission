@@ -499,4 +499,20 @@ MISSION_MODIFIERS = {
         "zh-tw": "#驚爆危城 #高強度 #突擊兵部隊",
         "zh-cn": "#纷乱爆燃 #高强度 #突击兵部队",
     },
+    # Special Event Modifiers - Atonement
+    "saints_core": {
+        "en": "#Atonement",
+        "zh-tw": "#贖罪",
+        "zh-cn": "#赎罪",
+    },
+    "saints_core_more_res": {
+        "en": "#Atonement #Hi-Intensity",
+        "zh-tw": "#贖罪 #高強度",
+        "zh-cn": "#赎罪 #高强度",
+    },
+    "saints_core_waves_spec": {
+        "en": "#Atonement #Hi-Intensity #Shock Troop",
+        "zh-tw": "#贖罪 #高強度 #突擊兵部隊",
+        "zh-cn": "#赎罪 #高强度 #突击兵部队",
+    },
 }

@@ -1,3 +1,5 @@
+# Ignored Keywords for notifications
+
 IGNORED_MAPS = [
     "psykhanium",
 ]
