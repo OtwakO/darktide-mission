@@ -10,6 +10,10 @@ services:
     ports:
       - ":80"
     restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
 
 networks:
   default:
