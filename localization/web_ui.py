@@ -56,8 +56,8 @@ UI_TRANSLATIONS = {
     },
     "auric_translation": {
         "en": "Auric (T5)",
-        "zh-tw": "金級任務 (奧里克)",
-        "zh-cn": "金级任务 (锐金)",
+        "zh-tw": "金級任務 (奧里克) (T5)",
+        "zh-cn": "金级任务 (锐金) (T5)",
     },
     "auric_maelstrom_translation": {
         "en": "Auric Maelstrom",
