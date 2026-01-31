@@ -44,6 +44,9 @@ async def external_notify(content, sender="Anonymous", source_site=None):
 
 
 async def internal_notify(content, sender="System", source_site="Internal"):
+    # Temporarily disables notifications for unknown maps etc.
+    if "Unknown" in content:
+        return
     current_time = int(datetime.timestamp(datetime.now()))
     discord_timestamp = f"<t:{current_time}:F>"
 
