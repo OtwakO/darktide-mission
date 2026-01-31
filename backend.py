@@ -80,7 +80,7 @@ async def send_report(request: Request) -> None:
 @get("/")
 async def index(request: Request) -> Template:
     entry_point = request.query_params.get(
-        "entry_point", "https://darktide-mission.astralyte.xyz/"
+        "entry_point", "https://darktide-mission.otwako.dev/"
     )
     language = request.query_params.get("language", "en")
     context = {
@@ -102,7 +102,7 @@ async def index(request: Request) -> Template:
 @get("/{lang: str}")
 async def index_lang(request: Request, lang: str) -> Template:
     entry_point = request.query_params.get(
-        "entry_point", "https://darktide-mission.astralyte.xyz/"
+        "entry_point", "https://darktide-mission.otwako.dev/"
     )
     language = lang if lang in ("en", "zh-cn", "zh-tw") else "en"
     context = {
