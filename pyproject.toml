@@ -1,0 +1,14 @@
+[project]
+name = "darktide-mission-board-overhaul"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "apprise>=1.9.9",
+    "arrow>=1.4.0",
+    "litestar[standard]>=2.21.1",
+    "msgspec>=0.20.0",
+    "python-dotenv>=1.2.2",
+    "requests>=2.33.1",
+]

@@ -20,10 +20,17 @@
     <link rel="stylesheet" href="https://raheelize.github.io/CrispyToastJS/crispy-toast.css">
     <script src="https://raheelize.github.io/CrispyToastJS/crispy-toast.js"></script>
     <script defer src="https://medama-analytic.otwako.com/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
     <meta name="htmx-config" content='{"selfRequestsOnly": false}'>
 </head>
 
 <style>
+    :root {
+        --font-sans: 'Noto Sans SC', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    }
+
     .main-page {
         height: 100%;
         width: 100%;
@@ -120,12 +127,37 @@
 
                     <div class="divider m-0 p-0"></div>
 
+                    <!-- Query Type Picker -->
+                    <p class="font-bold text-center"> {{ ui_translations.query_type_header[language] }} </p>
+                    <div class="cursor-pointer text-center">
+                        <span class="label-text">{{ ui_translations.pos_query_type[language] }}</span>
+                        <div class="query_type_toggle flex justify-around mb-[16px]">
+                            <span class="label-text">OR</span>
+                            <div class="divider divider-horizontal"></div>
+                            <input type="checkbox" class="toggle text-accent"
+                                name="pos_query_type" value="AND" checked />
+                            <div class="divider divider-horizontal"></div>
+                            <span class="label-text">AND</span>
+                        </div>
+                        <span class="label-text">{{ ui_translations.neg_query_type[language] }}</span>
+                        <div class="query_type_toggle flex justify-around mb-[16px]">
+                            <span class="label-text">OR</span>
+                            <div class="divider divider-horizontal"></div>
+                            <input type="checkbox" class="toggle text-accent"
+                                name="neg_query_type" value="AND" />
+                            <div class="divider divider-horizontal"></div>
+                            <span class="label-text">AND</span>
+                        </div>
+                    </div>
+
+                    <div class="divider m-0 p-0"></div>
+
                     <!-- Difficulty filter -->
                     <p class="font-bold text-center"> {{ ui_translations.difficulty_header[language] }} </p>
                     {% for difficulty_code, translation in mission_difficulties.items() %}
-                    <div class="cursor-pointer">
+                    <div class="cursor-pointer flex justify-between">
                         <span class="label-text">{{ translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent"
                             name="{{ difficulty_code }}" />
                     </div>
                     {% endfor %}
@@ -135,9 +167,9 @@
                     <!-- Side Mission filter -->
                     <p class="font-bold text-center"> {{ ui_translations.side_mission_header[language] }} </p>
                     {% for side_mission_code, translation in side_missions.items() %}
-                    <div class="cursor-pointer">
+                    <div class="cursor-pointer flex justify-between">
                         <span class="label-text">{{ translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent"
                             name="{{ side_mission_code }}" />
                     </div>
                     {% endfor %}
@@ -148,9 +180,9 @@
                     {% if special_event_keywords %}
                     <p class="font-bold text-center"> {{ ui_translations.event_filter_header[language] }} </p>
                     {% for keyword, translation in special_event_keywords.items() %}
-                    <div class="cursor-pointer">
+                    <div class="cursor-pointer flex justify-between">
                         <span class="label-text">{{ translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent"
                             name="{{ keyword }}" />
                     </div>
                     {% endfor %}
@@ -158,25 +190,25 @@
                     {% endif %}
 
                     <!-- Auric filter -->
-                    <p class="font-bold text-center"> {{ ui_translations.is_auric_header[language] }} </p>
+                    <!-- <p class="font-bold text-center"> {{ ui_translations.is_auric_header[language] }} </p>
                     <div class="cursor-pointer">
                         <span class="label-text">{{ ui_translations.auric_translation[language] }}</span>
                         <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
                             name="resistance_level_05" />
                     </div>
 
-                    <div class="divider m-0 p-0"></div>
+                    <div class="divider m-0 p-0"></div> -->
 
                     <!-- Maelstrom filter -->
                     <p class="font-bold text-center"> {{ ui_translations.is_maelstrom_header[language] }} </p>
-                    <div class="cursor-pointer">
+                    <div class="cursor-pointer flex justify-between">
                         <span class="label-text">{{ ui_translations.maelstrom_translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent"
                             name="maelstrom" />
                     </div>
-                    <div class="cursor-pointer">
+                    <div class="cursor-pointer flex justify-between">
                         <span class="label-text">{{ ui_translations.auric_maelstrom_translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent"
                             name="auric_maelstrom" />
                     </div>
 
@@ -185,9 +217,9 @@
                     <!-- Modifiers filter -->
                     <p class="font-bold text-center"> {{ ui_translations.filter_header[language] }} </p>
                     {% for keyword, translation in standard_keywords.items() %}
-                    <div class="cursor-pointer">
+                    <div class="cursor-pointer flex justify-between">
                         <span class="label-text">{{ translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent"
                             name="{{ keyword }}" />
                     </div>
                     {% endfor %}
@@ -196,9 +228,9 @@
 
                     <p class="font-bold text-center"> {{ ui_translations.mission_type_header[language] }} </p>
                     {% for mission_type, translation in mission_type_keywords.items() %}
-                    <div class="cursor-pointer">
+                    <div class="cursor-pointer flex justify-between">
                         <span class="label-text">{{ translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent"
                             name="{{ mission_type }}" />
                     </div>
                     {% endfor %}
@@ -207,9 +239,9 @@
 
                     <p class="font-bold text-center"> {{ ui_translations.maps_header[language] }} </p>
                     {% for map_code, translation in maps.items() %}
-                    <div class="cursor-pointer">
+                    <div class="cursor-pointer flex justify-between">
                         <span class="label-text">{{ translation[language] }}</span>
-                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent float-right"
+                        <input type="checkbox" class="checkbox tri-state-checkbox checkbox-accent"
                             name="{{ map_code }}" />
                     </div>
                     {% endfor %}

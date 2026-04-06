@@ -24,4 +24,9 @@ MISSION_DIFFICULTY = {
         "zh-tw": "詛咒 (T4)",
         "zh-cn": "诅咒 (T4)",
     },
+    "resistance_level_05": {
+        "en": "Auric (T5)",
+        "zh-tw": "奧里克 (T5)",
+        "zh-cn": "锐金 (T5)",
+    },
 }

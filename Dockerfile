@@ -10,10 +10,11 @@ COPY . /app
 
 # Install the requirements
 # RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
-RUN uv pip install --system --no-cache-dir -r requirements.txt
+# RUN uv pip install --system --no-cache-dir -r requirements.txt
+RUN uv sync
 
 # Expose the port the app runs on
 EXPOSE 80
 
 # Run the app with the Litestar CLI
-CMD ["uvicorn", "backend:app", "--host", "0.0.0.0", "--port", "80", "--loop", "uvloop"]
+CMD ["uv", "run", "uvicorn", "backend:app", "--host", "0.0.0.0", "--port", "80", "--loop", "uvloop"]

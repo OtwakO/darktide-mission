@@ -1,39 +1,65 @@
 {% for mission in missions %}
-<div class="card bg-base-100 shadow-xl m-2" data-image="{{ maps.get(mission.map_code,{}).get('image', '') }}">
-    <div class="card-body {% if mission.resistance_level == 'resistance_level_05' %}auric{% endif %}">
+<div
+    class="card bg-base-100 shadow-xl m-2"
+    data-image="{{ maps.get(mission.map_code,{}).get('image', '') }}"
+>
+    <div
+        class="card-body {% if mission.resistance_level == 'resistance_level_05' %}auric{% endif %}"
+    >
         <div class="card-header flex justify-between">
             <h2 class="card-title justify-center items-center">
-                {{ maps.get(mission.map_code, {}).get(language, mission.map_code) }} <i
-                    class="fa-regular fa-image text-stone-400 tooltip-hover"></i>
+                {{ maps.get(mission.map_code, {}).get(language,
+                mission.map_code) }}
+                <i class="fa-regular fa-image text-stone-400 tooltip-hover"></i>
             </h2>
             <div class="copy-btn-group">
-                <button class="btn btn-md btn-neutral"
-                    onclick="navigator.clipboard.writeText('/mmt {{ mission.mission_id }}');CrispyToast.success('{{ ui_translations.copy_success[language] }}', { position: 'bottom-right'})">
+                <button
+                    class="btn btn-md btn-neutral"
+                    onclick="navigator.clipboard.writeText('/mmt {{ mission.mission_id }}');CrispyToast.success('{{ ui_translations.copy_success[language] }}', { position: 'bottom-right'})"
+                >
                     {{ ui_translations.copy_btn[language] }}
                 </button>
-                <button class="btn btn-md btn-neutral"
-                    onclick="navigator.clipboard.writeText('/mmtimport {{ mission.mission_id }}');CrispyToast.success('{{ ui_translations.copy_success[language] }}', { position: 'bottom-right'})">
+                <button
+                    class="btn btn-md btn-neutral"
+                    onclick="navigator.clipboard.writeText('/mmtimport {{ mission.mission_id }}');CrispyToast.success('{{ ui_translations.copy_success[language] }}', { position: 'bottom-right'})"
+                >
                     {{ ui_translations.import_btn[language] }}
                 </button>
             </div>
         </div>
         <div class="card-actions justify-between items-center">
             <div>
-                <div class="badge badge-soft badge-info">{{ mission_types.get(mission.map_code, {}).get(language,
-                    mission.mission_type) }}</div>
-                <div class="badge badge-soft">{{ mission_difficulties.get(mission.challenge_level, {}).get(language,
-                    mission.challenge_level) }}</div>
-                <div class="badge badge-ghost">{{ side_missions.get(mission.side_mission, {}).get(language,
-                    mission.side_mission) }}</div>
-                <div class="badge badge-ghost">{{ mission.humanized_time_delta }}</div>
+                <div class="badge badge-soft badge-info">
+                    {{ mission_types.get(mission.map_code, {}).get(language,
+                    mission.mission_type) }}
+                </div>
+                <div class="badge badge-soft">
+                    {{ mission_difficulties.get("resistance_level_05" if
+                    mission.resistance_level == "resistance_level_05" else
+                    mission.challenge_level, {}).get(language,
+                    mission.challenge_level) }}
+                </div>
+                <div class="badge badge-ghost">
+                    {{ side_missions.get(mission.side_mission, {}).get(language,
+                    mission.side_mission) }}
+                </div>
+                <div class="badge badge-ghost">
+                    {{ mission.humanized_time_delta }}
+                </div>
             </div>
             <div class="badge badge-ghost gap-2">
                 <div class="credits flex gap-1 flex-row items-center">
-                    <img class="size-4 credits-icon" src="{{ server_entry_point }}/assets/icons/credits.png">
+                    <img
+                        class="size-4 credits-icon"
+                        src="{{ server_entry_point }}/assets/icons/credits.png"
+                    />
                     <span>{{ mission.credits }}</span>
                 </div>
                 <div class="xp flex flex-row items-center">
-                    <img class="size-4 xp-icon" src="{{ server_entry_point }}/assets/icons/xp.png">
+                    <img
+                        class="size-4 xp-icon"
+                        src="{{ server_entry_point }}/assets/icons/xp.png"
+                    />
                     <span>{{ mission.experience }}</span>
                 </div>
             </div>

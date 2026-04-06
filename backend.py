@@ -31,7 +31,13 @@ from report_notifier import external_notify, internal_notify
 
 cors_config = CORSConfig(allow_origins=["*"])
 ASSETS_DIR = Path("assets")
-EXCLUDED_KEYWORDS = ["language", "entry_point", "auric_maelstrom"]
+EXCLUDED_KEYWORDS = [
+    "language",
+    "entry_point",
+    "auric_maelstrom",
+    "pos_query_type",
+    "neg_query_type",
+]
 SAVE_RAW_JSON_PATH = Path("database", "raw_missions.json")
 background_task = None
 
@@ -141,6 +147,10 @@ async def get_missions(request: Request) -> None:
         try:
             form_data = await request.form()
             language = form_data.get("language", "en")
+            pos_query_type = form_data.get("pos_query_type", "OR")
+            print(pos_query_type)
+            neg_query_type = form_data.get("neg_query_type", "OR")
+            print(neg_query_type)
             positive_keyword = [
                 key
                 for key, value in form_data.items()
@@ -151,6 +161,20 @@ async def get_missions(request: Request) -> None:
                 for key, value in form_data.items()
                 if value == "off" and key not in EXCLUDED_KEYWORDS
             ]
+            # Make sure T4 and T5 (Auric) is independent of each other
+            if ("challenge_level_05" in positive_keyword) and (
+                "resistance_level_05" not in positive_keyword
+            ):
+                idx = positive_keyword.index("challenge_level_05")
+                positive_keyword[idx] = "challenge_level_05+resistance_level_04"
+
+            if ("challenge_level_05" in negative_keyword) and (
+                "resistance_level_05" not in negative_keyword
+            ):
+                idx = negative_keyword.index("challenge_level_05")
+                negative_keyword[idx] = "challenge_level_05+resistance_level_04"
+
+            # Handles Auric Maelstrom
             auric_maelstrom = form_data.get("auric_maelstrom", None)
             if auric_maelstrom:
                 if auric_maelstrom == "on":
@@ -167,10 +191,20 @@ async def get_missions(request: Request) -> None:
                         ["maelstrom+Hi-Intensity+flash_mission+resistance_level_05"]
                     )
 
-            # print(f"""Language: {language}
-            # Positive keywords: {positive_keyword}
-            # Negative keywords: {negative_keyword}
-            # Auric Maelstrom: {auric_maelstrom}""")
+            # Handles different query type of OR/AND
+            if pos_query_type == "AND":
+                positive_keyword = ["+".join(positive_keyword)]
+            if neg_query_type == "AND":
+                negative_keyword = ["+".join(negative_keyword)]
+
+            # Get rid of empty strings
+            positive_keyword = [keyword for keyword in positive_keyword if keyword]
+            negative_keyword = [keyword for keyword in negative_keyword if keyword]
+
+            print(f"""Language: {language}
+            Positive keywords: {positive_keyword}
+            Negative keywords: {negative_keyword}
+            Auric Maelstrom: {auric_maelstrom}""")
             missions = await search_with_keywords(
                 positive_keywords=positive_keyword,
                 negative_keywords=negative_keyword,

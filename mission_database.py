@@ -167,43 +167,41 @@ async def search_with_keywords(
     Search SQLite database using FTS5 with advanced keyword filtering.
 
     Args:
-        positive_keywords: List of partial strings that must all be present (AND)
-        negative_keywords: List of partial strings to exclude, supports '+' for AND within a negative keyword group
+        positive_keywords: List of keyword groups that are OR'd together by default.
+                           Use '+' within a string to AND terms (e.g. "raid+daily").
+        negative_keywords: List of keyword groups to exclude.
+                           Use '+' within a string to AND terms before negating (e.g. "raid+daily").
 
     Returns:
         List of dictionaries, each containing a matching row with column names as keys
     """
-    # Initialize empty lists if None
     positive_keywords = positive_keywords or []
     negative_keywords = negative_keywords or []
 
-    # Build FTS5 query string
-    fts_terms = []
+    def build_and_group(keyword: str) -> str:
+        """Split a keyword by '+' and join its parts with AND."""
+        terms = keyword.split("+")
+        joined = " AND ".join(f'"{t}"' for t in terms)
+        return f"({joined})" if len(terms) > 1 else f'"{terms[0]}"'
 
-    # Handle positive keywords - each must be present (AND logic)
-    for keyword in positive_keywords:
-        # Wrap each term in quotes to handle partial matches
-        fts_terms.append(f'"{keyword}"')
+    # Positive groups are OR'd together: ("raid") OR ("blitz") OR ("raid" AND "daily")
+    positive_parts = [build_and_group(kw) for kw in positive_keywords]
 
-    # Handle negative keywords with AND groups
-    for neg_group in negative_keywords:
-        and_keywords = neg_group.split("+")
-        if len(and_keywords) > 1:
-            # For AND groups, create a NOT (term1 AND term2) condition
-            and_terms = [f'"{kw}"' for kw in and_keywords]
-            fts_terms.append(f"NOT ({' AND '.join(and_terms)})")
-        else:
-            # For single negative terms
-            fts_terms.append(f'NOT "{neg_group}"')
+    # Negative groups are each negated: NOT ("raid") NOT ("raid" AND "daily")
+    negative_parts = [f"NOT {build_and_group(kw)}" for kw in negative_keywords]
 
-    # Combine all terms with AND
-    fts_query = (
-        " AND ".join(fts_terms).replace("AND NOT", "NOT") if fts_terms else "ALL"
-    )
-
-    # If only negative keywords are provided, include a wildcard search to avoid standalone NOT
-    if not positive_keywords and negative_keywords:
-        fts_query = f'"ALL" {fts_query}'
+    # Combine into final FTS5 query
+    if positive_parts:
+        pos_query = " OR ".join(positive_parts)
+        # Wrap in parens when combining with negatives to avoid precedence issues
+        if negative_parts and len(positive_parts) > 1:
+            pos_query = f"({pos_query})"
+        fts_query = " ".join([pos_query] + negative_parts)
+    elif negative_parts:
+        # FTS5 doesn't allow standalone NOT — prefix with a catch-all match
+        fts_query = " ".join(['"ALL"'] + negative_parts)
+    else:
+        fts_query = "ALL"
 
     # Excludes map_code because there might be overlap (cm_raid vs raid mission types)
     # query = """

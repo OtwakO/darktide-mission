@@ -89,4 +89,19 @@ UI_TRANSLATIONS = {
         "zh-tw": "反饋問題",
         "zh-cn": "反馈问题",
     },
+    "query_type_header": {
+        "en": "Query Logic",
+        "zh-tw": "搜索邏輯",
+        "zh-cn": "查询逻辑",
+    },
+    "pos_query_type": {
+        "en": "Positive Tags",
+        "zh-tw": "正標籤",
+        "zh-cn": "正标签",
+    },
+    "neg_query_type": {
+        "en": "Negative Tags",
+        "zh-tw": "反標籤",
+        "zh-cn": "反标签",
+    },
 }
