@@ -12,7 +12,6 @@ from litestar.contrib.jinja import JinjaTemplateEngine
 from litestar.response import Template
 from litestar.static_files import create_static_files_router
 from litestar.template.config import TemplateConfig
-
 from localization.authors_note import AUTHORS_NOTE
 from localization.keywords import (
     MISSION_TYPE_KEYWORDS,
@@ -148,9 +147,9 @@ async def get_missions(request: Request) -> None:
             form_data = await request.form()
             language = form_data.get("language", "en")
             pos_query_type = form_data.get("pos_query_type", "OR")
-            print(pos_query_type)
+            # print(pos_query_type)
             neg_query_type = form_data.get("neg_query_type", "OR")
-            print(neg_query_type)
+            # print(neg_query_type)
             positive_keyword = [
                 key
                 for key, value in form_data.items()
@@ -201,10 +200,10 @@ async def get_missions(request: Request) -> None:
             positive_keyword = [keyword for keyword in positive_keyword if keyword]
             negative_keyword = [keyword for keyword in negative_keyword if keyword]
 
-            print(f"""Language: {language}
-            Positive keywords: {positive_keyword}
-            Negative keywords: {negative_keyword}
-            Auric Maelstrom: {auric_maelstrom}""")
+            # print(f"""Language: {language}
+            # Positive keywords: {positive_keyword}
+            # Negative keywords: {negative_keyword}
+            # Auric Maelstrom: {auric_maelstrom}""")
             missions = await search_with_keywords(
                 positive_keywords=positive_keyword,
                 negative_keywords=negative_keyword,
