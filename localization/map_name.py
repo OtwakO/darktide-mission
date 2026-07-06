@@ -131,4 +131,10 @@ MAPS = {
         "zh-cn": "窄道 6-19",
         "image": "Warren_6-19.png",
     },
+    "op_no_mans_land": {
+        "en": "No Man's Land",
+        "zh-tw": "無人區",
+        "zh-cn": "无人区",
+        "image": "No_Man's_Land.png",
+    },
 }
