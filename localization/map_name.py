@@ -77,6 +77,12 @@ MAPS = {
         "zh-cn": "HL-70-04 贸易区",
         "image": "Mercantile_HL-70-04.png",
     },
+    "op_no_mans_land": {
+        "en": "No Man's Land",
+        "zh-tw": "無人區",
+        "zh-cn": "无人区",
+        "image": "No_Man's_Land.png",
+    },
     "lm_cooling": {
         "en": "Power Matrix HL-17-36",
         "zh-tw": "HL-17-36 能量矩陣",
@@ -131,10 +137,8 @@ MAPS = {
         "zh-cn": "窄道 6-19",
         "image": "Warren_6-19.png",
     },
-    "op_no_mans_land": {
-        "en": "No Man's Land",
-        "zh-tw": "無人區",
-        "zh-cn": "无人区",
-        "image": "No_Man's_Land.png",
-    },
 }
+
+if __name__ == "__main__":
+    sorted_maps = dict(sorted(MAPS.items(), key=lambda item: item[1]["en"]))
+    print(sorted_maps)
