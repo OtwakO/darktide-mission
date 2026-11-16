@@ -119,6 +119,12 @@ MAPS = {
         "zh-cn": "HL-17-36 冶炼厂大楼",
         "image": "Smelter_Complex_HL-17-36.png",
     },
+    "spillway": {
+        "en": "Spillway",
+        "zh-tw": "溢洪道",
+        "zh-cn": "泄洪道",
+        "image": "Spillway.png",
+    },
     "km_enforcer_twins": {
         "en": "The Orthus Offensive",
         "zh-tw": "雙頭犬攻勢 (雙子)",
@@ -136,12 +142,6 @@ MAPS = {
         "zh-tw": "窄巷區 6-19",
         "zh-cn": "窄道 6-19",
         "image": "Warren_6-19.png",
-    },
-    "spillway": {
-        "en": "Spillway",
-        "zh-tw": "溢洪道",
-        "zh-cn": "泄洪道",
-        "image": "Spillway.png",
     },
 }
 
