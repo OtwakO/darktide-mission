@@ -28,7 +28,7 @@ async def refresh_token():
     try:
         with open(Path("refresh_token.txt"), "r", encoding="utf-8") as f:
             REFRESH_TOKEN = f.read().strip()
-        url = "https://bsp-auth-prod.atoma.cloud/queue/refresh"
+        url = "https://login.shr-prod-identity.fatshark.services/queue/refresh"
 
         headers = {
             "authorization": f"Bearer {REFRESH_TOKEN}",

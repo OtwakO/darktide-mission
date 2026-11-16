@@ -1,0 +1,4981 @@
+{
+    "_links": {
+        "self": {
+            "href": "/mission-board"
+        },
+        "mission": {
+            "href": "/{missionId}",
+            "templated": true
+        }
+    },
+    "missions": [
+        {
+            "id": "7978cefc-dfbb-40e4-933c-ce41446503a4",
+            "map": "core_research",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_07_B",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 3270
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 4,
+            "missionSize": 1
+        },
+        {
+            "id": "439801cb-ad55-418b-955f-f0c77e96eb48",
+            "map": "dm_stockpile",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_02",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 4900,
+                    "xp": 545
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 11,
+            "missionSize": 1
+        },
+        {
+            "id": "dc21a89a-4791-491d-8c8b-e841d494fd2c",
+            "map": "km_enforcer_twins",
+            "flags": {
+                "altered": {},
+                "activate_twins-100": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_010",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4360
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 11,
+            "missionSize": 1
+        },
+        {
+            "id": "3b2d7359-58ee-48bc-b70a-0ff480b09ec9",
+            "map": "core_research",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_07_B",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 3210
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 2,
+            "missionSize": 1
+        },
+        {
+            "id": "332b5add-2644-4dcc-a05e-439555976bc6",
+            "map": "exp_wastes",
+            "flags": {
+                "altered": {},
+                "exped-node-node_e1c6d205-2bba-4944-8e76-992db43ffe3c": {},
+                "exped-mods-theme_02;timer_01": {}
+            },
+            "circumstance": "exps_dawn_au",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 12250,
+                    "xp": 2725
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 16,
+            "missionSize": 1
+        },
+        {
+            "id": "3712a0d8-e714-4f94-9a52-bbfa6e7d9e95",
+            "map": "hm_complex",
+            "flags": {},
+            "circumstance": "default",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {},
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794854280000",
+            "expiry": "1794855479999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "pilot_a",
+            "displayIndex": 4,
+            "missionSize": 1
+        },
+        {
+            "id": "d38c35d4-ece7-4353-ad84-caf186936c13",
+            "map": "core_research",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_07_B",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1140
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 1,
+            "missionSize": 1
+        },
+        {
+            "id": "b4935240-d33d-4e08-8797-226b4d4954a4",
+            "map": "exp_wastes",
+            "flags": {
+                "exped-node-node_c11eeb02-aad3-44ac-bfbf-de2a84cd8156": {},
+                "exped-mods-enemies_01;locs_01;extract_01": {}
+            },
+            "circumstance": "default",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {},
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 26,
+            "missionSize": 1
+        },
+        {
+            "id": "1733e7a4-56e9-42a6-89cf-8a59dbea3caa",
+            "map": "km_station",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_01",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 3705,
+                    "xp": 0
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_c",
+            "displayIndex": 14,
+            "missionSize": 1
+        },
+        {
+            "id": "8d659a1a-e77d-4789-a0cf-8bb2c6ddae8c",
+            "map": "cm_archives",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_012_A",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 3320
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 4,
+            "missionSize": 1
+        },
+        {
+            "id": "c9ac6db1-9f1e-463a-862f-2a15db300635",
+            "map": "exp_wastes",
+            "flags": {
+                "altered": {},
+                "exped-node-node_e1c6d205-2bba-4944-8e76-992db43ffe3c": {},
+                "exped-mods-theme_02;timer_01": {}
+            },
+            "circumstance": "exps_dawn",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {},
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 8,
+            "missionSize": 1
+        },
+        {
+            "id": "6cbde9f3-58a0-4f5d-abd0-26b59ab7f608",
+            "map": "psykhanium",
+            "flags": {
+                "altered": {},
+                "random_twin-0": {}
+            },
+            "circumstance": "waves_of_specials_more_resistance_01",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 26950,
+                    "xp": 4360
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794814380000",
+            "expiry": "1794900779999",
+            "requiredLevel": 1,
+            "category": "horde",
+            "missionGiver": "training_ground_psyker_a",
+            "displayIndex": 15,
+            "missionSize": 1
+        },
+        {
+            "id": "4bcadd28-1b44-4a57-b7a4-fbbd4804a4b0",
+            "map": "dm_stockpile",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_02",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 835,
+                    "xp": 190
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 3,
+            "missionSize": 1
+        },
+        {
+            "id": "37dcbb1d-3174-4ed2-8aa7-d1d82580429f",
+            "map": "hm_complex",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "waves_of_specials_more_resistance_01",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 26950,
+                    "xp": 4360
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794854280000",
+            "expiry": "1794855479999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "pilot_a",
+            "displayIndex": 20,
+            "missionSize": 1
+        },
+        {
+            "id": "6d005e3a-5d94-482b-9cf4-0bb98e871756",
+            "map": "hm_cartel",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "ventilation_purge_with_snipers_01",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 14700,
+                    "xp": 3270
+                },
+                "sideMission": {
+                    "credits": 14700,
+                    "xp": 1365
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794853740000",
+            "expiry": "1794855119999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "explicator_a",
+            "displayIndex": 32,
+            "missionSize": 1
+        },
+        {
+            "id": "65bdf4ff-dc0b-42ed-8414-1c215f27002a",
+            "map": "hm_strain",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_07_A",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1140
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_b",
+            "displayIndex": 10,
+            "missionSize": 1
+        },
+        {
+            "id": "ecf15c45-ec41-494c-a78d-88a4d6fd382a",
+            "map": "dm_forge",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "nurgle_explosion_2026",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 9975,
+                    "xp": 2675
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794853380000",
+            "expiry": "1794854639999",
+            "requiredLevel": 1,
+            "category": "event",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 25,
+            "missionSize": 1
+        },
+        {
+            "id": "ac87ef45-ec6a-4a50-8935-de97a2c85484",
+            "map": "op_no_mans_land",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "waves_of_specials_01",
+            "credits": 14960,
+            "xp": 4110,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 8980,
+                    "xp": 2410
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794853860000",
+            "expiry": "1794855239999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 17,
+            "missionSize": 0.75
+        },
+        {
+            "id": "8c616dd6-3c53-4325-b1b5-e5828f0505fc",
+            "map": "lm_scavenge",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "nurgle_explosion_2026_more_res",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 15960,
+                    "xp": 4280
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794853860000",
+            "expiry": "1794855059999",
+            "requiredLevel": 1,
+            "category": "event",
+            "missionGiver": "pilot_a",
+            "displayIndex": 26,
+            "missionSize": 1
+        },
+        {
+            "id": "b1b5bf62-6e11-4df8-8a95-2e9de5e90d2f",
+            "map": "exp_wastes",
+            "flags": {
+                "altered": {},
+                "exped-node-node_be50acdd-751e-4e81-b08a-2f67f8fec7b0": {},
+                "exped-mods-theme_01": {}
+            },
+            "circumstance": "exps_storm_au",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 19600,
+                    "xp": 4360
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 1,
+            "missionSize": 1
+        },
+        {
+            "id": "2b2c5c12-7a49-4fca-aa44-df78d20bd4d2",
+            "map": "hm_cartel",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "ventilation_purge_01",
+            "credits": 14825,
+            "xp": 4245,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 5185,
+                    "xp": 1040
+                },
+                "sideMission": {
+                    "credits": 8890,
+                    "xp": 1040
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794853740000",
+            "expiry": "1794855119999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "explicator_a",
+            "displayIndex": 38,
+            "missionSize": 1
+        },
+        {
+            "id": "4b1b6098-c500-4a25-8042-ec8ced1f4817",
+            "map": "hm_cartel",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_03",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 625,
+                    "xp": 380
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 3,
+            "missionSize": 1
+        },
+        {
+            "id": "73340915-097c-4c0b-8c3a-f06c59e10dd8",
+            "map": "km_station",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_01",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1045,
+                    "xp": 0
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_c",
+            "displayIndex": 7,
+            "missionSize": 1
+        },
+        {
+            "id": "15044627-aad2-452b-a1b1-d23fb193d00f",
+            "map": "fm_resurgence",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:spillway": {}
+            },
+            "circumstance": "story_spillway_02",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1860,
+                    "xp": 900
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794852000000",
+            "expiry": "1794859199999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "boon_vendor_s",
+            "displayIndex": 16,
+            "missionSize": 1
+        },
+        {
+            "id": "510a9108-a202-43e7-af08-a3786cee0407",
+            "map": "dm_propaganda",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_06_A",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2725
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 2,
+            "missionSize": 1
+        },
+        {
+            "id": "55a2fe92-3c4e-4fbe-a58c-7fa65a620928",
+            "map": "km_heresy",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_014",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 3320
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "interrogator_a",
+            "displayIndex": 2,
+            "missionSize": 1
+        },
+        {
+            "id": "ccfc9ee0-c3c2-4dc0-8d8b-e472ee4a8aa6",
+            "map": "hm_cartel",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_03",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1115,
+                    "xp": 600
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 3,
+            "missionSize": 1
+        },
+        {
+            "id": "f8c3e492-7a94-42b6-be1d-87cd72d96e43",
+            "map": "hm_strain",
+            "flags": {},
+            "circumstance": "default",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {},
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794853800000",
+            "expiry": "1794855179999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 32,
+            "missionSize": 1
+        },
+        {
+            "id": "fff37ac8-49cf-470b-aad9-3e4572e24d75",
+            "map": "cm_archives",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_012_A",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4360
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 17,
+            "missionSize": 1
+        },
+        {
+            "id": "f69da03a-0022-4c66-8ce3-071401391a6d",
+            "map": "hm_cartel",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_03",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 3675,
+                    "xp": 1090
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 17,
+            "missionSize": 1
+        },
+        {
+            "id": "02cdccba-b743-466c-a8bd-591588041088",
+            "map": "psykhanium",
+            "flags": {
+                "random_twin-0": {}
+            },
+            "circumstance": "default",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {},
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794814380000",
+            "expiry": "1794900779999",
+            "requiredLevel": 1,
+            "category": "horde",
+            "missionGiver": "training_ground_psyker_a",
+            "displayIndex": 37,
+            "missionSize": 1
+        },
+        {
+            "id": "36876ba9-01a6-4bdc-945f-355869872f96",
+            "map": "hm_strain",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "toxic_gas_01",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 11970,
+                    "xp": 2945
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794853800000",
+            "expiry": "1794855179999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 34,
+            "missionSize": 1
+        },
+        {
+            "id": "d243d5c3-913f-48da-88f5-6186cac32db5",
+            "map": "fm_cargo",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "ventilation_purge_with_snipers_01",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 11970,
+                    "xp": 3210
+                },
+                "sideMission": {
+                    "credits": 11970,
+                    "xp": 1340
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794853380000",
+            "expiry": "1794854759999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "explicator_a",
+            "displayIndex": 5,
+            "missionSize": 1
+        },
+        {
+            "id": "8f546a1a-88db-461c-b566-a1d9d7e2d232",
+            "map": "lm_scavenge",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:no-mans-land": {}
+            },
+            "circumstance": "story_nomansland_02",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 600
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847320000",
+            "expiry": "1794854519999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "commissar_a",
+            "displayIndex": 29,
+            "missionSize": 1
+        },
+        {
+            "id": "98eab391-7cb1-4205-adcb-08e48846dcdb",
+            "map": "hm_strain",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "toxic_gas_01",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 14700,
+                    "xp": 3000
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794853800000",
+            "expiry": "1794855179999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 25,
+            "missionSize": 1
+        },
+        {
+            "id": "6003e5c1-758d-4478-b3de-73b01df342b6",
+            "map": "fm_cargo",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_06_B",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1500
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "tech_priest_b",
+            "displayIndex": 21,
+            "missionSize": 1
+        },
+        {
+            "id": "4d074b99-ca33-4002-aec0-c77689176b26",
+            "map": "dm_propaganda",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "waves_of_specials_01",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 11970,
+                    "xp": 3210
+                },
+                "sideMission": {
+                    "credits": 11970,
+                    "xp": 1340
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794853260000",
+            "expiry": "1794854579999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 23,
+            "missionSize": 1
+        },
+        {
+            "id": "b6406ea8-7056-473c-a5f0-16a6303a9172",
+            "map": "fm_resurgence",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_011_A",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2400
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "boon_vendor_a",
+            "displayIndex": 8,
+            "missionSize": 1
+        },
+        {
+            "id": "57ec104b-e861-4094-a5c3-72ca4d91d288",
+            "map": "core_research",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_07_B",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2490
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 18,
+            "missionSize": 1
+        },
+        {
+            "id": "bc60a07c-c5d2-4065-a2e0-dd6aadc5a000",
+            "map": "km_enforcer_twins",
+            "flags": {
+                "altered": {},
+                "activate_twins-100": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_010",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4280
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 12,
+            "missionSize": 1
+        },
+        {
+            "id": "860958f7-612f-4afb-9bf3-d1b10c39c67e",
+            "map": "km_station",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_01",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 4990,
+                    "xp": 0
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_c",
+            "displayIndex": 11,
+            "missionSize": 1
+        },
+        {
+            "id": "3e64d3ab-79f5-4484-b39c-9a685682705d",
+            "map": "hm_strain",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_07_A",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1800
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_b",
+            "displayIndex": 13,
+            "missionSize": 1
+        },
+        {
+            "id": "4ed6f631-0dd6-4adb-8f24-bd2d37b728bc",
+            "map": "cm_raid",
+            "flags": {
+                "altered": {},
+                "flash": {}
+            },
+            "circumstance": "high_flash_mission_04",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 46550,
+                    "xp": 9265
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794852660000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "maelstrom",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 24,
+            "missionSize": 1
+        },
+        {
+            "id": "d05c4e9b-fdd8-4796-b40e-cfd733ecbe48",
+            "map": "hm_cartel",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_03",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 2995,
+                    "xp": 1070
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 14,
+            "missionSize": 1
+        },
+        {
+            "id": "5007aa83-501e-4652-9a4e-ab42fa810bcb",
+            "map": "cm_raid",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_09",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4360
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 11,
+            "missionSize": 1
+        },
+        {
+            "id": "62fb4b75-1d4a-4f9c-a01a-8f4aa4173e53",
+            "map": "hm_complex",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_013_A",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4280
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 4,
+            "missionSize": 1
+        },
+        {
+            "id": "7b9549a4-6a8a-45c1-94b6-064a76368052",
+            "map": "exp_wastes",
+            "flags": {
+                "altered": {},
+                "exped-node-node_31155e9b-0918-4504-b0cb-46d8fd4d4160": {},
+                "exped-mods-locs_03;opps_02": {}
+            },
+            "circumstance": "exps_auric",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 12250,
+                    "xp": 2725
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 18,
+            "missionSize": 1
+        },
+        {
+            "id": "f47f57f0-97d9-46bb-a350-285f0c9c791c",
+            "map": "km_enforcer_twins",
+            "flags": {
+                "altered": {},
+                "activate_twins-100": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_010",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 3320
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 14,
+            "missionSize": 1
+        },
+        {
+            "id": "6fa574b3-e836-42af-af29-05b8c8f804e8",
+            "map": "lm_scavenge",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "nurgle_explosion_2026",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 2090,
+                    "xp": 950
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794853860000",
+            "expiry": "1794855059999",
+            "requiredLevel": 1,
+            "category": "event",
+            "missionGiver": "pilot_a",
+            "displayIndex": 34,
+            "missionSize": 1
+        },
+        {
+            "id": "a93e7832-bb8e-44c0-9be7-bb74aa6b2225",
+            "map": "km_station",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_01",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1860,
+                    "xp": 0
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_c",
+            "displayIndex": 18,
+            "missionSize": 1
+        },
+        {
+            "id": "45706745-082d-436a-b0f4-3fecb75dc383",
+            "map": "dm_propaganda",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "waves_of_specials_less_resistance_01",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1880,
+                    "xp": 570
+                },
+                "sideMission": {
+                    "credits": 2510,
+                    "xp": 475
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794853260000",
+            "expiry": "1794854579999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 33,
+            "missionSize": 1
+        },
+        {
+            "id": "b28c2c76-948a-4204-a01b-2a8f4b6cb428",
+            "map": "hm_strain",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_07_A",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2490
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_b",
+            "displayIndex": 1,
+            "missionSize": 1
+        },
+        {
+            "id": "104f702d-1583-46e8-8c6c-444c69237e35",
+            "map": "dm_propaganda",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "waves_of_specials_more_resistance_01",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 26950,
+                    "xp": 4360
+                },
+                "sideMission": {
+                    "credits": 14700,
+                    "xp": 1365
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794853260000",
+            "expiry": "1794854579999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 26,
+            "missionSize": 1
+        },
+        {
+            "id": "d4eb5875-13f6-4a36-9f11-4484f573ec9f",
+            "map": "fm_cargo",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:spillway": {}
+            },
+            "circumstance": "story_spillway_01",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 3705,
+                    "xp": 1245
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794852000000",
+            "expiry": "1794859199999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "contract_vendor_a",
+            "displayIndex": 15,
+            "missionSize": 1
+        },
+        {
+            "id": "5f607212-176c-4a45-a2d9-f7b880a5efb1",
+            "map": "lm_cooling",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "toxic_gas_01",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 11970,
+                    "xp": 2945
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794853140000",
+            "expiry": "1794854579999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 29,
+            "missionSize": 1
+        },
+        {
+            "id": "4eb8df3c-3f0b-4368-90e1-02061fe266b7",
+            "map": "lm_scavenge",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "nurgle_explosion_2026_more_res",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 11855,
+                    "xp": 3320
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794853860000",
+            "expiry": "1794855059999",
+            "requiredLevel": 1,
+            "category": "event",
+            "missionGiver": "pilot_a",
+            "displayIndex": 27,
+            "missionSize": 1
+        },
+        {
+            "id": "dc6842b7-16b5-4d73-aeb0-372b536de2a9",
+            "map": "exp_wastes",
+            "flags": {
+                "exped-node-node_31155e9b-0918-4504-b0cb-46d8fd4d4160": {},
+                "exped-mods-locs_03;opps_02": {}
+            },
+            "circumstance": "default",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {},
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 16,
+            "missionSize": 1
+        },
+        {
+            "id": "3da0ffab-2d3e-4978-b95d-1323b1c5c57d",
+            "map": "hm_cartel",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "ventilation_purge_with_snipers_01",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 11970,
+                    "xp": 3210
+                },
+                "sideMission": {
+                    "credits": 11970,
+                    "xp": 1340
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794853740000",
+            "expiry": "1794855119999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "explicator_a",
+            "displayIndex": 31,
+            "missionSize": 1
+        },
+        {
+            "id": "d7b1fc11-79dc-4235-80cd-0b301edbdf0e",
+            "map": "km_heresy",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_014",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4360
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "interrogator_a",
+            "displayIndex": 8,
+            "missionSize": 1
+        },
+        {
+            "id": "0e2b8982-5a1c-4504-9d11-8585b3d4ed58",
+            "map": "cm_raid",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_09",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2400
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 21,
+            "missionSize": 1
+        },
+        {
+            "id": "c5026be1-7ac4-4b97-9bab-9fd643f0bdd2",
+            "map": "hm_complex",
+            "flags": {},
+            "circumstance": "default",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {},
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794854280000",
+            "expiry": "1794855479999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "pilot_a",
+            "displayIndex": 32,
+            "missionSize": 1
+        },
+        {
+            "id": "10e904e9-a106-4b6d-a509-74be4b4ff010",
+            "map": "dm_stockpile",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_02",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 3990,
+                    "xp": 535
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 3,
+            "missionSize": 1
+        },
+        {
+            "id": "a6426946-9220-4302-a8f7-3e1f4c9e054c",
+            "map": "km_enforcer_twins",
+            "flags": {
+                "altered": {},
+                "activate_twins-100": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_010",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2400
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 22,
+            "missionSize": 1
+        },
+        {
+            "id": "050dae93-fbea-493e-bfb8-77fea4820905",
+            "map": "dm_rise",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_011_B",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1520
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "purser_a",
+            "displayIndex": 10,
+            "missionSize": 1
+        },
+        {
+            "id": "6551ade4-6efe-40a0-8a22-eab8613b5fff",
+            "map": "spillway",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:spillway": {}
+            },
+            "circumstance": "story_spillway_03",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1045,
+                    "xp": 570
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794852000000",
+            "expiry": "1794859199999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "boon_vendor_a",
+            "displayIndex": 15,
+            "missionSize": 1
+        },
+        {
+            "id": "f1586ff4-12a9-452d-b029-e709b84b3eb5",
+            "map": "cm_raid",
+            "flags": {
+                "altered": {},
+                "flash": {}
+            },
+            "circumstance": "flash_mission_04",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 22230,
+                    "xp": 5395
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794852660000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "maelstrom",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 13,
+            "missionSize": 1
+        },
+        {
+            "id": "21b9a314-ae9f-447b-b0b3-ddfb80a8a054",
+            "map": "op_no_mans_land",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "waves_of_specials_01",
+            "credits": 5580,
+            "xp": 2350,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 3350,
+                    "xp": 1350
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794853860000",
+            "expiry": "1794855239999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 25,
+            "missionSize": 0.75
+        },
+        {
+            "id": "aa1d4f0c-f656-42e1-84b7-91cc2b482b77",
+            "map": "op_no_mans_land",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:no-mans-land": {}
+            },
+            "circumstance": "story_nomansland_03",
+            "credits": 14965,
+            "xp": 4110,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 805
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847320000",
+            "expiry": "1794854519999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 9,
+            "missionSize": 0.75
+        },
+        {
+            "id": "0ab80847-d35d-4e91-bc17-7df5c3e0aafb",
+            "map": "hm_strain",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "toxic_gas_01",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 4465,
+                    "xp": 1650
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794853800000",
+            "expiry": "1794855179999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 33,
+            "missionSize": 1
+        },
+        {
+            "id": "065629dd-9ecf-4aba-bd02-a15be7066666",
+            "map": "fm_armoury",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_08",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 3320
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_b",
+            "displayIndex": 20,
+            "missionSize": 1
+        },
+        {
+            "id": "bee484de-17ca-4031-a76b-caafa30ef555",
+            "map": "dm_stockpile",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_02",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1490,
+                    "xp": 300
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 11,
+            "missionSize": 1
+        },
+        {
+            "id": "5bcb0c58-9c3e-4d68-9554-dc03d0a8f20e",
+            "map": "exp_wastes",
+            "flags": {
+                "altered": {},
+                "exped-node-node_e1c6d205-2bba-4944-8e76-992db43ffe3c": {},
+                "exped-mods-theme_02;timer_01": {}
+            },
+            "circumstance": "exps_dawn",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {},
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 30,
+            "missionSize": 1
+        },
+        {
+            "id": "948c8d61-b725-44f2-a153-66654ba53172",
+            "map": "dm_rise",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_011_B",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4280
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "purser_a",
+            "displayIndex": 2,
+            "missionSize": 1
+        },
+        {
+            "id": "331386d8-3816-4599-b72e-d1f2be81d188",
+            "map": "hm_complex",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_013_A",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4360
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 4,
+            "missionSize": 1
+        },
+        {
+            "id": "fd53ead1-6cf7-4e5d-9f32-cf81597bcdc4",
+            "map": "hm_strain",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "toxic_gas_01",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 8890,
+                    "xp": 2285
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794853800000",
+            "expiry": "1794855179999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 23,
+            "missionSize": 1
+        },
+        {
+            "id": "c924838b-93a9-4334-baf0-32f97b582695",
+            "map": "lm_cooling",
+            "flags": {},
+            "circumstance": "default",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {},
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794853140000",
+            "expiry": "1794854579999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 20,
+            "missionSize": 1
+        },
+        {
+            "id": "f351a430-824e-4304-9cf0-95ee16aca21e",
+            "map": "cm_raid",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_09",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 3320
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 14,
+            "missionSize": 1
+        },
+        {
+            "id": "7a41e0a0-a8eb-4fe8-9a21-255842eb4366",
+            "map": "exp_wastes",
+            "flags": {
+                "exped-node-node_c11eeb02-aad3-44ac-bfbf-de2a84cd8156": {},
+                "exped-mods-enemies_01;locs_01;extract_01": {}
+            },
+            "circumstance": "default",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {},
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 25,
+            "missionSize": 1
+        },
+        {
+            "id": "91e69afd-bb37-4827-bc07-a9848e5a80f9",
+            "map": "exp_wastes",
+            "flags": {
+                "exped-node-node_31155e9b-0918-4504-b0cb-46d8fd4d4160": {},
+                "exped-mods-locs_03;opps_02": {}
+            },
+            "circumstance": "default",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {},
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 18,
+            "missionSize": 1
+        },
+        {
+            "id": "2b7a3fb8-0c4d-4921-a122-6de7496706b4",
+            "map": "fm_cargo",
+            "flags": {
+                "side": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "default",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "sideMission": {
+                    "credits": 2510,
+                    "xp": 475
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794853380000",
+            "expiry": "1794854759999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "explicator_a",
+            "displayIndex": 22,
+            "missionSize": 1
+        },
+        {
+            "id": "ec35b030-5b58-49a8-9950-d90e21231f4b",
+            "map": "cm_habs",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_05",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 370,
+                    "xp": 1200
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 3,
+            "missionSize": 1
+        },
+        {
+            "id": "8e742454-6f79-47ea-92c4-2d98418dd792",
+            "map": "fm_cargo",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "ventilation_purge_01",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 2605,
+                    "xp": 750
+                },
+                "sideMission": {
+                    "credits": 4465,
+                    "xp": 750
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794853380000",
+            "expiry": "1794854759999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "explicator_a",
+            "displayIndex": 37,
+            "missionSize": 1
+        },
+        {
+            "id": "a4b6bc7f-9ff9-46b3-b286-1a9d5d14d1eb",
+            "map": "op_no_mans_land",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:no-mans-land": {}
+            },
+            "circumstance": "story_nomansland_03",
+            "credits": 5580,
+            "xp": 2350,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 450
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847320000",
+            "expiry": "1794854519999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 35,
+            "missionSize": 0.75
+        },
+        {
+            "id": "1765d141-e56a-4d5a-b839-0858b2cdf55d",
+            "map": "dm_propaganda",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "waves_of_specials_01",
+            "credits": 14825,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 8890,
+                    "xp": 2490
+                },
+                "sideMission": {
+                    "credits": 8890,
+                    "xp": 1040
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794853260000",
+            "expiry": "1794854579999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 39,
+            "missionSize": 1
+        },
+        {
+            "id": "6705c63f-fddd-4fde-9566-ebb1afe7d803",
+            "map": "fm_resurgence",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_011_A",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1520
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "boon_vendor_a",
+            "displayIndex": 11,
+            "missionSize": 1
+        },
+        {
+            "id": "6b6c8787-adc9-4921-ba1b-5f6f25881c52",
+            "map": "cm_habs",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_05",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 740,
+                    "xp": 1660
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 3,
+            "missionSize": 1
+        },
+        {
+            "id": "09581f6c-1042-4002-9a82-c5637437917d",
+            "map": "cm_archives",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_012_A",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1520
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 9,
+            "missionSize": 1
+        },
+        {
+            "id": "d122068e-a327-4bde-93ac-79e5bfed6031",
+            "map": "cm_archives",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "hunting_grounds_01",
+            "credits": 19950,
+            "xp": 5445,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 9975,
+                    "xp": 2410
+                },
+                "sideMission": {
+                    "credits": 11970,
+                    "xp": 1340
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794853560000",
+            "expiry": "1794854939999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "explicator_a",
+            "displayIndex": 22,
+            "missionSize": 1
+        },
+        {
+            "id": "1e851414-fc10-4356-9e0d-a29da5285d51",
+            "map": "cm_habs",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_05",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1000,
+                    "xp": 2140
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 19,
+            "missionSize": 1
+        },
+        {
+            "id": "b3e0a34d-3767-40a8-95ed-cd599332dbcb",
+            "map": "op_train",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:no-mans-land": {}
+            },
+            "circumstance": "story_nomansland_01",
+            "credits": 11025,
+            "xp": 2555,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 490
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847320000",
+            "expiry": "1794854519999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 34,
+            "missionSize": 0.45
+        },
+        {
+            "id": "9101677b-64d4-42c8-a911-8dfde951bad0",
+            "map": "exp_wastes",
+            "flags": {
+                "altered": {},
+                "exped-node-node_be50acdd-751e-4e81-b08a-2f67f8fec7b0": {},
+                "exped-mods-theme_01": {}
+            },
+            "circumstance": "exps_storm",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 5985,
+                    "xp": 1605
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 36,
+            "missionSize": 1
+        },
+        {
+            "id": "1a69c99a-7431-419c-a1ee-a71e3f3e17bc",
+            "map": "cm_archives",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "hunting_grounds_01",
+            "credits": 14820,
+            "xp": 4245,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 7410,
+                    "xp": 1870
+                },
+                "sideMission": {
+                    "credits": 8890,
+                    "xp": 1040
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794853560000",
+            "expiry": "1794854939999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "explicator_a",
+            "displayIndex": 37,
+            "missionSize": 1
+        },
+        {
+            "id": "7a4e30a7-ed11-4470-b77c-7b01c63d849e",
+            "map": "hm_strain",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_07_A",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 3210
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_b",
+            "displayIndex": 16,
+            "missionSize": 1
+        },
+        {
+            "id": "1f0eba71-713e-48cf-9a37-de48127c2913",
+            "map": "psykhanium",
+            "flags": {
+                "random_twin-0": {}
+            },
+            "circumstance": "default",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {},
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794814380000",
+            "expiry": "1794900779999",
+            "requiredLevel": 1,
+            "category": "horde",
+            "missionGiver": "training_ground_psyker_a",
+            "displayIndex": 34,
+            "missionSize": 1
+        },
+        {
+            "id": "923bd15b-9a9f-4e86-a8e2-05b851f00b41",
+            "map": "core_research",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_07_B",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1800
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 21,
+            "missionSize": 1
+        },
+        {
+            "id": "6a7523d0-a537-4bff-9b09-9529d5c764b9",
+            "map": "hm_cartel",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "ventilation_purge_01",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 2605,
+                    "xp": 750
+                },
+                "sideMission": {
+                    "credits": 4465,
+                    "xp": 750
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794853740000",
+            "expiry": "1794855119999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "explicator_a",
+            "displayIndex": 38,
+            "missionSize": 1
+        },
+        {
+            "id": "05888459-f75f-48f0-8726-0046ab0b3e28",
+            "map": "fm_resurgence",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_011_A",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 3320
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "boon_vendor_a",
+            "displayIndex": 2,
+            "missionSize": 1
+        },
+        {
+            "id": "02838e2a-27b1-4316-a2ce-1a857854ece1",
+            "map": "fm_cargo",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "ventilation_purge_with_snipers_01",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 14700,
+                    "xp": 3270
+                },
+                "sideMission": {
+                    "credits": 14700,
+                    "xp": 1365
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794853380000",
+            "expiry": "1794854759999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "explicator_a",
+            "displayIndex": 10,
+            "missionSize": 1
+        },
+        {
+            "id": "ca9f83b9-8323-4475-b659-f03c72a0407c",
+            "map": "fm_armoury",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_08",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1520
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_b",
+            "displayIndex": 1,
+            "missionSize": 1
+        },
+        {
+            "id": "4e53ecc3-7035-4aee-ba1d-e84ac236bc25",
+            "map": "lm_scavenge",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:no-mans-land": {}
+            },
+            "circumstance": "story_nomansland_02",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1090
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847320000",
+            "expiry": "1794854519999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "commissar_a",
+            "displayIndex": 31,
+            "missionSize": 1
+        },
+        {
+            "id": "0987bd74-7bfb-4b0d-9241-f8386ffb1962",
+            "map": "fm_resurgence",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:spillway": {}
+            },
+            "circumstance": "story_spillway_02",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 6125,
+                    "xp": 1635
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794852000000",
+            "expiry": "1794859199999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "boon_vendor_s",
+            "displayIndex": 35,
+            "missionSize": 1
+        },
+        {
+            "id": "1e02c605-4b39-44d4-a46d-310ff46a858b",
+            "map": "cm_habs",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_05",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 210,
+                    "xp": 760
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 14,
+            "missionSize": 1
+        },
+        {
+            "id": "1307e0ac-a3ed-4aa5-97d3-1d9db9ee5641",
+            "map": "fm_cargo",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_06_B",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2675
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "tech_priest_b",
+            "displayIndex": 1,
+            "missionSize": 1
+        },
+        {
+            "id": "54b575be-18a7-4b26-9391-d7b71d6f7832",
+            "map": "fm_cargo",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:spillway": {}
+            },
+            "circumstance": "story_spillway_01",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 4990,
+                    "xp": 1605
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794852000000",
+            "expiry": "1794859199999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "contract_vendor_a",
+            "displayIndex": 6,
+            "missionSize": 1
+        },
+        {
+            "id": "2192322f-12f9-4a70-8660-5b0bc336fd39",
+            "map": "spillway",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:spillway": {}
+            },
+            "circumstance": "story_spillway_03",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 4990,
+                    "xp": 1605
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794852000000",
+            "expiry": "1794859199999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "boon_vendor_a",
+            "displayIndex": 24,
+            "missionSize": 1
+        },
+        {
+            "id": "64275fc4-408d-4487-8b05-4d942eff3e33",
+            "map": "op_no_mans_land",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:no-mans-land": {}
+            },
+            "circumstance": "story_nomansland_03",
+            "credits": 11115,
+            "xp": 3210,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 625
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847320000",
+            "expiry": "1794854519999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 35,
+            "missionSize": 0.75
+        },
+        {
+            "id": "4ce50112-ef0a-4813-a431-9921080fae8e",
+            "map": "dm_propaganda",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_06_A",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 950
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 11,
+            "missionSize": 1
+        },
+        {
+            "id": "237cc14e-ccb8-4ba7-ab74-c0cde6870624",
+            "map": "lm_scavenge",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "nurgle_explosion_2026_more_res",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 5950,
+                    "xp": 2400
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794853860000",
+            "expiry": "1794855059999",
+            "requiredLevel": 1,
+            "category": "event",
+            "missionGiver": "pilot_a",
+            "displayIndex": 5,
+            "missionSize": 1
+        },
+        {
+            "id": "f5c10fa0-d150-47d5-b680-1ae8257e9b6e",
+            "map": "cm_archives",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_012_A",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2400
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 15,
+            "missionSize": 1
+        },
+        {
+            "id": "d2eff39d-ee01-466a-aef1-c67a3dfeecd8",
+            "map": "spillway",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:spillway": {}
+            },
+            "circumstance": "story_spillway_03",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1860,
+                    "xp": 900
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794852000000",
+            "expiry": "1794859199999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "boon_vendor_a",
+            "displayIndex": 16,
+            "missionSize": 1
+        },
+        {
+            "id": "b99442b3-93d6-4ffd-83e9-d678428e8493",
+            "map": "dm_forge",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "nurgle_explosion_2026_waves_spec",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 19600,
+                    "xp": 4360
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794853380000",
+            "expiry": "1794854639999",
+            "requiredLevel": 1,
+            "category": "event",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 39,
+            "missionSize": 1
+        },
+        {
+            "id": "6bf7931e-abce-445a-be2a-84a3eb6fa3a1",
+            "map": "dm_propaganda",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_06_A",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1500
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 1,
+            "missionSize": 1
+        },
+        {
+            "id": "9b5f3c37-4df7-4fdb-bcb1-fe361179b840",
+            "map": "km_enforcer",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_04",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 2450,
+                    "xp": 1635
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 9,
+            "missionSize": 1
+        },
+        {
+            "id": "cd00f16f-9b30-4c59-866e-6200896a41ff",
+            "map": "spillway",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:spillway": {}
+            },
+            "circumstance": "story_spillway_03",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 6125,
+                    "xp": 1635
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794852000000",
+            "expiry": "1794859199999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "boon_vendor_a",
+            "displayIndex": 3,
+            "missionSize": 1
+        },
+        {
+            "id": "34131cbd-1128-4682-a1f5-18262554f331",
+            "map": "exp_wastes",
+            "flags": {
+                "altered": {},
+                "exped-node-node_be50acdd-751e-4e81-b08a-2f67f8fec7b0": {},
+                "exped-mods-theme_01": {}
+            },
+            "circumstance": "exps_storm",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 4445,
+                    "xp": 1245
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 7,
+            "missionSize": 1
+        },
+        {
+            "id": "9a4ee567-80eb-475a-9fb0-15ba5395bf27",
+            "map": "lm_cooling",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "toxic_gas_01",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 4465,
+                    "xp": 1650
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794853140000",
+            "expiry": "1794854579999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 6,
+            "missionSize": 1
+        },
+        {
+            "id": "c3e8c802-6a6b-4d9a-8422-f6a3888c15b5",
+            "map": "lm_scavenge",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "nurgle_explosion_2026_more_res",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 19600,
+                    "xp": 4360
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794853860000",
+            "expiry": "1794855059999",
+            "requiredLevel": 1,
+            "category": "event",
+            "missionGiver": "pilot_a",
+            "displayIndex": 6,
+            "missionSize": 1
+        },
+        {
+            "id": "f3ea7f3a-1acf-4f11-9a45-c5cce487f795",
+            "map": "op_no_mans_land",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "waves_of_specials_01",
+            "credits": 11115,
+            "xp": 3210,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 6670,
+                    "xp": 1870
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794853860000",
+            "expiry": "1794855239999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 36,
+            "missionSize": 0.75
+        },
+        {
+            "id": "4186eee8-9867-464f-a25c-a4ed67d275dc",
+            "map": "km_enforcer",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_04",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1995,
+                    "xp": 1605
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 21,
+            "missionSize": 1
+        },
+        {
+            "id": "a95af18f-ea43-4ff5-a9d6-d5de67ff49fa",
+            "map": "cm_archives",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_012_A",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4280
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 16,
+            "missionSize": 1
+        },
+        {
+            "id": "d7127bbb-25ad-4a3d-bfaa-380ee390470d",
+            "map": "fm_armoury",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_08",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4360
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_b",
+            "displayIndex": 4,
+            "missionSize": 1
+        },
+        {
+            "id": "e8a735ec-39b9-4a95-b788-600c8bb325a0",
+            "map": "fm_armoury",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_08",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2400
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_b",
+            "displayIndex": 18,
+            "missionSize": 1
+        },
+        {
+            "id": "64c84f21-73aa-45c9-995d-23457052e1e5",
+            "map": "op_no_mans_land",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "waves_of_specials_more_resistance_01",
+            "credits": 18375,
+            "xp": 4190,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 20215,
+                    "xp": 3270
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794853860000",
+            "expiry": "1794855239999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 23,
+            "missionSize": 0.75
+        },
+        {
+            "id": "748b9241-195c-4dca-8ee3-27edab7997d6",
+            "map": "fm_cargo",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:spillway": {}
+            },
+            "circumstance": "story_spillway_01",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1045,
+                    "xp": 570
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794852000000",
+            "expiry": "1794859199999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "contract_vendor_a",
+            "displayIndex": 17,
+            "missionSize": 1
+        },
+        {
+            "id": "953acad1-2598-4561-8e5f-3f0efe3b7ed8",
+            "map": "dm_forge",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "nurgle_explosion_2026",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 3720,
+                    "xp": 1500
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794853380000",
+            "expiry": "1794854639999",
+            "requiredLevel": 1,
+            "category": "event",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 10,
+            "missionSize": 1
+        },
+        {
+            "id": "5daa95ef-4325-49d1-a765-eab0db0d31c0",
+            "map": "dm_rise",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_011_B",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2400
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "purser_a",
+            "displayIndex": 22,
+            "missionSize": 1
+        },
+        {
+            "id": "a7a89be3-19b2-4c85-94d7-b5fe242f5e0c",
+            "map": "hm_strain",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_07_A",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 3270
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_b",
+            "displayIndex": 4,
+            "missionSize": 1
+        },
+        {
+            "id": "62c3f782-01ab-4946-9454-1404780f87ce",
+            "map": "op_train",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:no-mans-land": {}
+            },
+            "circumstance": "story_nomansland_01",
+            "credits": 1880,
+            "xp": 955,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 170
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847320000",
+            "expiry": "1794854519999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 29,
+            "missionSize": 0.45
+        },
+        {
+            "id": "ef36444e-b626-4bd4-889a-a492529e7e62",
+            "map": "dm_propaganda",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_06_A",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2675
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 13,
+            "missionSize": 1
+        },
+        {
+            "id": "bb34801c-fe8a-4c1b-873d-e6e47575d6d6",
+            "map": "dm_forge",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "nurgle_explosion_2026",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 2090,
+                    "xp": 950
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794853380000",
+            "expiry": "1794854639999",
+            "requiredLevel": 1,
+            "category": "event",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 19,
+            "missionSize": 1
+        },
+        {
+            "id": "32c957da-21ee-499e-9d10-62e0290ceef4",
+            "map": "km_heresy",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_014",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2400
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "interrogator_a",
+            "displayIndex": 20,
+            "missionSize": 1
+        },
+        {
+            "id": "f56f6aae-b0ae-4971-8210-008bebaf5b4f",
+            "map": "fm_cargo",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:spillway": {}
+            },
+            "circumstance": "story_spillway_01",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1860,
+                    "xp": 900
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794852000000",
+            "expiry": "1794859199999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "contract_vendor_a",
+            "displayIndex": 28,
+            "missionSize": 1
+        },
+        {
+            "id": "8fe8da1c-0eaf-4180-88e0-648b8597aa51",
+            "map": "hm_complex",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_013_A",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1520
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 3,
+            "missionSize": 1
+        },
+        {
+            "id": "e14e0d2d-2413-4632-aed3-f3c498e39701",
+            "map": "cm_archives",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "hunting_grounds_01",
+            "credits": 24500,
+            "xp": 5545,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 12250,
+                    "xp": 2455
+                },
+                "sideMission": {
+                    "credits": 14700,
+                    "xp": 1365
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794853560000",
+            "expiry": "1794854939999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "explicator_a",
+            "displayIndex": 19,
+            "missionSize": 1
+        },
+        {
+            "id": "87ece0cc-a4d9-4fa2-a7b3-f475a1d55b2b",
+            "map": "exp_wastes",
+            "flags": {
+                "exped-node-node_c11eeb02-aad3-44ac-bfbf-de2a84cd8156": {},
+                "exped-mods-enemies_01;locs_01;extract_01": {}
+            },
+            "circumstance": "default",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {},
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 15,
+            "missionSize": 1
+        },
+        {
+            "id": "9c7607b1-5252-4ae4-932c-10c979db83ca",
+            "map": "dm_rise",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_011_B",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4360
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "purser_a",
+            "displayIndex": 11,
+            "missionSize": 1
+        },
+        {
+            "id": "898128b9-28b3-4f06-9ee4-3eb843f926bb",
+            "map": "km_enforcer",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_04",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 745,
+                    "xp": 900
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 17,
+            "missionSize": 1
+        },
+        {
+            "id": "790385fa-1470-4ab7-af93-4d7d9d9c2a46",
+            "map": "op_no_mans_land",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:no-mans-land": {}
+            },
+            "circumstance": "story_nomansland_03",
+            "credits": 18375,
+            "xp": 4185,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 820
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847320000",
+            "expiry": "1794854519999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 33,
+            "missionSize": 0.75
+        },
+        {
+            "id": "f58ec183-46ae-40f9-80d0-d2f0d13a5c96",
+            "map": "psykhanium",
+            "flags": {
+                "random_twin-0": {}
+            },
+            "circumstance": "default",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {},
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794814380000",
+            "expiry": "1794900779999",
+            "requiredLevel": 1,
+            "category": "horde",
+            "missionGiver": "training_ground_psyker_a",
+            "displayIndex": 28,
+            "missionSize": 1
+        },
+        {
+            "id": "b5df4890-a8f2-408e-b52d-bb1f8582e2f6",
+            "map": "psykhanium",
+            "flags": {
+                "random_twin-0": {}
+            },
+            "circumstance": "default",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {},
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794814380000",
+            "expiry": "1794900779999",
+            "requiredLevel": 1,
+            "category": "horde",
+            "missionGiver": "training_ground_psyker_a",
+            "displayIndex": 12,
+            "missionSize": 1
+        },
+        {
+            "id": "5adc1684-4b54-4f15-9448-8716161421c1",
+            "map": "hm_cartel",
+            "flags": {
+                "side": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "default",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "sideMission": {
+                    "credits": 2510,
+                    "xp": 475
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794853740000",
+            "expiry": "1794855119999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "explicator_a",
+            "displayIndex": 21,
+            "missionSize": 1
+        },
+        {
+            "id": "7d5830f4-70ad-47bc-a1c3-c92de11fb169",
+            "map": "fm_cargo",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:spillway": {}
+            },
+            "circumstance": "story_spillway_01",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 6125,
+                    "xp": 1635
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794852000000",
+            "expiry": "1794859199999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "contract_vendor_a",
+            "displayIndex": 36,
+            "missionSize": 1
+        },
+        {
+            "id": "8023472d-936c-4555-a968-b61aa7344355",
+            "map": "spillway",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:spillway": {}
+            },
+            "circumstance": "story_spillway_03",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 3705,
+                    "xp": 1245
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794852000000",
+            "expiry": "1794859199999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "boon_vendor_a",
+            "displayIndex": 11,
+            "missionSize": 1
+        },
+        {
+            "id": "c3476112-b616-4e73-ab1f-d17cd8b7f4f8",
+            "map": "fm_armoury",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_08",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4280
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_b",
+            "displayIndex": 11,
+            "missionSize": 1
+        },
+        {
+            "id": "166b0680-40bd-4cf8-804e-ad346af49864",
+            "map": "exp_wastes",
+            "flags": {
+                "altered": {},
+                "exped-node-node_e1c6d205-2bba-4944-8e76-992db43ffe3c": {},
+                "exped-mods-theme_02;timer_01": {}
+            },
+            "circumstance": "exps_dawn",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {},
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 7,
+            "missionSize": 1
+        },
+        {
+            "id": "24fbf88b-2798-4348-90ba-3d354c3d8bec",
+            "map": "hm_complex",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_013_A",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 3320
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 18,
+            "missionSize": 1
+        },
+        {
+            "id": "fa5534fc-f544-4f3c-99ea-38da0ac8a4be",
+            "map": "km_heresy",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_014",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1520
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "interrogator_a",
+            "displayIndex": 6,
+            "missionSize": 1
+        },
+        {
+            "id": "1fa12364-03e4-45ea-bc15-6cc200e0eb30",
+            "map": "cm_archives",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "hunting_grounds_less_resistance_01",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 835,
+                    "xp": 380
+                },
+                "sideMission": {
+                    "credits": 2510,
+                    "xp": 475
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794853560000",
+            "expiry": "1794854939999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "explicator_a",
+            "displayIndex": 31,
+            "missionSize": 1
+        },
+        {
+            "id": "41ef58b7-fa6e-46ec-8710-91761f45d351",
+            "map": "lm_cooling",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "toxic_gas_01",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 8890,
+                    "xp": 2285
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794853140000",
+            "expiry": "1794854579999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 10,
+            "missionSize": 1
+        },
+        {
+            "id": "b6c81b54-94e1-4570-adcc-e13bcf90dd22",
+            "map": "lm_scavenge",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:no-mans-land": {}
+            },
+            "circumstance": "story_nomansland_02",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1070
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847320000",
+            "expiry": "1794854519999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "commissar_a",
+            "displayIndex": 35,
+            "missionSize": 1
+        },
+        {
+            "id": "4c3bc8ac-4d3e-427b-ba78-b0cb08e95d51",
+            "map": "fm_resurgence",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_011_A",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4360
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "boon_vendor_a",
+            "displayIndex": 14,
+            "missionSize": 1
+        },
+        {
+            "id": "8261bebe-3099-4496-af25-988fdd7ab2aa",
+            "map": "exp_wastes",
+            "flags": {
+                "altered": {},
+                "exped-node-node_c11eeb02-aad3-44ac-bfbf-de2a84cd8156": {},
+                "exped-mods-enemies_01;locs_01;extract_01": {}
+            },
+            "circumstance": "exps_auric",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 12250,
+                    "xp": 2725
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 22,
+            "missionSize": 1
+        },
+        {
+            "id": "e09d9ecb-e40b-46ac-948f-de749762b633",
+            "map": "op_train",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:no-mans-land": {}
+            },
+            "circumstance": "story_nomansland_01",
+            "credits": 6670,
+            "xp": 1965,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 375
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847320000",
+            "expiry": "1794854519999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 19,
+            "missionSize": 0.45
+        },
+        {
+            "id": "7d31376a-ea9c-45ed-a389-dc903746898c",
+            "map": "cm_habs",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_05",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1225,
+                    "xp": 2180
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 5,
+            "missionSize": 1
+        },
+        {
+            "id": "0fc4a147-2c6a-4381-97ed-3fe4ba0ce8bd",
+            "map": "fm_cargo",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "ventilation_purge_01",
+            "credits": 14825,
+            "xp": 4245,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 5185,
+                    "xp": 1040
+                },
+                "sideMission": {
+                    "credits": 8890,
+                    "xp": 1040
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794853380000",
+            "expiry": "1794854759999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "explicator_a",
+            "displayIndex": 24,
+            "missionSize": 1
+        },
+        {
+            "id": "41f20043-0024-4b21-99e5-2c3c2c89b3c3",
+            "map": "exp_wastes",
+            "flags": {
+                "exped-node-node_31155e9b-0918-4504-b0cb-46d8fd4d4160": {},
+                "exped-mods-locs_03;opps_02": {}
+            },
+            "circumstance": "default",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {},
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 24,
+            "missionSize": 1
+        },
+        {
+            "id": "0d6a3ee5-dc66-4a10-aff9-2d56fdac5e3a",
+            "map": "km_station",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_01",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 6125,
+                    "xp": 0
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_c",
+            "displayIndex": 13,
+            "missionSize": 1
+        },
+        {
+            "id": "5cbca559-78cc-4941-9234-43f05b83f31c",
+            "map": "fm_cargo",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_06_B",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2075
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "tech_priest_b",
+            "displayIndex": 2,
+            "missionSize": 1
+        },
+        {
+            "id": "ab298737-97fe-4967-9c56-d752a5e86468",
+            "map": "dm_forge",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "nurgle_explosion_2026",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 7410,
+                    "xp": 2075
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794853380000",
+            "expiry": "1794854639999",
+            "requiredLevel": 1,
+            "category": "event",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 31,
+            "missionSize": 1
+        },
+        {
+            "id": "c1d7e25a-5286-4648-9ebb-6a82bc428157",
+            "map": "km_enforcer",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_04",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1480,
+                    "xp": 1245
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 21,
+            "missionSize": 1
+        },
+        {
+            "id": "b205a938-e769-49ab-9e30-79eb484e0996",
+            "map": "hm_cartel",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_03",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 2225,
+                    "xp": 830
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 9,
+            "missionSize": 1
+        },
+        {
+            "id": "32e10f57-08ff-40a8-bf7a-09252c01acff",
+            "map": "dm_propaganda",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_06_A",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2075
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 9,
+            "missionSize": 1
+        },
+        {
+            "id": "2daf1e19-51b1-4158-8511-fe75d8c92cb6",
+            "map": "fm_resurgence",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:spillway": {}
+            },
+            "circumstance": "story_spillway_02",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1045,
+                    "xp": 570
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794852000000",
+            "expiry": "1794859199999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "boon_vendor_s",
+            "displayIndex": 23,
+            "missionSize": 1
+        },
+        {
+            "id": "f9aee9f8-fc67-404b-8dec-2d363dbe2ae2",
+            "map": "km_enforcer",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_04",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 420,
+                    "xp": 570
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 6,
+            "missionSize": 1
+        },
+        {
+            "id": "17be86ab-11a8-40e4-9c21-58912bf77d6a",
+            "map": "hm_complex",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_013_A",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2400
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 2,
+            "missionSize": 1
+        },
+        {
+            "id": "afef4e6d-944d-4324-879d-69271e7b2568",
+            "map": "hm_complex",
+            "flags": {},
+            "circumstance": "default",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {},
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794854280000",
+            "expiry": "1794855479999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "pilot_a",
+            "displayIndex": 14,
+            "missionSize": 1
+        },
+        {
+            "id": "944a6f31-2342-4729-bf06-f8f6359daab4",
+            "map": "lm_scavenge",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:no-mans-land": {}
+            },
+            "circumstance": "story_nomansland_02",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 380
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847320000",
+            "expiry": "1794854519999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "commissar_a",
+            "displayIndex": 13,
+            "missionSize": 1
+        },
+        {
+            "id": "16f4c9f2-7d7d-411a-b62f-1122122b86a9",
+            "map": "dm_propaganda",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "waves_of_specials_01",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 4465,
+                    "xp": 1800
+                },
+                "sideMission": {
+                    "credits": 4465,
+                    "xp": 750
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794853260000",
+            "expiry": "1794854579999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 27,
+            "missionSize": 1
+        },
+        {
+            "id": "a0fb0532-813c-42ef-95fc-cce2cbf133f2",
+            "map": "fm_resurgence",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:spillway": {}
+            },
+            "circumstance": "story_spillway_02",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 3705,
+                    "xp": 1245
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794852000000",
+            "expiry": "1794859199999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "boon_vendor_s",
+            "displayIndex": 29,
+            "missionSize": 1
+        },
+        {
+            "id": "45e8011e-48a8-4a82-818a-cfd24970c73c",
+            "map": "fm_resurgence",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_011_A",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4280
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "boon_vendor_a",
+            "displayIndex": 19,
+            "missionSize": 1
+        },
+        {
+            "id": "1a59f6d3-e4b3-495d-9aff-3d465a1cbeeb",
+            "map": "fm_cargo",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_06_B",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 950
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "tech_priest_b",
+            "displayIndex": 10,
+            "missionSize": 1
+        },
+        {
+            "id": "a39142bb-c262-4a30-ae39-c61e488f634b",
+            "map": "km_heresy",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_014",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4280
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "interrogator_a",
+            "displayIndex": 2,
+            "missionSize": 1
+        },
+        {
+            "id": "29366a94-83a3-4f07-a9e7-d42e60e4e55e",
+            "map": "exp_wastes",
+            "flags": {
+                "altered": {},
+                "exped-node-node_be50acdd-751e-4e81-b08a-2f67f8fec7b0": {},
+                "exped-mods-theme_01": {}
+            },
+            "circumstance": "exps_storm",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 2230,
+                    "xp": 900
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794830340000",
+            "expiry": "1794916739999",
+            "requiredLevel": 1,
+            "category": "expedition",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 4,
+            "missionSize": 1
+        },
+        {
+            "id": "c3d915e6-50ce-4f07-928b-d4de09217224",
+            "map": "cm_archives",
+            "flags": {
+                "side": {},
+                "altered": {}
+            },
+            "sideMission": "side_mission_grimoire",
+            "circumstance": "hunting_grounds_01",
+            "credits": 7440,
+            "xp": 3100,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 3720,
+                    "xp": 1350
+                },
+                "sideMission": {
+                    "credits": 4465,
+                    "xp": 750
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794853560000",
+            "expiry": "1794854939999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "explicator_a",
+            "displayIndex": 36,
+            "missionSize": 1
+        },
+        {
+            "id": "0b64693b-fd5a-4bdf-b676-c88fb386f160",
+            "map": "op_train",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:no-mans-land": {}
+            },
+            "circumstance": "story_nomansland_01",
+            "credits": 3350,
+            "xp": 1450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 270
+                }
+            },
+            "challenge": 3,
+            "resistance": 3,
+            "start": "1794847320000",
+            "expiry": "1794854519999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 29,
+            "missionSize": 0.45
+        },
+        {
+            "id": "be55031a-4e13-446b-9abd-a048dce6c692",
+            "map": "cm_raid",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_09",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 4280
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 11,
+            "missionSize": 1
+        },
+        {
+            "id": "a99dcff4-37fd-465a-8732-2c48853a951d",
+            "map": "lm_scavenge",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:no-mans-land": {}
+            },
+            "circumstance": "story_nomansland_02",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 830
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847320000",
+            "expiry": "1794854519999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "commissar_a",
+            "displayIndex": 30,
+            "missionSize": 1
+        },
+        {
+            "id": "189daeea-76fd-4615-9df9-6dbeac0ca3bf",
+            "map": "op_train",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:no-mans-land": {}
+            },
+            "circumstance": "story_nomansland_01",
+            "credits": 8980,
+            "xp": 2510,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 480
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794847320000",
+            "expiry": "1794854519999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 32,
+            "missionSize": 0.45
+        },
+        {
+            "id": "6b52134e-51ba-4ad7-b80e-2d508c0eba9f",
+            "map": "fm_resurgence",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:spillway": {}
+            },
+            "circumstance": "story_spillway_02",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 4990,
+                    "xp": 1605
+                }
+            },
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794852000000",
+            "expiry": "1794859199999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "boon_vendor_s",
+            "displayIndex": 33,
+            "missionSize": 1
+        },
+        {
+            "id": "fbd4e515-f6e8-4f45-88b6-b97a76389627",
+            "map": "op_no_mans_land",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:no-mans-land": {}
+            },
+            "circumstance": "story_nomansland_03",
+            "credits": 3135,
+            "xp": 1525,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 285
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847320000",
+            "expiry": "1794854519999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 18,
+            "missionSize": 0.75
+        },
+        {
+            "id": "529520c1-0189-4fd5-98a6-7a6161e63a22",
+            "map": "cm_raid",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_09",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1520
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 7,
+            "missionSize": 1
+        },
+        {
+            "id": "a4e4cbac-cf6d-4d9f-b253-9bd492c79157",
+            "map": "dm_stockpile",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_02",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 2965,
+                    "xp": 415
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 20,
+            "missionSize": 1
+        },
+        {
+            "id": "7e67e4e5-da4c-4aae-82bd-85ed3820c9d7",
+            "map": "op_no_mans_land",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "waves_of_specials_less_resistance_01",
+            "credits": 3135,
+            "xp": 1525,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 1410,
+                    "xp": 430
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794853860000",
+            "expiry": "1794855239999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "tech_priest_a",
+            "displayIndex": 27,
+            "missionSize": 0.75
+        },
+        {
+            "id": "64eda041-b907-41f8-8e57-d6d79a8556c1",
+            "map": "dm_rise",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_011_B",
+            "credits": 14820,
+            "xp": 4250,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 3320
+                }
+            },
+            "challenge": 4,
+            "resistance": 4,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "purser_a",
+            "displayIndex": 1,
+            "missionSize": 1
+        },
+        {
+            "id": "697b4105-11d8-450e-a664-57572731ece8",
+            "map": "lm_cooling",
+            "flags": {
+                "altered": {}
+            },
+            "circumstance": "toxic_gas_01",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 14700,
+                    "xp": 3000
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794853140000",
+            "expiry": "1794854579999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "sergeant_a",
+            "displayIndex": 27,
+            "missionSize": 1
+        },
+        {
+            "id": "611d2409-db6e-4e71-a2fa-8655ed8d1eb8",
+            "map": "km_enforcer_twins",
+            "flags": {
+                "altered": {},
+                "activate_twins-100": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_010",
+            "credits": 4180,
+            "xp": 2000,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 1520
+                }
+            },
+            "challenge": 2,
+            "resistance": 2,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "explicator_a",
+            "displayIndex": 10,
+            "missionSize": 1
+        },
+        {
+            "id": "7abaff4c-28a8-456d-b606-40d0d9a81fb0",
+            "map": "hm_complex",
+            "flags": {},
+            "circumstance": "default",
+            "credits": 19950,
+            "xp": 5450,
+            "extraRewards": {},
+            "challenge": 5,
+            "resistance": 4,
+            "start": "1794854280000",
+            "expiry": "1794855479999",
+            "requiredLevel": 1,
+            "category": "common",
+            "missionGiver": "pilot_a",
+            "displayIndex": 28,
+            "missionSize": 1
+        },
+        {
+            "id": "df3e7635-7a24-4d60-a80e-10f6856318c8",
+            "map": "fm_cargo",
+            "flags": {
+                "altered": {},
+                "noqp_start": {},
+                "campaign:player-journey": {}
+            },
+            "circumstance": "player_journey_06_B",
+            "credits": 24500,
+            "xp": 5550,
+            "extraRewards": {
+                "circumstance": {
+                    "credits": 0,
+                    "xp": 2725
+                }
+            },
+            "challenge": 5,
+            "resistance": 5,
+            "start": "1794847260000",
+            "expiry": "1794854459999",
+            "requiredLevel": 1,
+            "category": "story",
+            "missionGiver": "tech_priest_b",
+            "displayIndex": 11,
+            "missionSize": 1
+        }
+    ],
+    "refreshAt": "1794854459999"
+}
