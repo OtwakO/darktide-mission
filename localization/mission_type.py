@@ -94,6 +94,11 @@ MISSION_TYPES = {
         "zh-tw": "修理任務",
         "zh-cn": "修理任务",
     },
+    "spillway": {
+        "en": "Assassination",
+        "zh-tw": "刺殺任務",
+        "zh-cn": "暗杀任务",
+    },
     "km_enforcer_twins": {
         "en": "Special",
         "zh-tw": "特殊任務",
