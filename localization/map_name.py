@@ -137,6 +137,12 @@ MAPS = {
         "zh-cn": "窄道 6-19",
         "image": "Warren_6-19.png",
     },
+    "spillway": {
+        "en": "Spillway",
+        "zh-tw": "溢洪道",
+        "zh-cn": "泄洪道",
+        "image": "Spillway.png",
+    },
 }
 
 if __name__ == "__main__":
